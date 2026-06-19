@@ -169,6 +169,28 @@
     }
 
     /* ── IMAGEN DESTACADA ── */
+    .featured-img-wrap {
+      position: relative;
+      background: #111111;
+    }
+    .featured-img-wrap::before,
+    .featured-img-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 12%;
+      z-index: 1;
+      pointer-events: none;
+    }
+    .featured-img-wrap::before {
+      left: 0;
+      background: linear-gradient(to right, #111111 0%, transparent 100%);
+    }
+    .featured-img-wrap::after {
+      right: 0;
+      background: linear-gradient(to left, #111111 0%, transparent 100%);
+    }
     .featured-img {
       width: 100%;
       max-height: 480px;
@@ -708,7 +730,9 @@
   </header>
 
   <!-- IMAGEN DESTACADA -->
-  <img src="../alkhe-hero.jpg" alt="Manual de identidad corporativa ALKHE Arkitektura — portada y símbolo triangular" class="featured-img">
+  <div class="featured-img-wrap">
+    <img src="../alkhe-hero.jpg" alt="Manual de identidad corporativa ALKHE Arkitektura — portada y símbolo triangular" class="featured-img">
+  </div>
 
   <!-- LAYOUT PRINCIPAL -->
   <div class="article-layout">
