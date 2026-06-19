@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Identidad corporativa para estudio de arquitectura: el caso ALKHE — Ismael Gonzalo</title>
+  <meta name="description" content="Proceso completo de diseño de identidad corporativa para ALKHE Arkitektura: naming, símbolo triangular, sistema visual y web. Un proyecto de marca desde cero en Vitoria-Gasteiz.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ismaelgonzalo.com/blog/alkhe-identidad-corporativa-arquitectura/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Identidad corporativa para estudio de arquitectura: el caso ALKHE — Ismael Gonzalo">
+  <meta property="og:description" content="Naming, símbolo, sistema tipográfico, paleta, manual y web completa para un estudio de arquitectura Passivhaus en Vitoria-Gasteiz. Proceso real, con decisiones reales.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ismaelgonzalo.com/blog/alkhe-identidad-corporativa-arquitectura/">
+  <meta property="og:image" content="../../img/blog/alkhe-og.jpg">
+  <meta property="og:locale" content="es_ES">
+
+  <!-- Schema BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Identidad corporativa para estudio de arquitectura: el caso ALKHE",
+    "datePublished": "2026-06-19",
+    "author": {
+      "@type": "Person",
+      "name": "Ismael Gonzalo Peña",
+      "url": "https://ismaelgonzalo.com"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Ismael Gonzalo Peña"
+    },
+    "image": "https://ismaelgonzalo.com/img/blog/alkhe-og.jpg",
+    "url": "https://ismaelgonzalo.com/blog/alkhe-identidad-corporativa-arquitectura/",
+    "description": "Proceso completo de diseño de identidad corporativa para ALKHE Arkitektura: naming, símbolo, sistema visual y web."
+  }
+  </script>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --teal:    #1A7A9A;
+      --carbon:  #111111;
+      --off-white: #F7F7F7;
+      --amber:   #C8A840;
+      --gray:    #E8E8E8;
+      --text:    #2A2A2A;
+      --muted:   #6B6B6B;
+      --font-display: 'Barlow Condensed', sans-serif;
+      --font-body:    'Inter', sans-serif;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: #fff;
+      line-height: 1.7;
+      font-size: 1rem;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(17,17,17,0.96);
+      backdrop-filter: blur(8px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2rem;
+      height: 60px;
+    }
+    .nav-brand {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+    }
+    .nav-brand span { color: var(--teal); }
+    .nav-links { display: flex; gap: 1.75rem; list-style: none; }
+    .nav-links a {
+      color: rgba(255,255,255,0.75);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--teal); }
+
+    /* ── HERO DEL ARTÍCULO ── */
+    .article-hero {
+      background: var(--carbon);
+      padding: 4rem 2rem 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .article-hero::before {
+      content: '06';
+      font-family: var(--font-display);
+      font-size: clamp(8rem, 20vw, 18rem);
+      font-weight: 800;
+      color: var(--teal);
+      opacity: 0.08;
+      position: absolute;
+      right: -1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+    .hero-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .article-meta {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      flex-wrap: wrap;
+    }
+    .tag {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: 0.3rem 0.75rem;
+      border-radius: 2px;
+    }
+    .tag--cat { background: var(--teal); color: #fff; }
+    .tag--secondary { background: transparent; border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.6); }
+    .article-meta time {
+      color: rgba(255,255,255,0.45);
+      font-size: 0.8rem;
+    }
+
+    .article-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.05;
+      margin-bottom: 1.25rem;
+      letter-spacing: -0.01em;
+    }
+    .article-hero h1 em {
+      font-style: normal;
+      color: var(--teal);
+    }
+    .article-lead {
+      color: rgba(255,255,255,0.7);
+      font-size: 1.1rem;
+      max-width: 640px;
+      line-height: 1.65;
+    }
+
+    /* ── IMAGEN DESTACADA ── */
+    .featured-img {
+      width: 100%;
+      max-height: 480px;
+      object-fit: cover;
+      display: block;
+      background: #1e1e1e;
+    }
+    .featured-img-placeholder {
+      width: 100%;
+      height: 380px;
+      background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 50%, #1a2a32 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .featured-img-placeholder::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 40px,
+        rgba(26,122,154,0.04) 40px,
+        rgba(26,122,154,0.04) 80px
+      );
+    }
+    .placeholder-logo {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+    .placeholder-logo svg {
+      width: 120px;
+      height: auto;
+      opacity: 0.6;
+    }
+    .placeholder-logo p {
+      color: rgba(255,255,255,0.3);
+      font-size: 0.75rem;
+      margin-top: 1rem;
+      font-family: var(--font-display);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+
+    /* ── LAYOUT ARTÍCULO ── */
+    .article-layout {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 3rem 2rem 4rem;
+      display: grid;
+      grid-template-columns: 1fr 280px;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    /* ── CUERPO DEL ARTÍCULO ── */
+    .article-body h2 {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--carbon);
+      margin: 2.5rem 0 0.875rem;
+      padding-top: 2rem;
+      border-top: 2px solid var(--gray);
+      letter-spacing: -0.01em;
+    }
+    .article-body h2:first-child { margin-top: 0; padding-top: 0; border-top: none; }
+
+    .article-body h3 {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--teal);
+      margin: 2rem 0 0.625rem;
+      letter-spacing: 0.01em;
+    }
+
+    .article-body p {
+      margin-bottom: 1.25rem;
+      color: var(--text);
+      font-size: 1rem;
+    }
+
+    .article-body strong { color: var(--carbon); font-weight: 600; }
+
+    .article-body a {
+      color: var(--teal);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .article-body a:hover { color: #155f78; }
+
+    /* Bloque de proceso */
+    .process-steps {
+      margin: 1.75rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .process-step {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 0 1.25rem;
+      position: relative;
+    }
+    .process-step:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      left: 23px;
+      top: 48px;
+      bottom: 0;
+      width: 2px;
+      background: var(--gray);
+    }
+    .step-num {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: #fff;
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      z-index: 1;
+    }
+    .step-content {
+      padding: 0.5rem 0 2rem;
+    }
+    .step-content strong {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--carbon);
+      margin-bottom: 0.35rem;
+    }
+    .step-content p {
+      margin: 0;
+      font-size: 0.925rem;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Bloque de datos / especificaciones */
+    .spec-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      background: var(--gray);
+      border: 1px solid var(--gray);
+      border-radius: 4px;
+      overflow: hidden;
+      margin: 1.75rem 0;
+    }
+    .spec-item {
+      background: var(--off-white);
+      padding: 1rem 1.25rem;
+    }
+    .spec-item dt {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--muted);
+      margin-bottom: 0.3rem;
+    }
+    .spec-item dd {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--carbon);
+    }
+
+    /* Cita destacada */
+    blockquote.pull-quote {
+      border-left: 3px solid var(--teal);
+      margin: 2rem 0;
+      padding: 1rem 1.5rem;
+      background: var(--off-white);
+    }
+    blockquote.pull-quote p {
+      font-size: 1.05rem;
+      color: var(--carbon);
+      font-style: italic;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Paleta de colores */
+    .palette {
+      display: flex;
+      gap: 0.625rem;
+      margin: 1.25rem 0;
+      flex-wrap: wrap;
+    }
+    .swatch {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .swatch-color {
+      width: 52px;
+      height: 52px;
+      border-radius: 4px;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+    .swatch-label {
+      font-size: 0.65rem;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.3;
+    }
+
+    /* Versiones del logo */
+    .logo-versions {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin: 1.5rem 0;
+    }
+    .logo-version {
+      border: 1px solid var(--gray);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .logo-version-preview {
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+    .logo-version-preview.dark { background: #1a1a1a; }
+    .logo-version-preview.light { background: var(--off-white); }
+    .logo-version-label {
+      padding: 0.5rem 0.75rem;
+      background: #fff;
+      border-top: 1px solid var(--gray);
+    }
+    .logo-version-label strong {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--carbon);
+    }
+    .logo-version-label span {
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    /* Nota de imagen */
+    .img-note {
+      font-size: 0.78rem;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 0.5rem;
+      font-style: italic;
+    }
+
+    /* CTA interno */
+    .cta-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--teal);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.65rem 1.25rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 3px;
+      transition: background 0.2s;
+      margin-top: 0.5rem;
+    }
+    .cta-inline:hover { background: #155f78; color: #fff; }
+    .cta-inline::after { content: ' →'; }
+
+    /* CTA final */
+    .article-cta {
+      background: var(--carbon);
+      padding: 2.5rem;
+      border-radius: 4px;
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .article-cta h3 {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+    .article-cta p {
+      color: rgba(255,255,255,0.65);
+      margin-bottom: 1.5rem;
+      font-size: 0.95rem;
+    }
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--teal);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.875rem 2rem;
+      font-size: 0.95rem;
+      font-weight: 600;
+      border-radius: 3px;
+      transition: background 0.2s;
+    }
+    .cta-btn:hover { background: #155f78; }
+
+    /* ── SIDEBAR ── */
+    .sidebar { position: sticky; top: 80px; }
+
+    .sidebar-card {
+      border: 1px solid var(--gray);
+      border-radius: 4px;
+      overflow: hidden;
+      margin-bottom: 1.5rem;
+    }
+    .sidebar-card-header {
+      background: var(--carbon);
+      padding: 0.75rem 1rem;
+    }
+    .sidebar-card-header h4 {
+      font-family: var(--font-display);
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+    .sidebar-card-body { padding: 1rem; background: #fff; }
+
+    /* Info del autor */
+    .author-info { display: flex; align-items: center; gap: 0.875rem; }
+    .author-avatar {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--gray);
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    .author-avatar img { width: 100%; height: 100%; object-fit: cover; }
+    .author-name {
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: var(--carbon);
+    }
+    .author-role {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 0.15rem;
+    }
+
+    /* Datos del artículo */
+    .meta-list { list-style: none; }
+    .meta-list li {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0;
+      border-bottom: 1px solid var(--gray);
+      font-size: 0.8rem;
+    }
+    .meta-list li:last-child { border-bottom: none; }
+    .meta-list .meta-key { color: var(--muted); }
+    .meta-list .meta-val { color: var(--carbon); font-weight: 500; text-align: right; }
+
+    /* Tags sidebar */
+    .tags-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+    .tag-small {
+      font-size: 0.7rem;
+      padding: 0.25rem 0.6rem;
+      border: 1px solid var(--gray);
+      border-radius: 2px;
+      color: var(--muted);
+      text-decoration: none;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .tag-small:hover { border-color: var(--teal); color: var(--teal); }
+
+    /* Enlace al proyecto */
+    .project-link {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      background: var(--off-white);
+      text-decoration: none;
+      border-radius: 3px;
+      transition: background 0.2s;
+    }
+    .project-link:hover { background: var(--gray); }
+    .project-link-text strong {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--carbon);
+    }
+    .project-link-text span {
+      font-size: 0.72rem;
+      color: var(--muted);
+    }
+    .project-link-arrow { color: var(--teal); font-size: 1rem; }
+
+    /* ── ARTÍCULOS RELACIONADOS ── */
+    .related-section {
+      background: var(--off-white);
+      padding: 3rem 2rem;
+    }
+    .related-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .related-header {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+    .related-header h2 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--carbon);
+    }
+    .related-header a {
+      font-size: 0.8rem;
+      color: var(--teal);
+      text-decoration: none;
+      margin-left: auto;
+    }
+    .related-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .related-card {
+      background: #fff;
+      border: 1px solid var(--gray);
+      border-radius: 4px;
+      overflow: hidden;
+      text-decoration: none;
+      transition: box-shadow 0.2s;
+    }
+    .related-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .related-card-img {
+      height: 160px;
+      background: var(--carbon);
+      overflow: hidden;
+    }
+    .related-card-img img { width: 100%; height: 100%; object-fit: cover; }
+    .related-card-body { padding: 1rem 1.25rem; }
+    .related-card-tag {
+      font-size: 0.65rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--teal);
+      margin-bottom: 0.4rem;
+    }
+    .related-card-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--carbon);
+      line-height: 1.2;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--carbon);
+      padding: 2rem;
+      text-align: center;
+    }
+    footer p { color: rgba(255,255,255,0.35); font-size: 0.8rem; }
+    footer a { color: var(--teal); text-decoration: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .article-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      .sidebar { position: static; }
+      .related-grid { grid-template-columns: 1fr 1fr; }
+      .spec-grid { grid-template-columns: 1fr; }
+      .logo-versions { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 600px) {
+      .nav-links { display: none; }
+      .related-grid { grid-template-columns: 1fr; }
+      .logo-versions { grid-template-columns: 1fr; }
+      .palette { gap: 0.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="../../index.html" class="nav-brand">Ismael <span>Gonzalo</span></a>
+    <ul class="nav-links">
+      <li><a href="../../portfolio/">Portfolio</a></li>
+      <li><a href="../../pages/sobre-mi.html">Sobre mí</a></li>
+      <li><a href="../../pages/servicios.html">Servicios</a></li>
+      <li><a href="../index.html">Blog</a></li>
+      <li><a href="../../pages/contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="article-hero">
+    <div class="hero-inner">
+      <div class="article-meta">
+        <span class="tag tag--cat">Diseño gráfico</span>
+        <span class="tag tag--secondary">Identidad corporativa</span>
+        <span class="tag tag--secondary">Caso de estudio</span>
+        <time datetime="2026-06-19">19 junio 2026</time>
+      </div>
+      <h1>Identidad corporativa para estudio de arquitectura:<br><em>el caso ALKHE</em></h1>
+      <p class="article-lead">Naming, símbolo, sistema visual, manual y web completa para un estudio de arquitectura Passivhaus en Vitoria-Gasteiz. Un proyecto de marca construido desde cero, con proceso visible y resultado funcional en producción.</p>
+    </div>
+  </header>
+
+  <!-- IMAGEN DESTACADA -->
+  <img src="../alkhe-hero.jpg" alt="Manual de identidad corporativa ALKHE Arkitektura — portada y símbolo triangular" class="featured-img">
+
+  <!-- LAYOUT PRINCIPAL -->
+  <div class="article-layout">
+
+    <!-- CUERPO -->
+    <article class="article-body">
+
+      <h2>El encargo</h2>
+
+      <p>El proyecto parte de una arquitecta joven con base en Vitoria-Gasteiz que quiere lanzar su estudio con una imagen desde cero. El estudio se llama <strong>ALKHE Arkitektura</strong>, se especializa en vivienda residencial y en el estándar Passivhaus, y tiene un posicionamiento muy claro: arquitectura de autor, trato directo, sin intermediarios.</p>
+
+      <p>El reto no era solo hacer un logotipo. Era construir un sistema de identidad que communicara exactamente esa combinación — boutique y riguroso, local y con criterio, contemporáneo sin ser genérico — y que funcionara tanto en papel como en pantalla.</p>
+
+      <blockquote class="pull-quote">
+        <p>Una identidad corporativa que no funciona en todos los soportes no es una identidad corporativa: es un logotipo con ilusiones.</p>
+      </blockquote>
+
+      <h2>El naming: dos lenguas, un posicionamiento</h2>
+
+      <p>Antes de dibujar nada, el nombre tenía que funcionar. <strong>ALKHE</strong> viene del griego clásico <em>ἀλκή</em> — fuerza, vigor, resistencia — y al mismo tiempo es una fusión del nombre propio de la arquitecta fundadora. No es una casualidad: cuando el nombre de la empresa y el nombre de quien la fundó coinciden en el mismo término, la historia de marca se cuenta sola.</p>
+
+      <p><strong>Arkitektura</strong> es el término en euskera para arquitectura. La elección no es decorativa: es un posicionamiento territorial explícito. Le dice al cliente potencial, desde el nombre, que este estudio tiene arraigo en el norte de España, que conoce el territorio, que no es una agencia genérica transplantada. En un mercado como el vasco, donde la identidad local tiene peso real en las decisiones de compra, eso importa.</p>
+
+      <p>El resultado es un nombre que funciona en dos registros simultáneamente: rigor académico (griego) + raíz cultural (euskera). No hay muchos estudios de arquitectura en Álava con ese nivel de coherencia entre nombre y posicionamiento.</p>
+
+      <h2>El símbolo: tres triángulos con tres significados</h2>
+
+      <p>El símbolo de ALKHE está compuesto por tres triángulos geométricos entrelazados en una composición ascendente. La decisión de usar triángulos no es casual: los triángulos son la forma geométrica más presente en arquitectura — tejados, planos de fachada, alzados, celosías. Son la geometría del espacio construido.</p>
+
+      <p>Pero los tres triángulos no son iguales ni intercambiables. Cada uno tiene su función dentro del símbolo:</p>
+
+      <div class="spec-grid">
+        <div class="spec-item">
+          <dt>Triángulo superior</dt>
+          <dd>Aspiración · Dirección · Vértice</dd>
+        </div>
+        <div class="spec-item">
+          <dt>Triángulo izquierdo</dt>
+          <dd>Forma · Solidez · Base</dd>
+        </div>
+        <div class="spec-item">
+          <dt>Triángulo derecho</dt>
+          <dd>Lugar · Territorio · Raíz</dd>
+        </div>
+        <div class="spec-item">
+          <dt>Intersección</dt>
+          <dd>Confluencia de disciplinas</dd>
+        </div>
+      </div>
+
+      <p>La superposición de los tres representa las tres áreas de trabajo del estudio: arquitectura, interiorismo y urbanismo. Lo que en otro diseño sería decoración, aquí es estructura conceptual. Cada forma tiene un nombre y un significado que el cliente puede ver y entender cuando se le explica.</p>
+
+      <p>Desde el punto de vista formal, la composición funciona en positivo (negro sobre claro) y en negativo (blanco sobre oscuro), lo que garantiza que el símbolo sea usable en todos los contextos sin perder legibilidad. El grosor de trazo es el suficiente para mantener el detalle de las intersecciones en tamaños reducidos, hasta 20 mm de ancho en versión vertical.</p>
+
+      <h2>El sistema de logotipo: tres versiones, un solo criterio</h2>
+
+      <p>Un símbolo que solo funciona en un formato no es un sistema: es una imagen. El manual de ALKHE define tres versiones del logotipo con criterios de uso claros:</p>
+
+      <div class="logo-versions">
+        <div class="logo-version">
+          <div class="logo-version-preview light">Símbolo + texto<br>apilados</div>
+          <div class="logo-version-label">
+            <strong>Versión Vertical</strong>
+            <span>Tarjeta, sello, aplicaciones cuadradas</span>
+          </div>
+        </div>
+        <div class="logo-version">
+          <div class="logo-version-preview light">Símbolo + texto<br>en línea</div>
+          <div class="logo-version-label">
+            <strong>Versión Horizontal</strong>
+            <span>Cabeceras, sobre, carpetas, web</span>
+          </div>
+        </div>
+        <div class="logo-version">
+          <div class="logo-version-preview light">Solo tipografía<br>ALKHE / ARKITEKTURA</div>
+          <div class="logo-version-label">
+            <strong>Versión Tipográfica</strong>
+            <span>Formatos reducidos, firmas, watermarks</span>
+          </div>
+        </div>
+      </div>
+
+      <p class="img-note">Sustituir este bloque por imágenes reales de las tres versiones del logotipo del manual PDF</p>
+
+      <p>El tamaño mínimo está fijado para cada versión: 35 mm para la horizontal, 20 mm para la vertical, 28 mm para la tipográfica. El área de protección usa como unidad de referencia la altura de la "A" mayúscula del wordmark en cada aplicación, lo que garantiza que el área de exclusión escala correctamente independientemente del tamaño de uso.</p>
+
+      <h2>La paleta: materiales naturales vascos en código hexadecimal</h2>
+
+      <p>La paleta de ALKHE no parte de tendencias de diseño. Parte de los materiales de la arquitectura vasca: piedra, madera, tierra, hormigón. Dos bloques bien diferenciados con funciones distintas.</p>
+
+      <div class="palette">
+        <div class="swatch">
+          <div class="swatch-color" style="background:#1A1A1A;"></div>
+          <div class="swatch-label">Negro<br>Carbón<br>#1A1A1A</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#F7F5F2; border-color: #ddd;"></div>
+          <div class="swatch-label">Blanco<br>Roto<br>#F7F5F2</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#B5A090;"></div>
+          <div class="swatch-label">Piedra<br>&nbsp;<br>#B5A090</div>
+        </div>
+        <div class="swatch">
+          <div class="swatch-color" style="background:#4A4A4A;"></div>
+          <div class="swatch-label">Grafito<br>&nbsp;<br>#4A4A4A</div>
+        </div>
+      </div>
+
+      <p>El negro carbón (#1A1A1A) y el blanco roto (#F7F5F2) son la base: máxima sobriedad, máxima legibilidad. El color Piedra (#B5A090) es el acento cálido: aparece con moderación en líneas decorativas, etiquetas secundarias, la solapa triangular del sobre. El grafito (#4A4A4A) es el tono de cuerpo de texto: más suave que el negro puro, con menos fatiga visual en lectura larga.</p>
+
+      <p>La proporción de uso está definida en el manual: la base ocupa el 70% de cualquier pieza, el grafito el 20%, la piedra el 10%. Eso evita que el color de acento compita con el negro en vez de complementarlo.</p>
+
+      <h2>El sistema tipográfico: una sola familia bien jerarquizada</h2>
+
+      <p>La tipografía principal es <strong>Brandon Grotesque</strong>, en tres pesos. Bold para el wordmark y titulares H1; Medium para subtítulos H2; Regular para el cuerpo corto. La tipografía secundaria es <strong>Aaux Next</strong>, de la misma familia visual pero con más variación de pesos, pensada para texto largo, etiquetas y footers.</p>
+
+      <p>La decisión de usar Brandon Grotesque en el wordmark es relevante: es una grotesca geométrica con rasgos humanistas que se construyó a mano en 2010 por Gerren Lamson, lo que le da una calidez que las grotescas puramente geométricas como Futura no tienen. Eso es exactamente lo que necesita una firma de arquitectura boutique: rigor geométrico sin frialdad industrial.</p>
+
+      <p>El tagline tipográfico — ARKITEKTURA — se compone en tracking muy abierto (+150), lo que le da un peso visual secundario respecto al nombre principal ALKHE sin necesitar cambio de tamaño. Una solución tipográfica elegante que funciona en tamaños pequeños.</p>
+
+      <h2>El claim: "El lugar que da fuerza a la forma"</h2>
+
+      <p>El claim corporativo hace varias cosas al mismo tiempo. Referencia el nombre ALKHE (fuerza) de forma implícita. Nombra el territorio (el lugar) como concepto central, lo que conecta con el posicionamiento local del estudio. Y describe literalmente lo que hace la arquitectura: convertir un lugar en una forma construida.</p>
+
+      <p>No es un claim genérico del tipo "diseñamos espacios que transforman vidas". Tiene densidad conceptual real y se puede desmontar hacia el naming, hacia el territorio y hacia la disciplina. Eso es lo que diferencia un claim que dura de uno que envejece en seis meses.</p>
+
+      <h2>Las aplicaciones: de la tarjeta al sobre a la señalética</h2>
+
+      <p>El manual no termina en el logotipo. Documenta las aplicaciones reales que el estudio necesita para operar: tarjeta de visita (85×55 mm, papel 400g, relieve seco en logotipo, producida en tres idiomas: castellano, inglés y euskera), papel de carta DIN A4, sobre corporativo C5 con solapa triangular en color Piedra, firma de email HTML compatible con Outlook/Gmail/Apple Mail, carpeta de presentación con barniz UV selectivo, y señalética de estudio con letras corpóreas en acero inox.</p>
+
+      <p>Cada pieza tiene sus especificaciones técnicas completas: gramaje, acabado, dimensiones, proceso de impresión, referencias PMS cuando aplica. Eso significa que cualquier imprenta puede producir la papelería correctamente con el manual en la mano, sin necesidad de que el diseñador esté disponible para resolver dudas en cada tirada.</p>
+
+      <h2>La web: donde el sistema se pone a trabajar de verdad</h2>
+
+      <p>Un manual de identidad sin aplicación digital en 2026 es un documento incompleto. Para ALKHE, la identidad se extendió hasta una web completa en producción, disponible en <a href="https://alkhe-web.vercel.app/" target="_blank" rel="noopener">alkhe-web.vercel.app</a>.</p>
+
+      <p>La web no es un mockup ni una landing de una sola página. Tiene arquitectura de páginas real: home, servicios (con landings individuales por servicio: vivienda, interiorismo, urbanismo, Passivhaus), proyectos con fichas individuales por obra, estudio, blog con artículos y formulario de contacto con respuesta automática. La navegación reproduce el posicionamiento del manual: el negro carbón domina la cabecera, el color Piedra aparece en los acentos, Brandon Grotesque está presente en los titulares, el claim convive con el headline principal sin competir.</p>
+
+      <p>El headline de la web — <em>"Arquitectura que dura"</em> — no es el claim del manual, pero los dos hablan el mismo idioma. Esa coherencia entre el sistema impreso y la presencia digital es exactamente lo que convierte un proyecto de identidad en una marca.</p>
+
+      <h3>Por qué contar esto aquí</h3>
+
+      <p>La web de ALKHE la construí yo usando inteligencia artificial como herramienta de producción: definí la arquitectura de páginas, la estructura de contenidos, el SEO técnico y las decisiones de diseño, y usé IA para generar el código. El resultado es una web con meta tags completos, Schema markup, sitemap, canonical tags, Open Graph, integración con WhatsApp y formulario funcional.</p>
+
+      <p>Ese flujo — diseñador senior con criterio + IA como herramienta de producción — es lo que permite ofrecer un proyecto de identidad completo, del manual a la web, sin necesitar un equipo de cuatro personas ni un presupuesto de agencia. Es uno de los servicios que ofrezco y uno de los que más valor aporta a clientes que necesitan marca desde cero.</p>
+
+      <h2>Lo que este proyecto demuestra</h2>
+
+      <p>ALKHE es el tipo de proyecto que me interesa mostrar en el portfolio porque no es solo un logotipo. Es un sistema completo con decisiones justificadas en cada paso: el naming tiene dos capas semánticas documentadas, el símbolo tiene geometría con significado, la paleta tiene referentes materiales reales, el sistema tipográfico tiene jerarquía clara, el manual tiene especificaciones técnicas de producción, y la web traslada todo eso a un entorno digital funcional y posicionado en Google.</p>
+
+      <p>Ese nivel de profundidad es lo que diferencia el trabajo de un diseñador senior del de alguien que entrega un logotipo en PDF y cierra el proyecto.</p>
+
+      <a href="../../portfolio/diseno-grafico/" class="cta-inline">Ver más proyectos de identidad corporativa</a>
+
+      <!-- CTA FINAL -->
+      <div class="article-cta">
+        <h3>¿Necesitas identidad corporativa para tu empresa?</h3>
+        <p>Cuéntame qué tienes en mente. Naming, logotipo, manual de marca, aplicaciones, web. O solo una parte. Respondo en menos de 24 horas.</p>
+        <a href="../../pages/contacto.html" class="cta-btn">Solicitar presupuesto sin compromiso</a>
+      </div>
+
+    </article>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <!-- Autor -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-header"><h4>Autor</h4></div>
+        <div class="sidebar-card-body">
+          <div class="author-info">
+            <div class="author-avatar">
+              <img src="../../img/ismael-perfil.jpg" alt="Ismael Gonzalo Peña, diseñador gráfico Vitoria-Gasteiz" onerror="this.style.background='#e8e8e8'">
+            </div>
+            <div>
+              <div class="author-name">Ismael Gonzalo Peña</div>
+              <div class="author-role">Diseñador gráfico · Vitoria-Gasteiz</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Datos del artículo -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-header"><h4>Ficha</h4></div>
+        <div class="sidebar-card-body">
+          <ul class="meta-list">
+            <li>
+              <span class="meta-key">Categoría</span>
+              <span class="meta-val">Diseño gráfico</span>
+            </li>
+            <li>
+              <span class="meta-key">Publicado</span>
+              <span class="meta-val">19 jun 2026</span>
+            </li>
+            <li>
+              <span class="meta-key">Lectura</span>
+              <span class="meta-val">~9 min</span>
+            </li>
+            <li>
+              <span class="meta-key">Proyecto</span>
+              <span class="meta-val">ALKHE Arkitektura</span>
+            </li>
+            <li>
+              <span class="meta-key">Ámbito</span>
+              <span class="meta-val">Vitoria-Gasteiz</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Enlace al proyecto web -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-header"><h4>Proyecto en producción</h4></div>
+        <div class="sidebar-card-body">
+          <a href="https://alkhe-web.vercel.app/" target="_blank" rel="noopener" class="project-link">
+            <div class="project-link-text">
+              <strong>alkhe-web.vercel.app</strong>
+              <span>Web completa de ALKHE Arkitektura</span>
+            </div>
+            <span class="project-link-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Tags -->
+      <div class="sidebar-card">
+        <div class="sidebar-card-header"><h4>Etiquetas</h4></div>
+        <div class="sidebar-card-body">
+          <div class="tags-list">
+            <a href="#" class="tag-small">identidad corporativa</a>
+            <a href="#" class="tag-small">branding</a>
+            <a href="#" class="tag-small">logotipo</a>
+            <a href="#" class="tag-small">manual de marca</a>
+            <a href="#" class="tag-small">naming</a>
+            <a href="#" class="tag-small">arquitectura</a>
+            <a href="#" class="tag-small">Passivhaus</a>
+            <a href="#" class="tag-small">Vitoria-Gasteiz</a>
+            <a href="#" class="tag-small">diseño web</a>
+            <a href="#" class="tag-small">IA aplicada</a>
+          </div>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ARTÍCULOS RELACIONADOS -->
+  <section class="related-section">
+    <div class="related-inner">
+      <div class="related-header">
+        <h2>Artículos relacionados</h2>
+        <a href="../index.html">Ver todos →</a>
+      </div>
+      <div class="related-grid">
+        <a href="../manual-identidad-corporativa/index.html" class="related-card">
+          <div class="related-card-img" style="background:#1a2a1a;">
+            <img src="../../img/blog/gomez-thumb.jpg" alt="Manual de identidad corporativa Gómez Shoe Store" onerror="this.style.display='none'">
+          </div>
+          <div class="related-card-body">
+            <div class="related-card-tag">Diseño gráfico</div>
+            <div class="related-card-title">Cómo crear un manual de identidad corporativa desde cero — caso Gómez Shoe Store</div>
+          </div>
+        </a>
+        <a href="../caicos-diseno-reloj/index.html" class="related-card">
+          <div class="related-card-img" style="background:#1a1a2a;">
+            <img src="../../img/blog/caicos-thumb.jpg" alt="Reloj CAICOS diseño Ismael Gonzalo" onerror="this.style.display='none'">
+          </div>
+          <div class="related-card-body">
+            <div class="related-card-tag">Diseño de producto</div>
+            <div class="related-card-title">Cómo diseñé el reloj CAICOS: de la idea al plano técnico</div>
+          </div>
+        </a>
+        <a href="../midjourney-flujo-trabajo-disenador/index.html" class="related-card">
+          <div class="related-card-img" style="background:#2a1a1a;">
+            <img src="../../img/blog/midjourney-thumb.jpg" alt="Midjourney para diseñadores gráficos" onerror="this.style.display='none'">
+          </div>
+          <div class="related-card-body">
+            <div class="related-card-tag">IA aplicada al diseño</div>
+            <div class="related-card-title">Midjourney para diseñadores gráficos: cómo integro la IA en mi flujo de trabajo</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Ismael Gonzalo Peña · Diseñador gráfico en Vitoria-Gasteiz · <a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a> · <a href="tel:636702172">636 702 172</a></p>
+  </footer>
+
+</body>
+</html>
