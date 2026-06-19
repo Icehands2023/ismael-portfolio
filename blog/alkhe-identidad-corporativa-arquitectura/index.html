@@ -487,7 +487,7 @@
       align-items: center;
       gap: 0.5rem;
       background: var(--teal);
-      color: #fff;
+      color: #fff !important;
       text-decoration: none;
       padding: 0.875rem 2rem;
       font-size: 0.95rem;
@@ -495,7 +495,24 @@
       border-radius: 3px;
       transition: background 0.2s;
     }
-    .cta-btn:hover { background: #155f78; }
+    .cta-btn:hover { background: #155f78; color: #fff !important; }
+
+    .cta-inline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--teal);
+      color: #fff !important;
+      text-decoration: none;
+      padding: 0.65rem 1.25rem;
+      font-size: 0.875rem;
+      font-weight: 600;
+      border-radius: 3px;
+      transition: background 0.2s;
+      margin-top: 0.5rem;
+    }
+    .cta-inline:hover { background: #155f78; color: #fff !important; }
+    .cta-inline::after { content: ' →'; }
 
     /* ── SIDEBAR ── */
     .sidebar { position: sticky; top: 80px; }
@@ -728,6 +745,8 @@
 
       <p>El proyecto parte de una arquitecta joven con base en Vitoria-Gasteiz que quiere lanzar su estudio con una imagen desde cero. El estudio se llama <strong>ALKHE Arkitektura</strong>, se especializa en vivienda residencial y en el estándar Passivhaus, y tiene un posicionamiento muy claro: arquitectura de autor, trato directo, sin intermediarios.</p>
 
+      <p style="background:var(--off-white); border-left:3px solid var(--amber); padding:0.75rem 1rem; font-size:0.875rem; color:var(--muted); margin-bottom:1.25rem;"><strong style="color:var(--carbon);">Nota:</strong> ALKHE Arkitektura es un proyecto conceptual de identidad corporativa desarrollado como ejercicio de marca completa. El naming, el sistema visual y la web son reales en su ejecución técnica, aunque el estudio no existe actualmente como empresa. Si en algún momento se materializa, este trabajo sirve de base.</p>
+
       <p>El reto no era solo hacer un logotipo. Era construir un sistema de identidad que communicara exactamente esa combinación — boutique y riguroso, local y con criterio, contemporáneo sin ser genérico — y que funcionara tanto en papel como en pantalla.</p>
 
       <blockquote class="pull-quote">
@@ -777,21 +796,27 @@
 
       <div class="logo-versions">
         <div class="logo-version">
-          <div class="logo-version-preview light">Símbolo + texto<br>apilados</div>
+          <div class="logo-version-preview light">
+            <img src="../../img/Imagotipo_Vertical.png" alt="ALKHE Arkitektura — logotipo versión vertical" style="max-height:80px; max-width:90%; object-fit:contain;">
+          </div>
           <div class="logo-version-label">
             <strong>Versión Vertical</strong>
             <span>Tarjeta, sello, aplicaciones cuadradas</span>
           </div>
         </div>
         <div class="logo-version">
-          <div class="logo-version-preview light">Símbolo + texto<br>en línea</div>
+          <div class="logo-version-preview light">
+            <img src="../../img/Imagotipo_horizontal.png" alt="ALKHE Arkitektura — logotipo versión horizontal" style="max-height:80px; max-width:90%; object-fit:contain;">
+          </div>
           <div class="logo-version-label">
             <strong>Versión Horizontal</strong>
             <span>Cabeceras, sobre, carpetas, web</span>
           </div>
         </div>
         <div class="logo-version">
-          <div class="logo-version-preview light">Solo tipografía<br>ALKHE / ARKITEKTURA</div>
+          <div class="logo-version-preview light">
+            <img src="../../img/logotipo.png" alt="ALKHE Arkitektura — logotipo versión tipográfica" style="max-height:80px; max-width:90%; object-fit:contain;">
+          </div>
           <div class="logo-version-label">
             <strong>Versión Tipográfica</strong>
             <span>Formatos reducidos, firmas, watermarks</span>
@@ -799,7 +824,6 @@
         </div>
       </div>
 
-      <p class="img-note">Sustituir este bloque por imágenes reales de las tres versiones del logotipo del manual PDF</p>
 
       <p>El tamaño mínimo está fijado para cada versión: 35 mm para la horizontal, 20 mm para la vertical, 28 mm para la tipográfica. El área de protección usa como unidad de referencia la altura de la "A" mayúscula del wordmark en cada aplicación, lo que garantiza que el área de exclusión escala correctamente independientemente del tamaño de uso.</p>
 
@@ -975,7 +999,7 @@
       <div class="related-grid">
         <a href="../manual-identidad-corporativa/index.html" class="related-card">
           <div class="related-card-img" style="background:#1a2a1a;">
-            <img src="../../img/blog/gomez-thumb.jpg" alt="Manual de identidad corporativa Gómez Shoe Store" onerror="this.style.display='none'">
+            <img src="../../img/portfolio/GomezShoeStoreMockup.jpg" alt="Manual de identidad corporativa Gómez Shoe Store" loading="lazy" onerror="this.style.display='none'">
           </div>
           <div class="related-card-body">
             <div class="related-card-tag">Diseño gráfico</div>
@@ -984,7 +1008,7 @@
         </a>
         <a href="../caicos-diseno-reloj/index.html" class="related-card">
           <div class="related-card-img" style="background:#1a1a2a;">
-            <img src="../../img/blog/caicos-thumb.jpg" alt="Reloj CAICOS diseño Ismael Gonzalo" onerror="this.style.display='none'">
+            <img src="../../img/portfolio/reloj-caicos-luminiscencia-oscuridad.jpg" alt="Reloj CAICOS diseño Ismael Gonzalo" loading="lazy" onerror="this.style.display='none'">
           </div>
           <div class="related-card-body">
             <div class="related-card-tag">Diseño de producto</div>
@@ -993,7 +1017,7 @@
         </a>
         <a href="../midjourney-flujo-trabajo-disenador/index.html" class="related-card">
           <div class="related-card-img" style="background:#2a1a1a;">
-            <img src="../../img/blog/midjourney-thumb.jpg" alt="Midjourney para diseñadores gráficos" onerror="this.style.display='none'">
+            <img src="../../img/portfolio/cartel-exposicion-david-umemoto-planos-korapilo.jpg" alt="Midjourney para diseñadores gráficos" loading="lazy" onerror="this.style.display='none'">
           </div>
           <div class="related-card-body">
             <div class="related-card-tag">IA aplicada al diseño</div>
