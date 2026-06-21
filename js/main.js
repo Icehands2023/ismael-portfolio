@@ -318,22 +318,16 @@ document.addEventListener('DOMContentLoaded', function () {
 })();
 
 /* ============================================================
-   PAGE TRANSITION — cortina teal entre páginas
+   PAGE TRANSITION — fade de opacidad en main
    ============================================================ */
 (function () {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  // Crear el elemento de cortina
-  const curtain = document.createElement('div');
-  curtain.className = 'page-transition';
-  document.body.appendChild(curtain);
+  const main = document.querySelector('main');
+  if (!main) return;
 
-  // Al cargar la página: la cortina sale hacia arriba (exit)
-  window.addEventListener('load', () => {
-    // Forzar reflow para que la transición sea visible
-    curtain.getBoundingClientRect();
-    curtain.classList.add('exit');
-  });
+  // Fade in al cargar la página
+  main.classList.add('page-fade-in');
 
   // Interceptar clicks en links internos
   document.addEventListener('click', (e) => {
@@ -343,7 +337,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const href = link.getAttribute('href');
     if (!href) return;
 
-    // Ignorar: links externos, anclas, mailto, tel, target="_blank", descarga
+    // Ignorar: externos, anclas, mailto, tel, _blank, descargas, teclas modificadoras
     if (
       href.startsWith('http') ||
       href.startsWith('#') ||
@@ -357,14 +351,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
     e.preventDefault();
 
-    // Cortina entra desde abajo
-    curtain.classList.remove('exit');
-    curtain.classList.add('enter');
+    // Fade out del contenido
+    main.classList.add('page-fade-out');
 
-    // Navegar cuando la animación termina
+    // Navegar tras el fade out
     setTimeout(() => {
       window.location.href = href;
-    }, 270);
+    }, 230);
   });
 
 })();

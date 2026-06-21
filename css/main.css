@@ -2227,24 +2227,22 @@ p {
 }
 
 /* ============================================================
-   PAGE TRANSITION — cortina teal
+   PAGE TRANSITION — fade de opacidad
    ============================================================ */
-.page-transition {
-  position: fixed;
-  inset: 0;
-  background: var(--teal);
-  z-index: 9990;
-  pointer-events: none;
-  transform: translateY(100%);
-  transition: transform 280ms var(--ease-in);
+main {
+  transition: opacity 220ms var(--ease-out);
 }
 
-.page-transition.enter {
-  transform: translateY(0);
-  transition: transform 250ms var(--ease-in);
+main.page-fade-out {
+  opacity: 0;
 }
 
-.page-transition.exit {
-  transform: translateY(-100%);
-  transition: transform 320ms var(--ease-out);
+main.page-fade-in {
+  opacity: 0;
+  animation: pageFadeIn 280ms var(--ease-out) forwards;
+}
+
+@keyframes pageFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
 }
