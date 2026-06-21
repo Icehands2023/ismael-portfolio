@@ -47,7 +47,8 @@
   }
 
   /* ---- SCROLL REVEAL ---- */
-  const reveals = document.querySelectorAll('.reveal');
+  const revealSelectors = '.reveal, .reveal-img, .reveal-left, .divider--animated, .divider--full';
+  const reveals = document.querySelectorAll(revealSelectors);
   if (reveals.length) {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -150,7 +151,59 @@
 
   /* ---- REDUCED MOTION ---- */
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.querySelectorAll('.reveal').forEach(el => el.classList.add('visible'));
+    document.querySelectorAll('.reveal, .reveal-img, .reveal-left').forEach(el => el.classList.add('visible'));
+  }
+
+  /* ---- PARALLAX — Section numbers ---- */
+  const sectionNums = document.querySelectorAll('.section-num');
+  if (sectionNums.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let ticking = false;
+    const onParallaxScroll = () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const scrollY = window.scrollY;
+          sectionNums.forEach(num => {
+            const parent = num.closest('.section, .about-strip, .cta-section') || num.parentElement;
+            const rect = parent.getBoundingClientRect();
+            // Solo aplica cuando el padre es visible
+            if (rect.bottom > 0 && rect.top < window.innerHeight) {
+              const relY = scrollY - (scrollY + rect.top);
+              const shift = relY * 0.06; // factor de parallax suave
+              num.style.transform = `translateY(${shift}px)`;
+            }
+          });
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', onParallaxScroll, { passive: true });
+  }
+
+  /* ---- HERO TITLE — reveal por líneas ---- */
+  const heroTitle = document.querySelector('.hero__title');
+  if (heroTitle && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    // Dividimos el contenido en líneas envolviendo cada texto en un span animado
+    heroTitle.style.overflow = 'hidden';
+    const lines = heroTitle.querySelectorAll('.hero__line');
+    if (lines.length) {
+      lines.forEach((line, i) => {
+        line.style.display = 'block';
+        line.style.opacity = '0';
+        line.style.transform = 'translateY(40px)';
+        line.style.transition = `opacity 700ms cubic-bezier(0.16,1,0.3,1) ${120 + i * 120}ms,
+                                  transform 700ms cubic-bezier(0.16,1,0.3,1) ${120 + i * 120}ms`;
+      });
+      // Pequeño delay para que arranque después de que cargue la página
+      requestAnimationFrame(() => {
+        setTimeout(() => {
+          lines.forEach(line => {
+            line.style.opacity = '1';
+            line.style.transform = 'translateY(0)';
+          });
+        }, 150);
+      });
+    }
   }
 
 })();
