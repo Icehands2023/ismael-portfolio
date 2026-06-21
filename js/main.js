@@ -316,3 +316,55 @@ document.addEventListener('DOMContentLoaded', function () {
   mutationObserver.observe(document.body, { childList: true, subtree: true });
 
 })();
+
+/* ============================================================
+   PAGE TRANSITION — cortina teal entre páginas
+   ============================================================ */
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  // Crear el elemento de cortina
+  const curtain = document.createElement('div');
+  curtain.className = 'page-transition';
+  document.body.appendChild(curtain);
+
+  // Al cargar la página: la cortina sale hacia arriba (exit)
+  window.addEventListener('load', () => {
+    // Forzar reflow para que la transición sea visible
+    curtain.getBoundingClientRect();
+    curtain.classList.add('exit');
+  });
+
+  // Interceptar clicks en links internos
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a');
+    if (!link) return;
+
+    const href = link.getAttribute('href');
+    if (!href) return;
+
+    // Ignorar: links externos, anclas, mailto, tel, target="_blank", descarga
+    if (
+      href.startsWith('http') ||
+      href.startsWith('#') ||
+      href.startsWith('mailto') ||
+      href.startsWith('tel') ||
+      href.startsWith('javascript') ||
+      link.target === '_blank' ||
+      link.hasAttribute('download') ||
+      e.metaKey || e.ctrlKey || e.shiftKey || e.altKey
+    ) return;
+
+    e.preventDefault();
+
+    // Cortina entra desde abajo
+    curtain.classList.remove('exit');
+    curtain.classList.add('enter');
+
+    // Navegar cuando la animación termina
+    setTimeout(() => {
+      window.location.href = href;
+    }, 270);
+  });
+
+})();

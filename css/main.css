@@ -2225,3 +2225,26 @@ p {
     opacity: 0;
   }
 }
+
+/* ============================================================
+   PAGE TRANSITION — cortina teal
+   ============================================================ */
+.page-transition {
+  position: fixed;
+  inset: 0;
+  background: var(--teal);
+  z-index: 9990;
+  pointer-events: none;
+  transform: translateY(100%);
+  transition: transform 280ms var(--ease-in);
+}
+
+.page-transition.enter {
+  transform: translateY(0);
+  transition: transform 250ms var(--ease-in);
+}
+
+.page-transition.exit {
+  transform: translateY(-100%);
+  transition: transform 320ms var(--ease-out);
+}
