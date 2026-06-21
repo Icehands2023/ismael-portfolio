@@ -318,16 +318,22 @@ document.addEventListener('DOMContentLoaded', function () {
 })();
 
 /* ============================================================
-   PAGE TRANSITION — fade de opacidad en main
+   PAGE TRANSITION — barra de progreso superior
    ============================================================ */
 (function () {
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  const main = document.querySelector('main');
-  if (!main) return;
+  const bar = document.createElement('div');
+  bar.className = 'progress-bar';
+  document.body.appendChild(bar);
 
-  // Fade in al cargar la página
-  main.classList.add('page-fade-in');
+  // Al cargar: completar la barra y ocultarla
+  window.addEventListener('load', () => {
+    bar.classList.add('complete');
+    setTimeout(() => {
+      bar.classList.remove('loading', 'complete');
+    }, 500);
+  });
 
   // Interceptar clicks en links internos
   document.addEventListener('click', (e) => {
@@ -349,15 +355,14 @@ document.addEventListener('DOMContentLoaded', function () {
       e.metaKey || e.ctrlKey || e.shiftKey || e.altKey
     ) return;
 
-    e.preventDefault();
+    // Arrancar la barra
+    bar.classList.remove('complete');
+    bar.classList.add('loading');
 
-    // Fade out del contenido
-    main.classList.add('page-fade-out');
-
-    // Navegar tras el fade out
+    // Navegar — el browser se encarga del resto
     setTimeout(() => {
       window.location.href = href;
-    }, 230);
+    }, 10);
   });
 
 })();
