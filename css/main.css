@@ -1989,3 +1989,55 @@ p {
 .nav:not(.scrolled) .nav__hamburger span {
   background: var(--white);
 }
+/* --- FLOATING BUTTONS: WhatsApp + Back to Top --- */
+.fab-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  z-index: 900;
+}
+.fab {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.3s ease;
+  text-decoration: none;
+}
+.fab:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.22);
+}
+.fab--whatsapp {
+  background: #25D366;
+}
+.fab--top {
+  background: var(--teal);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(8px);
+}
+.fab--top.visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+@media (max-width: 768px) {
+  .fab-container {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+  .fab {
+    width: 46px;
+    height: 46px;
+  }
+}

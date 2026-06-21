@@ -154,3 +154,18 @@
   }
 
 })();
+// --- Back to top visibility ---
+(function () {
+  const topBtn = document.getElementById('fab-top');
+  if (!topBtn) return;
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 400) {
+      topBtn.classList.add('visible');
+    } else {
+      topBtn.classList.remove('visible');
+    }
+  }, { passive: true });
+  topBtn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}());
