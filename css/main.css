@@ -2117,3 +2117,111 @@ p {
     height: 46px;
   }
 }
+/* ============================================================
+   CUSTOM CURSOR
+   ============================================================ */
+
+/* Ocultar cursor nativo solo en desktop con puntero fino */
+@media (pointer: fine) {
+  body.custom-cursor-active,
+  body.custom-cursor-active * {
+    cursor: none !important;
+  }
+
+  .cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background: var(--teal);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transform: translate(-50%, -50%);
+    transition: width 200ms var(--ease-out),
+                height 200ms var(--ease-out),
+                background 200ms var(--ease-out),
+                opacity 200ms var(--ease-out);
+    will-change: transform;
+  }
+
+  .cursor-ring {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 36px;
+    height: 36px;
+    border: 1.5px solid var(--teal);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+    transition: width 300ms var(--ease-out),
+                height 300ms var(--ease-out),
+                border-color 300ms var(--ease-out),
+                opacity 300ms var(--ease-out);
+    will-change: transform;
+  }
+
+  /* Estado hover — sobre links, botones e imágenes */
+  body.cursor-hover .cursor-dot {
+    width: 6px;
+    height: 6px;
+    background: var(--white);
+    opacity: 0.9;
+  }
+
+  body.cursor-hover .cursor-ring {
+    width: 52px;
+    height: 52px;
+    border-color: var(--teal);
+    opacity: 1;
+    background: rgba(26, 122, 154, 0.08);
+  }
+
+  /* Estado "Ver" — sobre portfolio-card e imágenes con lightbox */
+  body.cursor-view .cursor-dot {
+    width: 0;
+    height: 0;
+    opacity: 0;
+  }
+
+  body.cursor-view .cursor-ring {
+    width: 72px;
+    height: 72px;
+    border-color: var(--teal);
+    opacity: 1;
+    background: rgba(26, 122, 154, 0.85);
+    border-width: 0;
+  }
+
+  .cursor-ring__label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-body);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--white);
+    opacity: 0;
+    transition: opacity 200ms var(--ease-out);
+    pointer-events: none;
+    user-select: none;
+  }
+
+  body.cursor-view .cursor-ring__label {
+    opacity: 1;
+  }
+
+  /* Ocultar cuando sale de la ventana */
+  body.cursor-out .cursor-dot,
+  body.cursor-out .cursor-ring {
+    opacity: 0;
+  }
+}

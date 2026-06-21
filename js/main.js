@@ -225,3 +225,94 @@ document.addEventListener('DOMContentLoaded', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 });
+/* ============================================================
+   CUSTOM CURSOR
+   Solo en dispositivos con puntero fino (no táctil)
+   ============================================================ */
+(function () {
+  if (!window.matchMedia('(pointer: fine)').matches) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const dot  = document.createElement('div');
+  const ring = document.createElement('div');
+  const label = document.createElement('span');
+
+  dot.className  = 'cursor-dot';
+  ring.className = 'cursor-ring';
+  label.className = 'cursor-ring__label';
+  label.textContent = 'Ver';
+  ring.appendChild(label);
+
+  document.body.appendChild(dot);
+  document.body.appendChild(ring);
+  document.body.classList.add('custom-cursor-active');
+
+  // Posición actual del cursor (para el punto — sigue exacto)
+  let mouseX = 0, mouseY = 0;
+  // Posición del anillo (interpolada con lag)
+  let ringX = 0, ringY = 0;
+  let rafId;
+
+  document.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    // El punto sigue inmediato via CSS transform
+    dot.style.transform = `translate(calc(${mouseX}px - 50%), calc(${mouseY}px - 50%))`;
+  });
+
+  // Animación del anillo con lag via rAF
+  function animateRing() {
+    // Interpolación suave — factor 0.12 da el lag deseado
+    ringX += (mouseX - ringX) * 0.12;
+    ringY += (mouseY - ringY) * 0.12;
+    ring.style.transform = `translate(calc(${ringX}px - 50%), calc(${ringY}px - 50%))`;
+    rafId = requestAnimationFrame(animateRing);
+  }
+  animateRing();
+
+  // Cursor fuera de ventana
+  document.addEventListener('mouseleave', () => {
+    document.body.classList.add('cursor-out');
+  });
+  document.addEventListener('mouseenter', () => {
+    document.body.classList.remove('cursor-out');
+  });
+
+  // Elementos que activan hover normal (links, botones)
+  const hoverSelectors = 'a, button, [role="button"], label, select, .btn, .arrow-link, .nav__logo, .fab';
+
+  // Elementos que activan el estado "Ver" (cards de portfolio, lightbox triggers)
+  const viewSelectors = '.portfolio-card, [data-lightbox], .blog-card__img, .gallery-masonry__item';
+
+  function addCursorListeners(el, type) {
+    el.addEventListener('mouseenter', () => {
+      document.body.classList.remove('cursor-hover', 'cursor-view');
+      document.body.classList.add(type === 'view' ? 'cursor-view' : 'cursor-hover');
+    });
+    el.addEventListener('mouseleave', () => {
+      document.body.classList.remove('cursor-hover', 'cursor-view');
+    });
+  }
+
+  // Aplicar a elementos existentes
+  document.querySelectorAll(hoverSelectors).forEach(el => addCursorListeners(el, 'hover'));
+  document.querySelectorAll(viewSelectors).forEach(el => addCursorListeners(el, 'view'));
+
+  // Observer para elementos que se añadan dinámicamente
+  const mutationObserver = new MutationObserver(() => {
+    document.querySelectorAll(hoverSelectors).forEach(el => {
+      if (!el.dataset.cursorBound) {
+        el.dataset.cursorBound = '1';
+        addCursorListeners(el, 'hover');
+      }
+    });
+    document.querySelectorAll(viewSelectors).forEach(el => {
+      if (!el.dataset.cursorBound) {
+        el.dataset.cursorBound = '1';
+        addCursorListeners(el, 'view');
+      }
+    });
+  });
+  mutationObserver.observe(document.body, { childList: true, subtree: true });
+
+})();
