@@ -155,7 +155,7 @@
 
 })();
 // --- Back to top visibility ---
-(function () {
+document.addEventListener('DOMContentLoaded', function () {
   const topBtn = document.getElementById('fab-top');
   if (!topBtn) return;
   window.addEventListener('scroll', function () {
@@ -168,4 +168,4 @@
   topBtn.addEventListener('click', function () {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
-}());
+});
