@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Del cuarto oscuro a la IA: cinco revoluciones tecnológicas vistas desde detrás de la cámara — Ismael Gonzalo</title>
+  <meta name="description" content="Cuarto oscuro, printers analógicos, digitalización, Photoshop e IA generativa. Cinco transformaciones tecnológicas vividas desde dentro de la profesión fotográfica y del diseño.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ismaelgonzalo.com/blog/del-cuarto-oscuro-a-la-ia/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Del cuarto oscuro a la IA: cinco revoluciones tecnológicas vistas desde detrás de la cámara">
+  <meta property="og:description" content="Cuarto oscuro, printers analógicos, digitalización, Photoshop e IA generativa. Cinco transformaciones vividas desde dentro.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ismaelgonzalo.com/blog/del-cuarto-oscuro-a-la-ia/">
+
+  <!-- Schema BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Del cuarto oscuro a la IA: cinco revoluciones tecnológicas vistas desde detrás de la cámara",
+    "description": "Cuarto oscuro, printers analógicos de producción, digitalización, postproducción digital e IA generativa. Cinco transformaciones vividas desde dentro de la profesión.",
+    "author": {
+      "@type": "Person",
+      "name": "Ismael Gonzalo Peña",
+      "url": "https://ismaelgonzalo.com/pages/sobre-mi.html"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Ismael Gonzalo Peña"
+    },
+    "datePublished": "2026-06-21",
+    "keywords": "fotografía analógica digital, cuarto oscuro fotografía, historia fotografía profesional, IA fotografía diseño, evolución tecnología fotográfica"
+  }
+  </script>
+
+  <style>
+    /* ── Estilos específicos del artículo ── */
+    .article-wrap {
+      max-width: 1100px; margin: 0 auto;
+      padding: 4rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 4rem; align-items: start;
+    }
+    @media (max-width: 900px) {
+      .article-wrap { grid-template-columns: 1fr; gap: 2.5rem; }
+      .article-sidebar { order: 2; }
+    }
+
+    .article-body { min-width: 0; }
+    .article-body p { margin-bottom: 1.5rem; font-size: 1.05rem; color: #2a2a2a; line-height: 1.8; }
+    .article-body strong { color: var(--carbon); font-weight: 600; }
+
+    /* Línea de tiempo */
+    .timeline {
+      display: flex; gap: 0;
+      margin: 2.5rem 0; overflow-x: auto;
+      padding-bottom: 0.75rem;
+    }
+    .timeline__item {
+      flex: 1; min-width: 90px;
+      display: flex; flex-direction: column; align-items: center;
+      position: relative;
+    }
+    .timeline__item:not(:last-child)::after {
+      content: '';
+      position: absolute; top: 16px; left: 50%;
+      width: 100%; height: 2px;
+      background: linear-gradient(to right, var(--teal), var(--gray-light));
+      z-index: 0;
+    }
+    .timeline__dot {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--teal); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.7rem; font-weight: 700;
+      position: relative; z-index: 1; flex-shrink: 0;
+    }
+    .timeline__item:last-child .timeline__dot { background: var(--amber, #C8A840); }
+    .timeline__label {
+      font-size: 0.68rem; font-weight: 600; color: var(--gray-mid);
+      text-align: center; margin-top: 0.5rem;
+      line-height: 1.3; max-width: 80px;
+    }
+
+    /* Bloque revolución */
+    .revolucion {
+      border-left: 3px solid var(--teal);
+      padding: 1.75rem 0 1.75rem 1.75rem;
+      margin: 3rem 0;
+      position: relative;
+    }
+    .revolucion__num {
+      position: absolute; left: -1px; top: 0;
+      font-size: 0.6rem; font-weight: 700;
+      color: #fff; background: var(--teal);
+      letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 0.2em 0.6em;
+    }
+    .revolucion__title {
+      font-family: var(--font-display, 'Barlow Condensed', sans-serif);
+      font-size: clamp(1.35rem, 2.5vw, 1.75rem);
+      color: var(--carbon); margin: 1rem 0 0.75rem;
+      line-height: 1.15; font-weight: 800;
+    }
+    .revolucion p {
+      margin-bottom: 1rem; font-size: 1.02rem;
+      color: #333; line-height: 1.78;
+    }
+    .revolucion p:last-child { margin-bottom: 0; }
+
+    /* Pull quote */
+    .pull-quote {
+      border-left: 4px solid var(--teal);
+      padding: 1rem 1.5rem; margin: 2rem 0;
+      background: rgba(26,122,154,0.08);
+      border-radius: 0 4px 4px 0;
+      font-size: 1.05rem; font-style: italic;
+      color: var(--carbon); line-height: 1.65;
+    }
+
+    /* CTA interno */
+    .cta-interno {
+      background: var(--gray-light, #F7F7F7);
+      border: 1px solid #e0e0e0;
+      border-radius: 6px; padding: 1.5rem 1.75rem;
+      margin: 2.5rem 0;
+      display: flex; align-items: center;
+      justify-content: space-between; gap: 1.25rem; flex-wrap: wrap;
+    }
+    .cta-interno p { margin: 0; font-size: 0.95rem; color: #444; }
+
+    /* Cierre */
+    .article-closing h2 {
+      font-family: var(--font-display, 'Barlow Condensed', sans-serif);
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: var(--carbon); margin: 3rem 0 1rem;
+      font-weight: 800;
+    }
+
+    /* Tags */
+    .article-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 3rem 0 0; }
+
+    /* Sidebar */
+    .article-sidebar { position: sticky; top: 80px; }
+    .sidebar-box {
+      background: var(--gray-light, #F7F7F7);
+      border: 1px solid #e0e0e0;
+      border-radius: 6px; padding: 1.4rem;
+      margin-bottom: 1.25rem;
+    }
+    .sidebar-box h4 {
+      font-size: 0.7rem; font-weight: 700;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--carbon); margin-bottom: 0.85rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--teal);
+    }
+    .sidebar-box ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 0.5rem; }
+    .sidebar-box ul li a {
+      font-size: 0.875rem; color: #444;
+      text-decoration: none;
+      display: flex; align-items: flex-start; gap: 0.4rem;
+      transition: color 0.2s; line-height: 1.4;
+    }
+    .sidebar-box ul li a:hover { color: var(--teal); }
+    .sidebar-box ul li a::before { content: "→"; color: var(--teal); font-size: 0.75rem; flex-shrink: 0; margin-top: 2px; }
+
+    .sidebar-box--dark {
+      background: var(--carbon); border-color: var(--carbon);
+    }
+    .sidebar-box--dark h4 { color: #fff; border-bottom-color: rgba(255,255,255,0.2); }
+    .sidebar-box--dark p { font-size: 0.85rem; color: rgba(255,255,255,0.6); margin-bottom: 1rem; line-height: 1.5; }
+
+    @media (max-width: 640px) {
+      .revolucion { padding-left: 1.1rem; }
+      .timeline { gap: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="skip-to-content" href="#main">Saltar al contenido</a>
+
+  <header class="nav">
+    <div class="container">
+      <nav class="nav__inner">
+        <a href="../../index.html" class="nav__logo">
+          <span>Ismael Gonzalo Peña</span>
+          <span>Diseñador Gráfico · Vitoria-Gasteiz</span>
+        </a>
+        <ul class="nav__links">
+          <li><a href="../../portfolio/index.html">Portfolio</a></li>
+          <li><a href="../../pages/sobre-mi.html">Sobre mí</a></li>
+          <li><a href="../../blog/index.html" class="active">Blog</a></li>
+          <li><a href="../../pages/contacto.html" class="nav__cta">Contactar</a></li>
+        </ul>
+        <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <nav class="nav__mobile" id="mobile-menu">
+    <a href="../../portfolio/index.html">Portfolio</a>
+    <a href="../../pages/sobre-mi.html">Sobre mí</a>
+    <a href="../../blog/index.html">Blog</a>
+    <a href="../../pages/contacto.html">Contactar</a>
+  </nav>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="page-hero">
+      <span class="page-hero__bg-num" aria-hidden="true">05</span>
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="../../index.html">Inicio</a>
+          <span class="breadcrumb__sep">›</span>
+          <a href="../../blog/index.html">Blog</a>
+          <span class="breadcrumb__sep">›</span>
+          <span aria-current="page">Del cuarto oscuro a la IA</span>
+        </nav>
+        <div class="blog-card__meta" style="margin-bottom:1rem;">
+          <span class="tag">Portfolio y proceso</span>
+          <span class="blog-card__date" style="margin-left:0.75rem;">Junio 2026 · 10 min de lectura</span>
+        </div>
+        <h1 class="reveal">Del cuarto oscuro a la IA: cinco revoluciones tecnológicas vistas desde detrás de la cámara</h1>
+        <p class="reveal reveal-delay-1">Cuarto oscuro, printers analógicos, digitalización, Photoshop e IA generativa. Cinco transformaciones vividas desde dentro, con los detalles que solo se conocen cuando se han pasado de verdad.</p>
+      </div>
+    </section>
+
+    <!-- CONTENIDO -->
+    <section class="section section--white" style="padding: 0 0 4rem;">
+      <div class="article-wrap">
+
+        <article class="article-body">
+
+          <p>Cada vez que llega una nueva tecnología a la fotografía o al diseño, alguien anuncia el fin de la profesión. Lo dice con convicción. Lo ilustra con datos. Y durante un tiempo, hay razones para tomarlo en serio. Luego pasa el tiempo y lo que queda no es el fin de nada, sino una nueva capa encima de lo que ya existía, y los profesionales que supieron integrarla trabajando mejor que antes.</p>
+
+          <p>He vivido ese ciclo cinco veces. No lo digo para acumular méritos — lo digo porque cada una de esas transiciones me enseñó algo diferente sobre esta profesión, y sobre lo que cambia de verdad y lo que permanece igual sin importar qué herramienta tengas en la mano.</p>
+
+          <p>Este artículo es un recorrido por esas cinco revoluciones. Desde dentro, con los detalles que solo se conocen cuando se han vivido.</p>
+
+          <!-- LÍNEA DE TIEMPO -->
+          <div class="timeline">
+            <div class="timeline__item">
+              <div class="timeline__dot">01</div>
+              <div class="timeline__label">Cuarto oscuro</div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__dot">02</div>
+              <div class="timeline__label">Printers analógicos</div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__dot">03</div>
+              <div class="timeline__label">Digitalización</div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__dot">04</div>
+              <div class="timeline__label">Photoshop e Internet</div>
+            </div>
+            <div class="timeline__item">
+              <div class="timeline__dot">05</div>
+              <div class="timeline__label">IA generativa</div>
+            </div>
+          </div>
+
+          <!-- REVOLUCIÓN 1 -->
+          <div class="revolucion">
+            <span class="revolucion__num">Revolución 01</span>
+            <h2 class="revolucion__title">El cuarto oscuro: cuando la imagen era química</h2>
+            <p>El cuarto oscuro era un lugar físico antes de ser una metáfora. Un espacio con luz de seguridad roja, cubetas con líquidos a temperatura controlada, y el sonido del temporizador marcando los tiempos de exposición del papel. Revelar una fotografía era un proceso manual, táctil, artesanal en el sentido más literal de la palabra.</p>
+            <p>El revelador arrancaba la imagen de la oscuridad del papel. El blanqueador convertía los haluros de plata sin exponer en sales solubles. El fijador las eliminaba para que la imagen fuera permanente. Cada químico tenía su olor propio y reconocible, y cualquiera que haya trabajado en un cuarto oscuro los recuerda sin esfuerzo décadas después. Hay recuerdos que se quedan grabados en los sentidos antes que en la memoria.</p>
+            <p>Pero más allá del proceso físico, el cuarto oscuro enseñaba algo que no aparece en ningún manual: la paciencia y la atención como disciplina de trabajo. Cada hoja de papel tenía un coste. Cada prueba fallida era material y tiempo perdido. Eso obligaba a pensar antes de actuar, a visualizar el resultado antes de exponerlo, a tomar decisiones con el peso real de las consecuencias. Es un modo de trabajar que no desapareció con el químico. Solo cambió de forma.</p>
+          </div>
+
+          <!-- REVOLUCIÓN 2 -->
+          <div class="revolucion">
+            <span class="revolucion__num">Revolución 02</span>
+            <h2 class="revolucion__title">Los printers analógicos de producción: todavía película, nueva lógica</h2>
+            <p>Antes de que llegara la cámara digital, hubo una etapa intermedia que mucha gente olvida o directamente no conoce: los printers de producción fotográfica analógica. Sistemas que todavía trabajaban con película y con química, pero con una lógica de producción muy diferente al cuarto oscuro tradicional.</p>
+            <p>Estas máquinas permitían tiradas de copias a escala, con control de densidad y color más sistemático que el trabajo manual en cubeta. El laboratorio profesional de esa época no era el cuarto oscuro romántico de los aficionados — era una instalación con maquinaria especializada, flujos de trabajo definidos y estándares de calidad medibles.</p>
+            <p>Lo que cambió en el modo de trabajar del fotógrafo fue aún más importante. Con un rollo de 36 exposiciones, cada disparo tenía un coste económico y logístico real. No había revisión inmediata del resultado. No había borrar y repetir. La fotografía se pensaba antes de hacerse, la composición se calculaba, la luz se medía con cuidado. El disparo era el último paso de un proceso mental que ya había ocurrido.</p>
+            <div class="pull-quote">
+              "Con un rollo de 36 exposiciones, cada disparo era una decisión. No había forma de deshacer. Esa limitación enseñó más sobre fotografía que cualquier herramienta posterior."
+            </div>
+            <p>Cuando años después llegaron las cámaras digitales con capacidad de disparar cientos de imágenes por sesión, muchos fotógrafos formados en película notaron algo: la proliferación de disparos no siempre mejoraba el resultado. La abundancia técnica no sustituye al criterio previo. Eso también lo enseñó el rollo de 36.</p>
+          </div>
+
+          <!-- REVOLUCIÓN 3 -->
+          <div class="revolucion">
+            <span class="revolucion__num">Revolución 03</span>
+            <h2 class="revolucion__title">La digitalización: los laboratorios no desaparecieron, se transformaron</h2>
+            <p>La entrada de los primeros sistemas de captura digital fue la transición más espectacular que he vivido en esta profesión — y también la más mal contada. El relato popular dice que la fotografía digital mató el laboratorio fotográfico. No fue así.</p>
+            <p>Lo que ocurrió fue más interesante y más complejo. Los laboratorios profesionales invirtieron en maquinaria capaz de trabajar en paralelo con dos mundos completamente diferentes: por un lado, los rollos de película de los fotógrafos que no querían — o no podían todavía — dar el salto digital. Por otro, los ficheros digitales que llegaban en tarjetas de memoria o por transferencia desde las nuevas cámaras y desde los crecientes fotógrafos aficionados que habían adoptado el sistema digital antes que muchos profesionales.</p>
+            <p>Hubo años de convivencia real entre los dos sistemas. Un laboratorio de producción de esa época podía procesar un rollo de diapositiva por la mañana e imprimir un archivo de cámara digital por la tarde. Los técnicos de laboratorio tuvieron que dominar dos lenguajes técnicos radicalmente distintos al mismo tiempo.</p>
+            <p>Para el fotógrafo, la transición fue también gradual. Las primeras cámaras digitales profesionales eran caras, los archivos eran pequeños comparados con los negativos de medio formato, y el flujo de trabajo digital requería aprender desde cero: gestión de archivos, calibración de pantallas, perfiles de color, formatos de exportación. Un universo nuevo que se superponía al anterior sin reemplazarlo todavía del todo. La imagen había dejado de ser química. Pero los procesos mentales que la sostenían — la luz, la composición, el momento, el criterio — no habían cambiado en absoluto.</p>
+          </div>
+
+          <!-- REVOLUCIÓN 4 -->
+          <div class="revolucion">
+            <span class="revolucion__num">Revolución 04</span>
+            <h2 class="revolucion__title">Photoshop, el retoque digital e Internet: el laboratorio en la pantalla</h2>
+            <p>Con la consolidación del sistema digital llegó Photoshop — y con él, la posibilidad de hacer en pantalla lo que antes solo era posible en el cuarto oscuro o con técnicas de laboratorio sofisticadas. Dodging y burning, máscaras, capas, corrección de color. Herramientas digitales que llevaban nombres directamente tomados de los procesos analógicos que venían a sustituir.</p>
+            <p>El retoque dejó de ser un proceso físico para convertirse en uno visual e iterativo. Se podía deshacer. Se podía comparar. Se podía guardar en distintos estados. Para alguien formado en la disciplina del proceso irreversible del cuarto oscuro, esta flexibilidad era extraordinaria — y al mismo tiempo exigía una nueva forma de autodisciplina, porque la posibilidad de cambiar todo en cualquier momento podía convertirse en una trampa de perfeccionismo sin fin.</p>
+            <p>Internet añadió otra capa de transformación: la imagen empezó a vivir en pantallas, en resoluciones reducidas, en formatos comprimidos. El cliente que antes recibía una copia física empezó a recibir un archivo. Paralelamente, el diseño gráfico y la fotografía comenzaron a converger en los flujos de trabajo — la misma persona podía fotografiar, retocar, maquetar y preparar el material para web o para imprenta desde el mismo ordenador.</p>
+            <p>Esa convergencia es parte de mi trayectoria. No soy fotógrafo que aprendió a usar Photoshop, ni diseñador que entiende de fotografía. Soy las dos cosas al mismo tiempo, porque la transición digital las unió en el mismo espacio de trabajo.</p>
+          </div>
+
+          <div class="cta-interno">
+            <p><strong>¿Te interesa el proceso detrás de los proyectos?</strong><br>En el portfolio están documentados algunos de los trabajos más complejos, con el proceso visible desde el concepto hasta el resultado.</p>
+            <a href="../../portfolio/index.html" class="btn btn--primary">Ver el portfolio</a>
+          </div>
+
+          <!-- REVOLUCIÓN 5 -->
+          <div class="revolucion">
+            <span class="revolucion__num">Revolución 05</span>
+            <h2 class="revolucion__title">La IA generativa: la quinta capa, no el fin de nada</h2>
+            <p>La inteligencia artificial generativa es la transformación más reciente, la más ruidosa mediáticamente y, probablemente, la que viene con las predicciones más apocalípticas sobre el futuro de la profesión creativa. También es la que más se parece, en su estructura profunda, a todas las anteriores.</p>
+            <p>Herramientas como Midjourney, Adobe Firefly o los modelos de lenguaje como Claude no son inteligencias creativas autónomas. Son sistemas que generan resultados estadísticamente coherentes a partir de grandes volúmenes de datos de entrenamiento. Lo que producen puede ser sorprendente, pero no saben qué problema están resolviendo, para quién, ni por qué una solución es mejor que otra en un contexto específico.</p>
+            <p>Eso es exactamente lo que aporta quien tiene criterio acumulado: saber qué pedir, evaluar lo que llega, descartar lo que no sirve y reconocer lo que sí funciona. De cien imágenes generadas, quizás tres son interesantes. Saber cuáles son esas tres — y por qué — es el mismo trabajo que había en el cuarto oscuro eligiendo qué negativo merecía ser ampliado.</p>
+            <div class="pull-quote">
+              "La IA no me da ideas. Me ayuda a externalizar las que ya tengo para evaluarlas más rápido. El criterio para seleccionar sigue siendo el mismo de siempre."
+            </div>
+            <p>Integro estas herramientas en mi flujo de trabajo habitual desde 2024, con formación reglada completada en CETIC en 2026. Midjourney para exploración visual y generación de referencias antes de arrancar proyectos de identidad. Firefly integrado en Photoshop para retoque no destructivo y extensión de fondos. Modelos de lenguaje para estructurar briefings, redactar copy y organizar proyectos complejos.</p>
+            <p>No las uso para todo. Las uso donde reducen el tiempo de trabajo sin comprometer el criterio sobre el resultado. Esa distinción — cuándo entran y cuándo no — es la que marca la diferencia entre integrar una herramienta y depender de ella.</p>
+          </div>
+
+          <!-- CONCLUSIÓN -->
+          <div class="article-closing">
+            <h2>Lo que permanece igual</h2>
+            <p>Cinco revoluciones tecnológicas. Cinco momentos en los que alguien dijo que esta profesión estaba a punto de cambiar para siempre. Y en todos los casos tenían razón — cambió. Pero lo que cambió siempre fueron las herramientas y los procesos, nunca las preguntas fundamentales.</p>
+            <p>¿Qué quiere comunicar esta imagen? ¿A quién va dirigida? ¿Por qué esta solución visual es mejor que otra para este problema concreto? ¿Qué se sacrifica y qué se gana con cada decisión?</p>
+            <p>Esas preguntas existían en el cuarto oscuro. Existen delante de una pantalla con Midjourney abierto. Y seguirán existiendo con cualquier herramienta que venga después, porque no son preguntas técnicas — son preguntas de criterio. Y el criterio no se actualiza con una suscripción.</p>
+            <p>Se construye despacio, con trabajo real, a lo largo de una carrera.</p>
+          </div>
+
+          <!-- Tags -->
+          <div class="article-tags">
+            <span class="tag">Portfolio y proceso</span>
+            <span class="tag">Fotografía analógica</span>
+            <span class="tag">Historia de la fotografía</span>
+            <span class="tag">IA y diseño</span>
+            <span class="tag">Trayectoria profesional</span>
+          </div>
+
+        </article>
+
+        <!-- SIDEBAR -->
+        <aside class="article-sidebar">
+
+          <div class="sidebar-box sidebar-box--dark">
+            <h4>Sobre el autor</h4>
+            <p>Diseñador gráfico y especialista en imagen. Fotografía, identidad visual y diseño editorial. Vitoria-Gasteiz.</p>
+            <a href="../../pages/sobre-mi.html" class="btn btn--outline" style="display:block; text-align:center; font-size:0.8rem; padding:0.5rem 1rem;">Ver perfil completo</a>
+          </div>
+
+          <div class="sidebar-box">
+            <h4>Artículos relacionados</h4>
+            <ul>
+              <li><a href="../../blog/ia-flujo-trabajo-diseno/index.html">Cómo integro la IA en mi flujo de trabajo</a></li>
+              <li><a href="../../blog/caicos-diseno-reloj/index.html">Cómo diseñé el reloj CAICOS</a></li>
+              <li><a href="../../blog/alkhe-identidad-corporativa-arquitectura/index.html">Identidad corporativa ALKHE</a></li>
+              <li><a href="../../blog/manual-identidad-corporativa/index.html">Manual de identidad desde cero</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-box">
+            <h4>Portfolio relacionado</h4>
+            <ul>
+              <li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li>
+              <li><a href="../../portfolio/fotomontajes-retoques/index.html">Retoque y fotomontajes</a></li>
+              <li><a href="../../portfolio/diseno-grafico/index.html">Diseño gráfico e identidad</a></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-box" style="background:var(--teal); border-color:var(--teal);">
+            <h4 style="color:#fff; border-bottom-color:rgba(255,255,255,0.25);">¿Tienes un proyecto?</h4>
+            <p style="font-size:0.85rem; color:rgba(255,255,255,0.75); margin-bottom:1rem; line-height:1.5;">Cuéntame qué necesitas.</p>
+            <a href="../../pages/contacto.html" class="btn btn--white" style="display:block; text-align:center;">Contactar</a>
+          </div>
+
+        </aside>
+
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="cta-section">
+      <span class="section-num cta-section__num" aria-hidden="true">→</span>
+      <div class="container cta-section__content">
+        <h2 class="reveal">¿Hablamos de<br>tu proyecto?</h2>
+        <p class="reveal reveal-delay-1">Criterio acumulado en cinco revoluciones tecnológicas, aplicado a lo que necesitas hoy.</p>
+        <a href="../../pages/contacto.html" class="btn btn--white reveal reveal-delay-2">
+          Contactar
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="../../index.html" class="footer__logo">Ismael <span>Gonzalo</span></a>
+          <p>Diseñador gráfico y especialista en imagen en Vitoria-Gasteiz.</p>
+          <div class="footer__contact">
+            <a href="tel:+34636702172">636 702 172</a>
+            <a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a>
+          </div>
+        </div>
+        <div class="footer__col">
+          <h5>Portfolio</h5>
+          <ul>
+            <li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li>
+            <li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li>
+            <li><a href="../../portfolio/fotomontajes-retoques/index.html">Retoques</a></li>
+            <li><a href="../../portfolio/diseno-editorial/index.html">Diseño Editorial</a></li>
+            <li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li>
+            <li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>Blog</h5>
+          <ul>
+            <li><a href="../../blog/del-cuarto-oscuro-a-la-ia/index.html">Del cuarto oscuro a la IA</a></li>
+            <li><a href="../../blog/alkhe-identidad-corporativa-arquitectura/index.html">ALKHE identidad corporativa</a></li>
+            <li><a href="../../blog/caicos-diseno-reloj/index.html">Reloj CAICOS</a></li>
+            <li><a href="../../blog/midjourney-flujo-trabajo-disenador/index.html">Midjourney</a></li>
+            <li><a href="../../blog/manual-identidad-corporativa/index.html">Manual de identidad</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h5>Más</h5>
+          <ul>
+            <li><a href="../../pages/sobre-mi.html">Sobre mí</a></li>
+            <li><a href="../../pages/contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span class="footer__copy">© 2026 Ismael Gonzalo Peña · Vitoria-Gasteiz (Álava)</span>
+        <nav class="footer__social"><a href="https://www.linkedin.com/in/ismael-gonzalo-pe%C3%B1a-9425ba1aa/" rel="noopener noreferrer" target="_blank">LinkedIn</a></nav>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lightbox"><button class="lightbox__close" aria-label="Cerrar">×</button><img class="lightbox__img" src="" alt=""></div>
+  <script src="../../js/main.js"></script>
+
+  <div class="fab-container">
+    <button class="fab fab--top" id="fab-top" aria-label="Volver arriba">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+    <a class="fab fab--whatsapp" href="https://wa.me/34636702172?text=Hola%20Ismael%2C%20me%20gustar%C3%ADa%20consultarte%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.17 1.623 5.963L.057 23.428a.5.5 0 0 0 .609.601l5.634-1.533A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 0 1-5.031-1.388l-.36-.214-3.733 1.016 1.05-3.619-.235-.372A9.808 9.808 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg>
+    </a>
+  </div>
+
+</body>
+</html>
