@@ -2019,6 +2019,13 @@ p {
 }
 .fab--whatsapp {
   background: #25D366;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+.fab--whatsapp.visible {
+  opacity: 1;
+  pointer-events: auto;
 }
 .fab--top {
   background: var(--teal);

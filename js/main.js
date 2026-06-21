@@ -157,12 +157,15 @@
 // --- Back to top visibility ---
 document.addEventListener('DOMContentLoaded', function () {
   const topBtn = document.getElementById('fab-top');
+  const waBtn = document.querySelector('.fab--whatsapp');
   if (!topBtn) return;
   window.addEventListener('scroll', function () {
     if (window.scrollY > 400) {
       topBtn.classList.add('visible');
+      if (waBtn) waBtn.classList.add('visible');
     } else {
       topBtn.classList.remove('visible');
+      if (waBtn) waBtn.classList.remove('visible');
     }
   }, { passive: true });
   topBtn.addEventListener('click', function () {
