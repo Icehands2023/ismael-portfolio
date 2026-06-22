@@ -366,3 +366,57 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
 })();
+
+/* ============================================================
+   INTRO SCREEN — pantalla de entrada
+   Solo en la home y solo en la primera visita de la sesión
+   ============================================================ */
+(function () {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  const screen = document.querySelector('.intro-screen');
+  if (!screen) return;
+
+  // Solo mostrar una vez por sesión
+  if (sessionStorage.getItem('intro-shown')) {
+    screen.style.display = 'none';
+    return;
+  }
+
+  const name = screen.querySelector('.intro-screen__name');
+
+  // Bloquear scroll mientras la intro está activa
+  document.body.style.overflow = 'hidden';
+
+  // Arrancar la animación del nombre tras un frame
+  requestAnimationFrame(() => {
+    setTimeout(() => {
+      if (name) name.classList.add('revealed');
+    }, 120);
+  });
+
+  // Duración según dispositivo — más corta en móvil
+  const isMobile = window.innerWidth < 768;
+  const holdDuration = isMobile ? 1500 : 2200;
+
+  // Ocultar la intro y revelar la home
+  setTimeout(() => {
+    screen.classList.add('hide');
+
+    // Restaurar scroll y limpiar tras la transición
+    setTimeout(() => {
+      screen.style.display = 'none';
+      document.body.style.overflow = '';
+
+      // Disparar el reveal del hero manualmente
+      const heroLines = document.querySelectorAll('.hero__line');
+      heroLines.forEach(line => {
+        line.style.opacity = '1';
+        line.style.transform = 'translateY(0)';
+      });
+    }, 650);
+
+    sessionStorage.setItem('intro-shown', '1');
+  }, holdDuration);
+
+})();
