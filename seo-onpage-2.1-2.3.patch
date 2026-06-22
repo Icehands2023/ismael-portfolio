@@ -1,0 +1,219 @@
+From 89ec951a8ae0662bfc567cdf8d52afcea40b7066 Mon Sep 17 00:00:00 2001
+From: Ismael Gonzalo <ismaelgph@gmail.com>
+Date: Mon, 22 Jun 2026 23:00:18 +0000
+Subject: [PATCH] =?UTF-8?q?SEO=20on-page:=20meta=20titles=20=E2=89=A465=20?=
+ =?UTF-8?q?chars,=20H1=20keywords,=20H2=20sem=C3=A1nticos=20en=20fotograf?=
+ =?UTF-8?q?=C3=ADa?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+- 11 meta titles reducidos al rango 50-65 chars (auditoría 2.1)
+- Home H1: añade span Vitoria-Gasteiz como elemento visible dentro del H1
+- portfolio/index H1: enriquecido con keyword de especialidad y ciudad (2.2)
+- blog/index H1: enriquecido con keyword profesional (2.2)
+- portfolio/fotografia: 3 secciones span.label convertidas a H2 semánticos (2.3)
+---
+ blog/index.html                                | 4 ++--
+ index.html                                     | 3 ++-
+ pages/servicios.html                           | 2 +-
+ pages/sobre-mi.html                            | 2 +-
+ portfolio/carteleria/index.html                | 2 +-
+ portfolio/diseno-editorial/index.html          | 2 +-
+ portfolio/diseno-grafico/index.html            | 2 +-
+ portfolio/fotografia/index.html                | 6 +++---
+ portfolio/fotomontajes-retoques/index.html     | 2 +-
+ portfolio/index.html                           | 4 ++--
+ portfolio/personalizacion-productos/index.html | 2 +-
+ 11 files changed, 16 insertions(+), 15 deletions(-)
+
+diff --git a/blog/index.html b/blog/index.html
+index d27fd8c..db55fac 100644
+--- a/blog/index.html
++++ b/blog/index.html
+@@ -3,7 +3,7 @@
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Blog sobre diseño gráfico, fotografía y IA aplicada — Ismael Gonzalo</title>
++  <title>Blog de diseño gráfico y fotografía — Ismael Gonzalo</title>
+   <meta name="description" content="Artículos sobre diseño gráfico, fotografía de producto, Midjourney e IA generativa aplicada al diseño. Casos de estudio reales con proceso completo visible.">
+   <meta name="keywords" content="blog diseño gráfico Vitoria, fotografía de producto, Midjourney diseñadores, IA aplicada al diseño">
+   <meta name="robots" content="index, follow">
+@@ -56,7 +56,7 @@
+           <span class="breadcrumb__sep">›</span>
+           <span aria-current="page">Blog</span>
+         </nav>
+-        <h1 class="reveal">Blog — Diseño gráfico,<br>fotografía y creatividad</h1>
++        <h1 class="reveal">Blog de diseño gráfico<br>y fotografía — Ismael Gonzalo</h1>
+         <p class="reveal reveal-delay-1">Casos de estudio propios, técnica fotográfica, IA aplicada al diseño y proceso creativo real. No teoría genérica: proyectos que he hecho yo, con el proceso completo visible.</p>
+       </div>
+     </section>
+diff --git a/index.html b/index.html
+index 1491901..13075df 100644
+--- a/index.html
++++ b/index.html
+@@ -3,7 +3,7 @@
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Ismael Gonzalo — Diseñador gráfico y fotógrafo publicitario en Vitoria-Gasteiz</title>
++  <title>Ismael Gonzalo — Diseñador gráfico · Vitoria-Gasteiz</title>
+   <meta name="description" content="Diseñador gráfico especialista en fotografía, identidad visual y diseño editorial en Vitoria-Gasteiz. Criterio consolidado, herramientas actuales. Ver portfolio.">
+   <meta name="keywords" content="diseñador gráfico Vitoria-Gasteiz, fotógrafo publicitario Álava, diseño editorial Vitoria, identidad corporativa Álava">
+   <meta name="robots" content="index, follow">
+@@ -72,6 +72,7 @@
+           <span class="hero__line">Gonzalo —</span>
+           <span class="hero__line"><em>Diseñador</em></span>
+           <span class="hero__line">gráfico</span>
++          <span class="hero__line hero__line--geo" style="font-size:clamp(1rem,2.5vw,1.4rem);font-weight:400;letter-spacing:0.08em;color:var(--teal);opacity:0.85;margin-top:0.25em;">Vitoria-Gasteiz</span>
+         </h1>
+         <p class="hero__sub">Fotografía, diseño editorial y comunicación visual en Vitoria-Gasteiz. Criterio consolidado, herramientas actuales.</p>
+         <div class="hero__actions">
+diff --git a/pages/servicios.html b/pages/servicios.html
+index 1f974b0..f65f522 100644
+--- a/pages/servicios.html
++++ b/pages/servicios.html
+@@ -3,7 +3,7 @@
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Servicios de diseño gráfico y fotografía en Vitoria-Gasteiz — Ismael Gonzalo</title>
++  <title>Servicios de diseño gráfico y fotografía — Ismael Gonzalo</title>
+   <meta name="description" content="Fotografía de producto, identidad corporativa, diseño editorial, retoque fotográfico y más. Servicios de diseño gráfico profesional en Vitoria-Gasteiz y Álava.">
+   <meta name="keywords" content="servicios diseño gráfico Vitoria-Gasteiz, fotografía de producto Álava, identidad corporativa Vitoria, maquetación editorial">
+   <meta name="robots" content="index, follow">
+diff --git a/pages/sobre-mi.html b/pages/sobre-mi.html
+index ad5c0e2..454f6c7 100644
+--- a/pages/sobre-mi.html
++++ b/pages/sobre-mi.html
+@@ -3,7 +3,7 @@
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Sobre mí — Ismael Gonzalo Peña | Diseñador gráfico y especialista en imagen en Vitoria-Gasteiz</title>
++  <title>Sobre mí — Ismael Gonzalo | Diseñador gráfico Vitoria</title>
+   <meta name="description" content="Diseñador gráfico y especialista en imagen nacido en Vitoria-Gasteiz en 1968. Fotografía, identidad corporativa, diseño editorial y comunicación visual. Conoce mi trayectoria.">
+   <meta name="keywords" content="diseñador gráfico Vitoria-Gasteiz, Ismael Gonzalo Peña, diseñador con experiencia Álava, fotógrafo Vitoria">
+   <meta name="robots" content="index, follow">
+diff --git a/portfolio/carteleria/index.html b/portfolio/carteleria/index.html
+index 74d7eab..4d156b9 100644
+--- a/portfolio/carteleria/index.html
++++ b/portfolio/carteleria/index.html
+@@ -2,7 +2,7 @@
+ <html lang="es">
+ <head>
+   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Diseño de cartelería publicitaria y gráfica exterior — Ismael Gonzalo</title>
++  <title>Cartelería y diseño gráfico publicitario — Ismael Gonzalo</title>
+   <meta name="description" content="Carteles para campañas, eventos deportivos, instituciones y vía pública. Cliente recurrente CB Araba. Campaña WWF La Hora del Planeta con aplicación en autobuses de Vitoria-Gasteiz.">
+   <meta name="keywords" content="diseño de carteles Vitoria-Gasteiz, cartelería publicitaria, diseño gráfico publicitario Álava">
+   <meta name="robots" content="index, follow">
+diff --git a/portfolio/diseno-editorial/index.html b/portfolio/diseno-editorial/index.html
+index 9d8e2df..72d0679 100644
+--- a/portfolio/diseno-editorial/index.html
++++ b/portfolio/diseno-editorial/index.html
+@@ -2,7 +2,7 @@
+ <html lang="es">
+ <head>
+   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Diseño editorial y maquetación profesional — libros, revistas y prensa — Ismael Gonzalo</title>
++  <title>Diseño editorial y maquetación profesional — Ismael Gonzalo</title>
+   <meta name="description" content="Maquetación de libros, catálogos, revistas y portadas de periódico. Flujos de trabajo orientados a preimpresión. InDesign. Diario de Noticias de Álava. Vitoria-Gasteiz.">
+   <meta name="keywords" content="diseño editorial Vitoria, maquetación InDesign Álava, diseño de libros, diseño de portadas">
+   <meta name="robots" content="index, follow">
+diff --git a/portfolio/diseno-grafico/index.html b/portfolio/diseno-grafico/index.html
+index efa3c5a..39f47b1 100644
+--- a/portfolio/diseno-grafico/index.html
++++ b/portfolio/diseno-grafico/index.html
+@@ -2,7 +2,7 @@
+ <html lang="es">
+ <head>
+   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Diseño gráfico e identidad corporativa en Vitoria-Gasteiz — Ismael Gonzalo</title>
++  <title>Diseño gráfico e identidad corporativa — Ismael Gonzalo</title>
+   <meta name="description" content="Diseño de identidad visual, manual de marca y branding para empresas. Proyectos con proceso completo visible. Gómez Shoe Store, David Umemoto. Vitoria-Gasteiz, Álava.">
+   <meta name="keywords" content="diseñador gráfico Vitoria-Gasteiz, identidad corporativa Álava, diseño de logotipo, branding">
+   <meta name="robots" content="index, follow">
+diff --git a/portfolio/fotografia/index.html b/portfolio/fotografia/index.html
+index b21a0bf..e4bc401 100644
+--- a/portfolio/fotografia/index.html
++++ b/portfolio/fotografia/index.html
+@@ -35,7 +35,7 @@
+     <!-- RELOJERÍA -->
+     <section class="section section--white" style="padding:4rem 0;">
+       <div class="container">
+-        <div class="reveal" style="margin-bottom:2rem;"><span class="label">Relojería y produto de precisión</span><div class="divider divider--animated"></div></div>
++        <div class="reveal" style="margin-bottom:2rem;"><h2 class="label" style="font-size:var(--text-sm);font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--teal);margin:0 0 0.5rem;">Relojería y producto de precisión</h2><div class="divider divider--animated"></div></div>
+         <div class="gallery-masonry reveal">
+           <div class="gallery-masonry__item" data-lightbox="../../img/portfolio/rolex-submariner-fotografia-producto-relojeria.jpg">
+             <img src="../../img/portfolio/rolex-submariner-fotografia-producto-relojeria.jpg" alt="Fotografía de producto reloj Rolex Submariner, plano frontal angular, fondo oscuro — Ismael Gonzalo fotógrafo de relojería Vitoria-Gasteiz" loading="lazy">
+@@ -72,7 +72,7 @@
+     <!-- NATURALEZA -->
+     <section class="section section--offwhite" style="padding:4rem 0;">
+       <div class="container">
+-        <div class="reveal" style="margin-bottom:2rem;"><span class="label">Naturaleza y paisaje</span><div class="divider divider--animated"></div></div>
++        <div class="reveal" style="margin-bottom:2rem;"><h2 class="label" style="font-size:var(--text-sm);font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--teal);margin:0 0 0.5rem;">Naturaleza y paisaje</h2><div class="divider divider--animated"></div></div>
+         <div class="gallery-masonry reveal">
+           <div class="gallery-masonry__item" data-lightbox="../../img/portfolio/playa-figura-solitaria-byn-naturaleza.jpg">
+             <img src="../../img/portfolio/playa-figura-solitaria-byn-naturaleza.jpg" alt="Fotografía en blanco y negro de playa con figura solitaria bajo paraguas, monte al fondo — fotografía de naturaleza y paisaje atmosférico" loading="lazy">
+@@ -96,7 +96,7 @@
+     <!-- RETRATO -->
+     <section class="section section--white" style="padding:4rem 0;">
+       <div class="container">
+-        <div class="reveal" style="margin-bottom:2rem;"><span class="label">Retrato y fotografía social</span><div class="divider divider--animated"></div></div>
++        <div class="reveal" style="margin-bottom:2rem;"><h2 class="label" style="font-size:var(--text-sm);font-weight:700;text-transform:uppercase;letter-spacing:0.12em;color:var(--teal);margin:0 0 0.5rem;">Retrato y fotografía social</h2><div class="divider divider--animated"></div></div>
+         <div class="gallery-masonry reveal">
+           <div class="gallery-masonry__item" data-lightbox="../../img/portfolio/recien-nacido-manos-adultas-byn.jpg">
+             <img src="../../img/portfolio/recien-nacido-manos-adultas-byn.jpg" alt="Fotografía de recién nacido dormido en manos adultas, blanco y negro de alta calidad — fotografía social de estudio Ismael Gonzalo" loading="lazy">
+diff --git a/portfolio/fotomontajes-retoques/index.html b/portfolio/fotomontajes-retoques/index.html
+index feb2acc..aa1bd40 100644
+--- a/portfolio/fotomontajes-retoques/index.html
++++ b/portfolio/fotomontajes-retoques/index.html
+@@ -2,7 +2,7 @@
+ <html lang="es">
+ <head>
+   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Retoque fotográfico profesional y fotomontajes — Ismael Gonzalo</title>
++  <title>Retoque fotográfico y fotomontajes — Ismael Gonzalo</title>
+   <meta name="description" content="Restauración de fotografías antiguas, retoque de retrato y fotomontajes de alta complejidad. Antes y después real. Vitoria-Gasteiz.">
+   <meta name="keywords" content="retoque fotográfico profesional, restauración fotografías antiguas, fotomontaje, composición digital">
+   <meta name="robots" content="index, follow">
+diff --git a/portfolio/index.html b/portfolio/index.html
+index 365bd3f..ebcc026 100644
+--- a/portfolio/index.html
++++ b/portfolio/index.html
+@@ -3,7 +3,7 @@
+ <head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Portfolio — Ismael Gonzalo | Diseñador Gráfico Vitoria-Gasteiz</title>
++  <title>Portfolio — Ismael Gonzalo | Diseñador Gráfico Vitoria</title>
+   <meta name="description" content="Portfolio completo de Ismael Gonzalo: fotografía de producto, diseño gráfico, diseño editorial, cartelería y personalización de producto. Ver proyectos reales.">
+   <meta name="robots" content="index, follow">
+   <link rel="canonical" href="https://ismaelgonzalo.com/portfolio/">
+@@ -59,7 +59,7 @@
+           <span class="breadcrumb__sep" aria-hidden="true">›</span>
+           <span aria-current="page">Portfolio</span>
+         </nav>
+-        <h1 class="reveal">Portfolio completo</h1>
++        <h1 class="reveal">Portfolio — Diseño gráfico y fotografía<br><span style="font-size:0.65em;font-weight:400;color:var(--teal);letter-spacing:0.06em;">Ismael Gonzalo · Vitoria-Gasteiz</span></h1>
+         <p class="reveal reveal-delay-1">Treinta años de proyectos reales en seis disciplinas. Desde fotografía de precisión hasta identidad corporativa.</p>
+       </div>
+     </section>
+diff --git a/portfolio/personalizacion-productos/index.html b/portfolio/personalizacion-productos/index.html
+index a645e64..8e442c0 100644
+--- a/portfolio/personalizacion-productos/index.html
++++ b/portfolio/personalizacion-productos/index.html
+@@ -2,7 +2,7 @@
+ <html lang="es">
+ <head>
+   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+-  <title>Personalización de producto y diseño de equipaciones — Ismael Gonzalo</title>
++  <title>Personalización de producto y equipaciones — Ismael Gonzalo</title>
+   <meta name="description" content="Diseño integral de producto personalizado: reloj CAICOS edición limitada 51 unidades, caseback para foros de relojería, equipaciones deportivas CB Araba. Vitoria-Gasteiz.">
+   <meta name="keywords" content="diseño de producto personalizado, diseño equipaciones deportivas, grabado en reloj edición limitada, Obris Morgan CAICOS">
+   <meta name="robots" content="index, follow">
+-- 
+2.43.0
+
