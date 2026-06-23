@@ -16,7 +16,7 @@
   --off-white:   #F7F7F7;
   --gold:        #C8A840;
   --gray-light:  #E8E8E8;
-  --gray-mid:    #999999;
+  --gray-mid:    #6B6B6B;
   --white:       #ffffff;
 
   /* Typography */
@@ -1107,7 +1107,7 @@ a:hover .tag,
 
 .footer__contact a:hover { color: var(--teal); }
 
-.footer__col h5 {
+.footer__col h5, .footer__col-title {
   font-size: var(--text-sm);
   font-weight: 600;
   letter-spacing: 0.08em;
