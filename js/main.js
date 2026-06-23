@@ -47,7 +47,7 @@
   }
 
   /* ---- SCROLL REVEAL ---- */
-  const revealSelectors = '.reveal, .reveal-img, .reveal-left, .reveal-right, .reveal-bottom, .divider--animated, .divider--full';
+  const revealSelectors = '.reveal, .reveal-img, .reveal-left, .reveal-right, .reveal-bottom, .reveal-fade, .divider--animated, .divider--full';
   const reveals = document.querySelectorAll(revealSelectors);
   if (reveals.length) {
     const observer = new IntersectionObserver(
@@ -62,6 +62,15 @@
       { threshold: 0.08, rootMargin: '0px 0px -80px 0px' }
     );
     reveals.forEach(el => observer.observe(el));
+  }
+
+  /* ---- PORTFOLIO GRID — fade de entrada con delay aleatorio ---- */
+  const fadeCards = document.querySelectorAll('.reveal-fade');
+  if (fadeCards.length) {
+    fadeCards.forEach(card => {
+      const delay = Math.floor(Math.random() * 800); // 0–800ms aleatorio
+      card.style.transitionDelay = delay + 'ms';
+    });
   }
 
   /* ---- LIGHTBOX ---- */
@@ -151,7 +160,7 @@
 
   /* ---- REDUCED MOTION ---- */
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.querySelectorAll('.reveal, .reveal-img, .reveal-left, .reveal-right, .reveal-bottom').forEach(el => el.classList.add('visible'));
+    document.querySelectorAll('.reveal, .reveal-img, .reveal-left, .reveal-right, .reveal-bottom, .reveal-fade').forEach(el => el.classList.add('visible'));
   }
 
   /* ---- PARALLAX — Section numbers ---- */

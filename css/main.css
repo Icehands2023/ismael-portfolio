@@ -757,7 +757,7 @@ a:hover .tag,
   object-fit: cover;
   transition: transform 600ms var(--ease-out),
               opacity 600ms var(--ease-out);
-  opacity: 0.5;
+  opacity: 0.75;
   transform-origin: center center;
 }
 
@@ -1796,34 +1796,14 @@ a:hover .tag,
 .reveal-delay-4 { transition-delay: 400ms; }
 .reveal-delay-5 { transition-delay: 500ms; }
 
-/* Variante derecha — columna derecha del grid */
-.reveal-right {
+/* Fade de entrada para cards de portfolio — delay aleatorio vía JS */
+.reveal-fade {
   opacity: 0;
-  transform: translateX(60px);
-  transition: opacity 700ms var(--ease-out),
-              transform 700ms var(--ease-out);
+  transition: opacity 900ms var(--ease-out);
 }
-.reveal-right.visible {
+.reveal-fade.visible {
   opacity: 1;
-  transform: translateX(0);
 }
-
-/* Variante abajo — columna central del grid */
-.reveal-bottom {
-  opacity: 0;
-  transform: translateY(60px);
-  transition: opacity 700ms var(--ease-out),
-              transform 700ms var(--ease-out);
-}
-.reveal-bottom.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Delays adicionales para segunda fila */
-.reveal-delay-6 { transition-delay: 150ms; }
-.reveal-delay-7 { transition-delay: 250ms; }
-.reveal-delay-8 { transition-delay: 350ms; }
 
 /* --- BREADCRUMB --- */
 .breadcrumb {
