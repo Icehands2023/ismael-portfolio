@@ -757,7 +757,7 @@ a:hover .tag,
   object-fit: cover;
   transition: transform 600ms var(--ease-out),
               opacity 600ms var(--ease-out);
-  opacity: 0.75;
+  opacity: 0.35;
   transform-origin: center center;
 }
 
