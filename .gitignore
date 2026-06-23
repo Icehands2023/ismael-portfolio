@@ -1,0 +1,23 @@
+# Carpetas de conversión WebP (backups locales, no van al repo)
+img/WEBP/
+img/portfolio/WEBP/
+
+# Archivos de parche generados por Claude
+*.patch
+*.sh
+
+# Archivos de trabajo de Adobe
+*.psd
+*.ai
+*.indd
+*.idml
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Archivos temporales
+*.tmp
+*.bak
+*.old
