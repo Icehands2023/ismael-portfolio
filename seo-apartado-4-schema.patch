@@ -1,0 +1,249 @@
+From ca16a06bc54227ef438457b584f10c31d8be9e68 Mon Sep 17 00:00:00 2001
+From: Ismael Gonzalo <ismaelgph@gmail.com>
+Date: Tue, 23 Jun 2026 06:05:41 +0000
+Subject: [PATCH] =?UTF-8?q?SEO=20apartado=204:=20schema=20markup=20complet?=
+ =?UTF-8?q?o=20en=20todas=20las=20p=C3=A1ginas?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+- Person (home, sobre-mi): añadidos image y sameAs
+- Service (servicios): añadidos name y description
+- ImageGallery (fotografia): añadidos image y description
+- ImageGallery nuevo: carteleria, diseno-editorial, diseno-grafico, fotomontajes-retoques, personalizacion-productos
+- BlogPosting (5 artículos): añadido campo image desde og:image o imagen principal del artículo
+---
+ blog/caicos-diseno-reloj/index.html            | 13 +------------
+ blog/del-cuarto-oscuro-a-la-ia/index.html      | 18 +-----------------
+ blog/fotografia-producto-relojeria/index.html  |  2 +-
+ blog/manual-identidad-corporativa/index.html   |  2 +-
+ .../index.html                                 |  2 +-
+ index.html                                     |  2 +-
+ pages/servicios.html                           | 15 +--------------
+ portfolio/carteleria/index.html                |  3 +++
+ portfolio/diseno-editorial/index.html          |  3 +++
+ portfolio/diseno-grafico/index.html            |  3 +++
+ portfolio/fotografia/index.html                |  4 +++-
+ portfolio/fotomontajes-retoques/index.html     |  3 +++
+ portfolio/personalizacion-productos/index.html |  3 +++
+ 13 files changed, 25 insertions(+), 48 deletions(-)
+
+diff --git a/blog/caicos-diseno-reloj/index.html b/blog/caicos-diseno-reloj/index.html
+index 69483a6..7ce6f4c 100644
+--- a/blog/caicos-diseno-reloj/index.html
++++ b/blog/caicos-diseno-reloj/index.html
+@@ -14,18 +14,7 @@
+   <meta property="og:url" content="https://ismaelgonzalo.com/blog/caicos-diseno-reloj/">
+   <meta property="og:image" content="https://ismaelgonzalo.com/img/portfolio/reloj-caicos-luminiscencia-oscuridad.jpg">
+   <script type="application/ld+json">
+-  {
+-    "@context": "https://schema.org",
+-    "@type": "BlogPosting",
+-    "headline": "Cómo diseñé el reloj CAICOS: del plano técnico a la pieza real",
+-    "author": { "@type": "Person", "name": "Ismael Gonzalo Peña", "url": "https://ismaelgonzalo.com" },
+-    "datePublished": "2025-06-01",
+-    "dateModified": "2025-06-01",
+-    "publisher": { "@type": "Person", "name": "Ismael Gonzalo Peña" },
+-    "url": "https://ismaelgonzalo.com/blog/caicos-diseno-reloj/",
+-    "description": "Dial, bisel, agujas, grabados y personalización integral sobre base Obris Morgan Explorer. Movimiento Miyota 9015, edición limitada numerada 00–50.",
+-    "keywords": ["diseño de reloj", "reloj edición limitada", "Illustrator", "Miyota 9015", "Obris Morgan"]
+-  }
++  {"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Cómo diseñé el reloj CAICOS: del plano técnico a la pieza real", "author": {"@type": "Person", "name": "Ismael Gonzalo Peña", "url": "https://ismaelgonzalo.com"}, "datePublished": "2025-06-01", "dateModified": "2025-06-01", "publisher": {"@type": "Person", "name": "Ismael Gonzalo Peña"}, "url": "https://ismaelgonzalo.com/blog/caicos-diseno-reloj/", "description": "Dial, bisel, agujas, grabados y personalización integral sobre base Obris Morgan Explorer. Movimiento Miyota 9015, edición limitada numerada 00–50.", "keywords": ["diseño de reloj", "reloj edición limitada", "Illustrator", "Miyota 9015", "Obris Morgan"], "image": "https://ismaelgonzalo.com/img/portfolio/reloj-caicos-luminiscencia-oscuridad.jpg"}
+   </script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+diff --git a/blog/del-cuarto-oscuro-a-la-ia/index.html b/blog/del-cuarto-oscuro-a-la-ia/index.html
+index bb2b7f4..ed01574 100644
+--- a/blog/del-cuarto-oscuro-a-la-ia/index.html
++++ b/blog/del-cuarto-oscuro-a-la-ia/index.html
+@@ -22,23 +22,7 @@
+ 
+   <!-- Schema BlogPosting -->
+   <script type="application/ld+json">
+-  {
+-    "@context": "https://schema.org",
+-    "@type": "BlogPosting",
+-    "headline": "Del cuarto oscuro a la IA: cinco revoluciones tecnológicas vistas desde detrás de la cámara",
+-    "description": "Cuarto oscuro, printers analógicos de producción, digitalización, postproducción digital e IA generativa. Cinco transformaciones vividas desde dentro de la profesión.",
+-    "author": {
+-      "@type": "Person",
+-      "name": "Ismael Gonzalo Peña",
+-      "url": "https://ismaelgonzalo.com/pages/sobre-mi.html"
+-    },
+-    "publisher": {
+-      "@type": "Person",
+-      "name": "Ismael Gonzalo Peña"
+-    },
+-    "datePublished": "2026-06-21",
+-    "keywords": "fotografía analógica digital, cuarto oscuro fotografía, historia fotografía profesional, IA fotografía diseño, evolución tecnología fotográfica"
+-  }
++  {"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Del cuarto oscuro a la IA: cinco revoluciones tecnológicas vistas desde detrás de la cámara", "description": "Cuarto oscuro, printers analógicos de producción, digitalización, postproducción digital e IA generativa. Cinco transformaciones vividas desde dentro de la profesión.", "author": {"@type": "Person", "name": "Ismael Gonzalo Peña", "url": "https://ismaelgonzalo.com/pages/sobre-mi.html"}, "publisher": {"@type": "Person", "name": "Ismael Gonzalo Peña"}, "datePublished": "2026-06-21", "keywords": "fotografía analógica digital, cuarto oscuro fotografía, historia fotografía profesional, IA fotografía diseño, evolución tecnología fotográfica", "image": "https://ismaelgonzalo.com/img/portfolio/del-cuarto-oscuro-ia-flatlay.jpg"}
+   </script>
+ 
+   <style>
+diff --git a/blog/fotografia-producto-relojeria/index.html b/blog/fotografia-producto-relojeria/index.html
+index 3b3cdd9..5cdfa31 100644
+--- a/blog/fotografia-producto-relojeria/index.html
++++ b/blog/fotografia-producto-relojeria/index.html
+@@ -9,7 +9,7 @@
+   <meta name="robots" content="index, follow">
+   <link rel="canonical" href="https://ismaelgonzalo.com/blog/fotografia-producto-relojeria/">
+   <script type="application/ld+json">
+-  {"@context":"https://schema.org","@type":"BlogPosting","headline":"Fotografía de producto de relojería: técnica, iluminación y postproducción paso a paso","author":{"@type":"Person","name":"Ismael Gonzalo Peña","url":"https://ismaelgonzalo.com"},"datePublished":"2025-05-10","url":"https://ismaelgonzalo.com/blog/fotografia-producto-relojeria/"}
++  {"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Fotografía de producto de relojería: técnica, iluminación y postproducción paso a paso", "author": {"@type": "Person", "name": "Ismael Gonzalo Peña", "url": "https://ismaelgonzalo.com"}, "datePublished": "2025-05-10", "url": "https://ismaelgonzalo.com/blog/fotografia-producto-relojeria/", "image": "https://ismaelgonzalo.com/img/portfolio/rolex-submariner-fotografia-producto-relojeria.jpg", "publisher": {"@type": "Person", "name": "Ismael Gonzalo Peña", "url": "https://ismaelgonzalo.com"}}
+   </script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+diff --git a/blog/manual-identidad-corporativa/index.html b/blog/manual-identidad-corporativa/index.html
+index c960c66..fbf84b0 100644
+--- a/blog/manual-identidad-corporativa/index.html
++++ b/blog/manual-identidad-corporativa/index.html
+@@ -9,7 +9,7 @@
+   <meta name="robots" content="index, follow">
+   <link rel="canonical" href="https://ismaelgonzalo.com/blog/manual-identidad-corporativa/">
+   <script type="application/ld+json">
+-  {"@context":"https://schema.org","@type":"BlogPosting","headline":"Cómo crear un manual de identidad corporativa desde cero","author":{"@type":"Person","name":"Ismael Gonzalo Peña","url":"https://ismaelgonzalo.com"},"datePublished":"2025-03-20","url":"https://ismaelgonzalo.com/blog/manual-identidad-corporativa/"}
++  {"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Cómo crear un manual de identidad corporativa desde cero", "author": {"@type": "Person", "name": "Ismael Gonzalo Peña", "url": "https://ismaelgonzalo.com"}, "datePublished": "2025-03-20", "url": "https://ismaelgonzalo.com/blog/manual-identidad-corporativa/", "image": "https://ismaelgonzalo.com/img/portfolio/gomez-shoe-store-manual-identidad-logo-paleta.jpg", "publisher": {"@type": "Person", "name": "Ismael Gonzalo Peña", "url": "https://ismaelgonzalo.com"}}
+   </script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+diff --git a/blog/midjourney-flujo-trabajo-disenador/index.html b/blog/midjourney-flujo-trabajo-disenador/index.html
+index 7fd062b..e83be1b 100644
+--- a/blog/midjourney-flujo-trabajo-disenador/index.html
++++ b/blog/midjourney-flujo-trabajo-disenador/index.html
+@@ -9,7 +9,7 @@
+   <meta name="robots" content="index, follow">
+   <link rel="canonical" href="https://ismaelgonzalo.com/blog/midjourney-flujo-trabajo-disenador/">
+   <script type="application/ld+json">
+-  {"@context":"https://schema.org","@type":"BlogPosting","headline":"Midjourney para diseñadores gráficos: cómo integro la IA en mi flujo de trabajo real","author":{"@type":"Person","name":"Ismael Gonzalo Peña","url":"https://ismaelgonzalo.com"},"datePublished":"2025-04-15","url":"https://ismaelgonzalo.com/blog/midjourney-flujo-trabajo-disenador/"}
++  {"@context": "https://schema.org", "@type": "BlogPosting", "headline": "Midjourney para diseñadores gráficos: cómo integro la IA en mi flujo de trabajo real", "author": {"@type": "Person", "name": "Ismael Gonzalo Peña", "url": "https://ismaelgonzalo.com"}, "datePublished": "2025-04-15", "url": "https://ismaelgonzalo.com/blog/midjourney-flujo-trabajo-disenador/", "image": "https://ismaelgonzalo.com/img/portfolio/ortzadar2x_5x10 portfolio.jpg", "publisher": {"@type": "Person", "name": "Ismael Gonzalo Peña", "url": "https://ismaelgonzalo.com"}}
+   </script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+diff --git a/index.html b/index.html
+index 4a84740..08a4a7b 100644
+--- a/index.html
++++ b/index.html
+@@ -16,7 +16,7 @@
+   <meta property="og:locale" content="es_ES">
+   <meta name="twitter:card" content="summary_large_image">
+   <script type="application/ld+json">
+-  {"@context":"https://schema.org","@type":"Person","name":"Ismael Gonzalo Peña","jobTitle":"Diseñador gráfico y especialista en imagen","url":"https://ismaelgonzalo.com","email":"ismaelgph@gmail.com","telephone":"+34636702172","address":{"@type":"PostalAddress","addressLocality":"Vitoria-Gasteiz","addressRegion":"Álava","addressCountry":"ES"}}
++  {"@context": "https://schema.org", "@type": "Person", "name": "Ismael Gonzalo Peña", "jobTitle": "Diseñador gráfico y especialista en imagen", "url": "https://ismaelgonzalo.com", "email": "ismaelgph@gmail.com", "telephone": "+34636702172", "image": "https://ismaelgonzalo.com/img/ismael-perfil.jpg", "address": {"@type": "PostalAddress", "addressLocality": "Vitoria-Gasteiz", "addressRegion": "Álava", "addressCountry": "ES"}, "sameAs": ["https://www.linkedin.com/in/ismaelgonzalo", "https://www.instagram.com/ismaelgph"]}
+   </script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+diff --git a/pages/servicios.html b/pages/servicios.html
+index dfbb86f..00ac4ac 100644
+--- a/pages/servicios.html
++++ b/pages/servicios.html
+@@ -9,20 +9,7 @@
+   <meta name="robots" content="index, follow">
+   <link rel="canonical" href="https://ismaelgonzalo.com/pages/servicios">
+   <script type="application/ld+json">
+-  {
+-    "@context": "https://schema.org",
+-    "@type": "Service",
+-    "provider": {
+-      "@type": "Person",
+-      "name": "Ismael Gonzalo Peña",
+-      "url": "https://ismaelgonzalo.com"
+-    },
+-    "areaServed": {
+-      "@type": "Place",
+-      "name": "Vitoria-Gasteiz, Álava"
+-    },
+-    "serviceType": ["Fotografía de producto", "Diseño gráfico", "Identidad corporativa", "Diseño editorial", "Retoque fotográfico", "IA generativa aplicada al diseño"]
+-  }
++  {"@context": "https://schema.org", "@type": "Service", "name": "Diseño gráfico, fotografía e identidad corporativa en Vitoria-Gasteiz", "description": "Servicios profesionales de diseño gráfico, fotografía de producto, identidad corporativa, diseño editorial y retoque fotográfico en Vitoria-Gasteiz.", "provider": {"@type": "Person", "name": "Ismael Gonzalo Peña", "url": "https://ismaelgonzalo.com"}, "areaServed": {"@type": "Place", "name": "Vitoria-Gasteiz, Álava"}, "serviceType": ["Fotografía de producto", "Diseño gráfico", "Identidad corporativa", "Diseño editorial", "Retoque fotográfico", "IA generativa aplicada al diseño"]}
+   </script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+diff --git a/portfolio/carteleria/index.html b/portfolio/carteleria/index.html
+index 0783812..bcbb12f 100644
+--- a/portfolio/carteleria/index.html
++++ b/portfolio/carteleria/index.html
+@@ -10,6 +10,9 @@
+   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../../css/main.css"><link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
++  <script type="application/ld+json">
++  {"@context": "https://schema.org", "@type": "ImageGallery", "name": "Diseño de cartelería publicitaria — Ismael Gonzalo", "description": "Portfolio de diseño de cartelería publicitaria y gráfica exterior: CB Araba, WWF La Hora del Planeta, carteles de concierto y eventos en Vitoria-Gasteiz.", "url": "https://ismaelgonzalo.com/portfolio/carteleria/", "image": "https://ismaelgonzalo.com/img/portfolio/cartel-la-hora-del-planeta-wwf-diseno.jpg", "author": {"@type": "Person", "name": "Ismael Gonzalo Peña", "url": "https://ismaelgonzalo.com"}}
++  </script>
+ </head>
+ <body>
+   <a class="skip-to-content" href="#main">Saltar al contenido</a>
+diff --git a/portfolio/diseno-editorial/index.html b/portfolio/diseno-editorial/index.html
+index 41a5f05..e3e5fc9 100644
+--- a/portfolio/diseno-editorial/index.html
++++ b/portfolio/diseno-editorial/index.html
+@@ -10,6 +10,9 @@
+   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../../css/main.css"><link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
++  <script type="application/ld+json">
++  {"@context": "https://schema.org", "@type": "ImageGallery", "name": "Diseño editorial y maquetación profesional — Ismael Gonzalo", "description": "Portfolio de diseño editorial: libros, revistas, suplementos de prensa y catálogos. Diseño con InDesign y flujos de preimpresión profesionales.", "url": "https://ismaelgonzalo.com/portfolio/diseno-editorial/", "image": "https://ismaelgonzalo.com/img/portfolio/portada-suplemento-vendimia-2024-diario-noticias-alava.jpg", "author": {"@type": "Person", "name": "Ismael Gonzalo Peña", "url": "https://ismaelgonzalo.com"}}
++  </script>
+ </head>
+ <body>
+   <a class="skip-to-content" href="#main">Saltar al contenido</a>
+diff --git a/portfolio/diseno-grafico/index.html b/portfolio/diseno-grafico/index.html
+index 5b7f164..f05c1e4 100644
+--- a/portfolio/diseno-grafico/index.html
++++ b/portfolio/diseno-grafico/index.html
+@@ -10,6 +10,9 @@
+   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../../css/main.css"><link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
++  <script type="application/ld+json">
++  {"@context": "https://schema.org", "@type": "ImageGallery", "name": "Diseño gráfico e identidad corporativa — Ismael Gonzalo", "description": "Portfolio de diseño gráfico e identidad corporativa en Vitoria-Gasteiz: manual de marca, logotipos, cartelería y aplicaciones gráficas.", "url": "https://ismaelgonzalo.com/portfolio/diseno-grafico/", "image": "https://ismaelgonzalo.com/img/portfolio/gomez-shoe-store-manual-identidad-logo-paleta.jpg", "author": {"@type": "Person", "name": "Ismael Gonzalo Peña", "url": "https://ismaelgonzalo.com"}}
++  </script>
+ </head>
+ <body>
+   <a class="skip-to-content" href="#main">Saltar al contenido</a>
+diff --git a/portfolio/fotografia/index.html b/portfolio/fotografia/index.html
+index 8364339..ea930e2 100644
+--- a/portfolio/fotografia/index.html
++++ b/portfolio/fotografia/index.html
+@@ -7,7 +7,9 @@
+   <meta name="keywords" content="fotografía de producto Vitoria, fotógrafo publicitario Álava, fotografía comercial, fotografía de relojería">
+   <meta name="robots" content="index, follow">
+   <link rel="canonical" href="https://ismaelgonzalo.com/portfolio/fotografia/">
+-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageGallery","name":"Fotografía de producto — Ismael Gonzalo","author":{"@type":"Person","name":"Ismael Gonzalo Peña"},"url":"https://ismaelgonzalo.com/portfolio/fotografia/"}</script>
++  <script type="application/ld+json">
++  {"@context": "https://schema.org", "@type": "ImageGallery", "name": "Fotografía de producto, naturaleza y retrato — Ismael Gonzalo", "description": "Portfolio de fotografía profesional de Ismael Gonzalo Peña: relojería de precisión, naturaleza, retrato y fotografía social en Vitoria-Gasteiz.", "url": "https://ismaelgonzalo.com/portfolio/fotografia/", "image": "https://ismaelgonzalo.com/img/portfolio/rolex-submariner-fotografia-producto-relojeria.jpg", "author": {"@type": "Person", "name": "Ismael Gonzalo Peña", "url": "https://ismaelgonzalo.com"}}
++  </script>
+   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../../css/main.css"><link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
+diff --git a/portfolio/fotomontajes-retoques/index.html b/portfolio/fotomontajes-retoques/index.html
+index a1e766e..1376f7d 100644
+--- a/portfolio/fotomontajes-retoques/index.html
++++ b/portfolio/fotomontajes-retoques/index.html
+@@ -10,6 +10,9 @@
+   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../../css/main.css"><link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
++  <script type="application/ld+json">
++  {"@context": "https://schema.org", "@type": "ImageGallery", "name": "Retoque fotográfico y fotomontajes — Ismael Gonzalo", "description": "Portfolio de retoque fotográfico profesional, restauración de fotografías antiguas y fotomontajes digitales avanzados.", "url": "https://ismaelgonzalo.com/portfolio/fotomontajes-retoques/", "image": "https://ismaelgonzalo.com/img/portfolio/restauracion-fotografia-antigua-retrato-antes-despues.jpg", "author": {"@type": "Person", "name": "Ismael Gonzalo Peña", "url": "https://ismaelgonzalo.com"}}
++  </script>
+ </head>
+ <body>
+   <a class="skip-to-content" href="#main">Saltar al contenido</a>
+diff --git a/portfolio/personalizacion-productos/index.html b/portfolio/personalizacion-productos/index.html
+index d3242db..daae327 100644
+--- a/portfolio/personalizacion-productos/index.html
++++ b/portfolio/personalizacion-productos/index.html
+@@ -10,6 +10,9 @@
+   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../../css/main.css"><link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
++  <script type="application/ld+json">
++  {"@context": "https://schema.org", "@type": "ImageGallery", "name": "Personalización de producto y equipaciones — Ismael Gonzalo", "description": "Portfolio de personalización de producto: reloj CAICOS edición limitada, equipaciones deportivas CB Araba, merchandising y grabados personalizados.", "url": "https://ismaelgonzalo.com/portfolio/personalizacion-productos/", "image": "https://ismaelgonzalo.com/img/portfolio/reloj-caicos-muneca-diseno-ismael-gonzalo.jpg", "author": {"@type": "Person", "name": "Ismael Gonzalo Peña", "url": "https://ismaelgonzalo.com"}}
++  </script>
+ </head>
+ <body>
+   <a class="skip-to-content" href="#main">Saltar al contenido</a>
+-- 
+2.43.0
+
