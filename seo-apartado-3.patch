@@ -1,0 +1,1330 @@
+From 867d3495703481ee7f1a1fd3ba882da7d5c4c70e Mon Sep 17 00:00:00 2001
+From: Ismael Gonzalo <ismaelgph@gmail.com>
+Date: Tue, 23 Jun 2026 06:01:30 +0000
+Subject: [PATCH] SEO apartado 3: sitemap completo, Google Fonts sin @import,
+ canonicals limpios, nav links absolutos
+MIME-Version: 1.0
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+- sitemap.xml: 3 artículos añadidos (alkhe, del-cuarto-oscuro, diseno-publicidad-prensa), lastmod actualizados a 2026-06-23
+- css/main.css: eliminado @import Google Fonts (bloqueante); fuentes ahora cargadas vía link en cada HTML
+- 19 HTML: añadido link Google Fonts con display=swap directamente en head
+- pages/sobre-mi, servicios, contacto: canonical sin extensión .html
+- 17 HTML: nav links convertidos a rutas absolutas desde raíz (/portfolio/, /blog/, etc.)
+---
+ .../index.html                                |  8 ++--
+ blog/caicos-diseno-reloj/index.html           | 27 ++++++-----
+ blog/del-cuarto-oscuro-a-la-ia/index.html     | 37 ++++++++-------
+ blog/diseno-publicidad-prensa/index.html      | 15 +++---
+ blog/fotografia-producto-relojeria/index.html | 15 +++---
+ blog/index.html                               | 29 ++++++------
+ blog/manual-identidad-corporativa/index.html  | 17 +++----
+ .../index.html                                | 15 +++---
+ css/main.css                                  |  2 +-
+ index.html                                    |  1 +
+ pages/contacto.html                           | 33 ++++++-------
+ pages/servicios.html                          | 47 ++++++++++---------
+ pages/sobre-mi.html                           | 37 ++++++++-------
+ portfolio-pdf.html                            |  1 +
+ portfolio/carteleria/index.html               | 15 +++---
+ portfolio/diseno-editorial/index.html         | 15 +++---
+ portfolio/diseno-grafico/index.html           | 15 +++---
+ portfolio/fotografia/index.html               | 15 +++---
+ portfolio/fotomontajes-retoques/index.html    | 15 +++---
+ portfolio/index.html                          |  1 +
+ .../personalizacion-productos/index.html      | 15 +++---
+ sitemap.xml                                   | 32 ++++++-------
+ 22 files changed, 212 insertions(+), 195 deletions(-)
+
+diff --git a/blog/alkhe-identidad-corporativa-arquitectura/index.html b/blog/alkhe-identidad-corporativa-arquitectura/index.html
+index ba6331d..1b41996 100644
+--- a/blog/alkhe-identidad-corporativa-arquitectura/index.html
++++ b/blog/alkhe-identidad-corporativa-arquitectura/index.html
+@@ -706,13 +706,13 @@
+ 
+   <!-- NAV -->
+   <nav>
+-    <a href="../../index.html" class="nav-brand">Ismael <span>Gonzalo</span></a>
++    <a href="/" class="nav-brand">Ismael <span>Gonzalo</span></a>
+     <ul class="nav-links">
+       <li><a href="../../portfolio/">Portfolio</a></li>
+-      <li><a href="../../pages/sobre-mi.html">Sobre mí</a></li>
++      <li><a href="/pages/sobre-mi">Sobre mí</a></li>
+       <li><a href="../../pages/servicios.html">Servicios</a></li>
+       <li><a href="../index.html">Blog</a></li>
+-      <li><a href="../../pages/contacto.html">Contacto</a></li>
++      <li><a href="/pages/contacto">Contacto</a></li>
+     </ul>
+   </nav>
+ 
+@@ -900,7 +900,7 @@
+       <div class="article-cta">
+         <h3>¿Necesitas identidad corporativa para tu empresa?</h3>
+         <p>Cuéntame qué tienes en mente. Naming, logotipo, manual de marca, aplicaciones, web. O solo una parte. </p>
+-        <a href="../../pages/contacto.html" class="cta-btn">Solicitar presupuesto sin compromiso</a>
++        <a href="/pages/contacto" class="cta-btn">Solicitar presupuesto sin compromiso</a>
+       </div>
+ 
+     </article>
+diff --git a/blog/caicos-diseno-reloj/index.html b/blog/caicos-diseno-reloj/index.html
+index 9f5e27b..69483a6 100644
+--- a/blog/caicos-diseno-reloj/index.html
++++ b/blog/caicos-diseno-reloj/index.html
+@@ -29,6 +29,7 @@
+   </script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../../css/main.css">
+   <link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
+ </head>
+@@ -39,16 +40,16 @@
+   <header class="nav">
+     <div class="container">
+       <nav class="nav__inner">
+-        <a href="../../index.html" class="nav__logo">
++        <a href="/" class="nav__logo">
+           <span>Ismael Gonzalo Peña</span>
+           <span>Diseñador Gráfico · Vitoria-Gasteiz</span>
+         </a>
+         <ul class="nav__links">
+-          <li><a href="../../portfolio/index.html">Portfolio</a></li>
+-          <li><a href="../../pages/sobre-mi.html">Sobre mí</a></li>
+-          <li><a href="../../blog/index.html" class="active">Blog</a></li>
++          <li><a href="/portfolio/">Portfolio</a></li>
++          <li><a href="/pages/sobre-mi">Sobre mí</a></li>
++          <li><a href="/blog/" class="active">Blog</a></li>
+           <li></li>
+-          <li><a href="../../pages/contacto.html" class="nav__cta">Contactar</a></li>
++          <li><a href="/pages/contacto" class="nav__cta">Contactar</a></li>
+         </ul>
+         <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+           <span></span><span></span><span></span>
+@@ -57,12 +58,12 @@
+     </div>
+   </header>
+   <nav class="nav__mobile" id="mobile-menu">
+-    <a href="../../portfolio/index.html">Portfolio</a>
+-    <a href="../../pages/sobre-mi.html">Sobre mí</a>
++    <a href="/portfolio/">Portfolio</a>
++    <a href="/pages/sobre-mi">Sobre mí</a>
+     
+-    <a href="../../blog/index.html">Blog</a>
++    <a href="/blog/">Blog</a>
+     
+-    <a href="../../pages/contacto.html">Contactar</a>
++    <a href="/pages/contacto">Contactar</a>
+   </nav>
+ 
+   <main id="main">
+@@ -72,9 +73,9 @@
+       <span class="page-hero__bg-num" aria-hidden="true">01</span>
+       <div class="container">
+         <nav class="breadcrumb">
+-          <a href="../../index.html">Inicio</a>
++          <a href="/">Inicio</a>
+           <span class="breadcrumb__sep">›</span>
+-          <a href="../../blog/index.html">Blog</a>
++          <a href="/blog/">Blog</a>
+           <span class="breadcrumb__sep">›</span>
+           <span aria-current="page">Reloj CAICOS</span>
+         </nav>
+@@ -216,7 +217,7 @@
+           <div class="article-sidebar__card" style="background:var(--teal); color:white;">
+             <h4 style="color:white;">¿Tienes un proyecto de producto?</h4>
+             <p style="font-size:var(--text-sm);color:rgba(255,255,255,0.8);margin:0.75rem 0 1.25rem;">Diseño de producto personalizado, equipaciones o merchandising. Cuéntame qué necesitas.</p>
+-            <a href="../../pages/contacto.html" class="btn btn--white" style="width:100%;justify-content:center;font-size:var(--text-sm);">Contactar</a>
++            <a href="/pages/contacto" class="btn btn--white" style="width:100%;justify-content:center;font-size:var(--text-sm);">Contactar</a>
+           </div>
+           <div class="article-sidebar__card" style="background:var(--off-white);border:1px solid var(--gray-light);">
+             <h4 style="font-size:var(--text-base);margin-bottom:0.75rem;">Portfolio completo en PDF</h4>
+@@ -271,7 +272,7 @@
+ 
+   </main>
+ 
+-  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="../../index.html" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Blog</h5><ul><li><a href="../../blog/caicos-diseno-reloj/index.html">Reloj CAICOS</a></li><li><a href="../../blog/fotografia-producto-relojeria/index.html">Fotografía relojería</a></li><li><a href="../../blog/midjourney-flujo-trabajo-disenador/index.html">Midjourney</a></li><li><a href="../../blog/manual-identidad-corporativa/index.html">Identidad corporativa</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="../../pages/sobre-mi.html">Sobre mí</a></li><li></li><li><a href="../../pages/contacto.html">Contacto</a></li><li></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2025 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
++  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="/" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Blog</h5><ul><li><a href="../../blog/caicos-diseno-reloj/index.html">Reloj CAICOS</a></li><li><a href="../../blog/fotografia-producto-relojeria/index.html">Fotografía relojería</a></li><li><a href="../../blog/midjourney-flujo-trabajo-disenador/index.html">Midjourney</a></li><li><a href="../../blog/manual-identidad-corporativa/index.html">Identidad corporativa</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="/pages/sobre-mi">Sobre mí</a></li><li></li><li><a href="/pages/contacto">Contacto</a></li><li></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2025 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
+   <div class="lightbox"><button class="lightbox__close">×</button><img class="lightbox__img" src="" alt=""></div>
+   <script src="../../js/main.js"></script>
+ <div class="fab-container"><button class="fab fab--top" id="fab-top" aria-label="Volver arriba"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg></button><a class="fab fab--whatsapp" href="https://wa.me/34636702172?text=Hola%20Ismael%2C%20me%20gustar%C3%ADa%20consultarte%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.17 1.623 5.963L.057 23.428a.5.5 0 0 0 .609.601l5.634-1.533A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 0 1-5.031-1.388l-.36-.214-3.733 1.016 1.05-3.619-.235-.372A9.808 9.808 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg></a></div></body>
+diff --git a/blog/del-cuarto-oscuro-a-la-ia/index.html b/blog/del-cuarto-oscuro-a-la-ia/index.html
+index 2150b7c..bb2b7f4 100644
+--- a/blog/del-cuarto-oscuro-a-la-ia/index.html
++++ b/blog/del-cuarto-oscuro-a-la-ia/index.html
+@@ -9,6 +9,7 @@
+   <link rel="canonical" href="https://ismaelgonzalo.com/blog/del-cuarto-oscuro-a-la-ia/">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../../css/main.css">
+   <link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
+ 
+@@ -192,15 +193,15 @@
+   <header class="nav">
+     <div class="container">
+       <nav class="nav__inner">
+-        <a href="../../index.html" class="nav__logo">
++        <a href="/" class="nav__logo">
+           <span>Ismael Gonzalo Peña</span>
+           <span>Diseñador Gráfico · Vitoria-Gasteiz</span>
+         </a>
+         <ul class="nav__links">
+-          <li><a href="../../portfolio/index.html">Portfolio</a></li>
+-          <li><a href="../../pages/sobre-mi.html">Sobre mí</a></li>
+-          <li><a href="../../blog/index.html" class="active">Blog</a></li>
+-          <li><a href="../../pages/contacto.html" class="nav__cta">Contactar</a></li>
++          <li><a href="/portfolio/">Portfolio</a></li>
++          <li><a href="/pages/sobre-mi">Sobre mí</a></li>
++          <li><a href="/blog/" class="active">Blog</a></li>
++          <li><a href="/pages/contacto" class="nav__cta">Contactar</a></li>
+         </ul>
+         <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+           <span></span><span></span><span></span>
+@@ -210,10 +211,10 @@
+   </header>
+ 
+   <nav class="nav__mobile" id="mobile-menu">
+-    <a href="../../portfolio/index.html">Portfolio</a>
+-    <a href="../../pages/sobre-mi.html">Sobre mí</a>
+-    <a href="../../blog/index.html">Blog</a>
+-    <a href="../../pages/contacto.html">Contactar</a>
++    <a href="/portfolio/">Portfolio</a>
++    <a href="/pages/sobre-mi">Sobre mí</a>
++    <a href="/blog/">Blog</a>
++    <a href="/pages/contacto">Contactar</a>
+   </nav>
+ 
+   <main id="main">
+@@ -223,9 +224,9 @@
+       <span class="page-hero__bg-num" aria-hidden="true">05</span>
+       <div class="container">
+         <nav class="breadcrumb">
+-          <a href="../../index.html">Inicio</a>
++          <a href="/">Inicio</a>
+           <span class="breadcrumb__sep">›</span>
+-          <a href="../../blog/index.html">Blog</a>
++          <a href="/blog/">Blog</a>
+           <span class="breadcrumb__sep">›</span>
+           <span aria-current="page">Del cuarto oscuro a la IA</span>
+         </nav>
+@@ -318,7 +319,7 @@
+ 
+           <div class="cta-interno">
+             <p><strong>¿Te interesa el proceso detrás de los proyectos?</strong><br>En el portfolio están documentados algunos de los trabajos más complejos, con el proceso visible desde el concepto hasta el resultado.</p>
+-            <a href="../../portfolio/index.html" class="btn btn--primary">Ver el portfolio</a>
++            <a href="/portfolio/" class="btn btn--primary">Ver el portfolio</a>
+           </div>
+ 
+           <!-- REVOLUCIÓN 5 -->
+@@ -361,7 +362,7 @@
+           <div class="sidebar-box sidebar-box--dark">
+             <h4>Sobre el autor</h4>
+             <p>Diseñador gráfico y especialista en imagen. Fotografía, identidad visual y diseño editorial. Vitoria-Gasteiz.</p>
+-            <a href="../../pages/sobre-mi.html" class="btn btn--outline" style="display:block; text-align:center; font-size:0.8rem; padding:0.5rem 1rem;">Ver perfil completo</a>
++            <a href="/pages/sobre-mi" class="btn btn--outline" style="display:block; text-align:center; font-size:0.8rem; padding:0.5rem 1rem;">Ver perfil completo</a>
+           </div>
+ 
+           <div class="sidebar-box">
+@@ -386,7 +387,7 @@
+           <div class="sidebar-box" style="background:var(--teal); border-color:var(--teal);">
+             <h4 style="color:#fff; border-bottom-color:rgba(255,255,255,0.25);">¿Tienes un proyecto?</h4>
+             <p style="font-size:0.85rem; color:rgba(255,255,255,0.75); margin-bottom:1rem; line-height:1.5;">Cuéntame qué necesitas.</p>
+-            <a href="../../pages/contacto.html" class="btn btn--white" style="display:block; text-align:center;">Contactar</a>
++            <a href="/pages/contacto" class="btn btn--white" style="display:block; text-align:center;">Contactar</a>
+           </div>
+ 
+         </aside>
+@@ -400,7 +401,7 @@
+       <div class="container cta-section__content">
+         <h2 class="reveal">¿Hablamos de<br>tu proyecto?</h2>
+         <p class="reveal reveal-delay-1">Criterio acumulado en cinco revoluciones tecnológicas, aplicado a lo que necesitas hoy.</p>
+-        <a href="../../pages/contacto.html" class="btn btn--white reveal reveal-delay-2">
++        <a href="/pages/contacto" class="btn btn--white reveal reveal-delay-2">
+           Contactar
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+         </a>
+@@ -413,7 +414,7 @@
+     <div class="container">
+       <div class="footer__grid">
+         <div class="footer__brand">
+-          <a href="../../index.html" class="footer__logo">Ismael <span>Gonzalo</span></a>
++          <a href="/" class="footer__logo">Ismael <span>Gonzalo</span></a>
+           <p>Diseñador gráfico y especialista en imagen en Vitoria-Gasteiz.</p>
+           <div class="footer__contact">
+             <a href="tel:+34636702172">636 702 172</a>
+@@ -444,8 +445,8 @@
+         <div class="footer__col">
+           <h5>Más</h5>
+           <ul>
+-            <li><a href="../../pages/sobre-mi.html">Sobre mí</a></li>
+-            <li><a href="../../pages/contacto.html">Contacto</a></li>
++            <li><a href="/pages/sobre-mi">Sobre mí</a></li>
++            <li><a href="/pages/contacto">Contacto</a></li>
+           </ul>
+         </div>
+       </div>
+diff --git a/blog/diseno-publicidad-prensa/index.html b/blog/diseno-publicidad-prensa/index.html
+index 818649d..9d6a6b7 100644
+--- a/blog/diseno-publicidad-prensa/index.html
++++ b/blog/diseno-publicidad-prensa/index.html
+@@ -17,24 +17,25 @@
+   </script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../../css/main.css">
+   <link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
+ </head>
+ <body>
+   <a class="skip-to-content" href="#main">Saltar al contenido</a>
+   <header class="nav"><div class="container"><nav class="nav__inner">
+-    <a href="../../index.html" class="nav__logo"><span>Ismael Gonzalo Peña</span><span>Diseñador Gráfico · Vitoria-Gasteiz</span></a>
+-    <ul class="nav__links"><li><a href="../../portfolio/index.html">Portfolio</a></li><li><a href="../../pages/sobre-mi.html">Sobre mí</a></li><li></li><li><a href="../../blog/index.html" class="active">Blog</a></li><li><a href="../../pages/contacto.html" class="nav__cta">Contactar</a></li></ul>
++    <a href="/" class="nav__logo"><span>Ismael Gonzalo Peña</span><span>Diseñador Gráfico · Vitoria-Gasteiz</span></a>
++    <ul class="nav__links"><li><a href="/portfolio/">Portfolio</a></li><li><a href="/pages/sobre-mi">Sobre mí</a></li><li></li><li><a href="/blog/" class="active">Blog</a></li><li><a href="/pages/contacto" class="nav__cta">Contactar</a></li></ul>
+     <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+   </nav></div></header>
+-  <nav class="nav__mobile" id="mobile-menu"><a href="../../portfolio/index.html">Portfolio</a><a href="../../pages/sobre-mi.html">Sobre mí</a><a href="../../blog/index.html">Blog</a>
+-    <a href="../../pages/contacto.html">Contactar</a></nav>
++  <nav class="nav__mobile" id="mobile-menu"><a href="/portfolio/">Portfolio</a><a href="/pages/sobre-mi">Sobre mí</a><a href="/blog/">Blog</a>
++    <a href="/pages/contacto">Contactar</a></nav>
+ 
+   <main id="main">
+     <section class="page-hero" style="padding-bottom:4rem;">
+       <span class="page-hero__bg-num" aria-hidden="true">07</span>
+       <div class="container">
+-        <nav class="breadcrumb"><a href="../../index.html">Inicio</a><span class="breadcrumb__sep">›</span><a href="../../blog/index.html">Blog</a><span class="breadcrumb__sep">›</span><span aria-current="page">Diseño publicitario en prensa</span></nav>
++        <nav class="breadcrumb"><a href="/">Inicio</a><span class="breadcrumb__sep">›</span><a href="/blog/">Blog</a><span class="breadcrumb__sep">›</span><span aria-current="page">Diseño publicitario en prensa</span></nav>
+         <div style="margin-top:1.5rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+           <span class="tag">Diseño gráfico</span>
+           <span style="font-size:var(--text-sm);color:rgba(255,255,255,0.5);">Junio 2026 · 8 min de lectura</span>
+@@ -126,7 +127,7 @@
+           <div class="article-sidebar__card" style="background:var(--teal);color:white;">
+             <h4 style="font-size:var(--text-base);margin-bottom:0.75rem;color:white;">¿Tienes un proyecto?</h4>
+             <p style="font-size:var(--text-sm);color:rgba(255,255,255,0.85);margin:0 0 1rem;line-height:1.6;">Diseño publicitario, cartelería o comunicación para eventos. Cuéntame qué necesitas.</p>
+-            <a href="../../pages/contacto.html" class="btn btn--white" style="width:100%;justify-content:center;font-size:var(--text-sm);">Contactar</a>
++            <a href="/pages/contacto" class="btn btn--white" style="width:100%;justify-content:center;font-size:var(--text-sm);">Contactar</a>
+           </div>
+ 
+           <div class="article-sidebar__card" style="margin-top:1.5rem;">
+@@ -177,7 +178,7 @@
+     </section>
+   </main>
+ 
+-  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="../../index.html" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Blog</h5><ul><li><a href="../../blog/caicos-diseno-reloj/index.html">Reloj CAICOS</a></li><li><a href="../../blog/fotografia-producto-relojeria/index.html">Fotografía relojería</a></li><li><a href="../../blog/midjourney-flujo-trabajo-disenador/index.html">Midjourney</a></li><li><a href="../../blog/manual-identidad-corporativa/index.html">Identidad corporativa</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="../../pages/sobre-mi.html">Sobre mí</a></li><li><a href="../../pages/contacto.html">Contacto</a></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2026 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
++  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="/" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Blog</h5><ul><li><a href="../../blog/caicos-diseno-reloj/index.html">Reloj CAICOS</a></li><li><a href="../../blog/fotografia-producto-relojeria/index.html">Fotografía relojería</a></li><li><a href="../../blog/midjourney-flujo-trabajo-disenador/index.html">Midjourney</a></li><li><a href="../../blog/manual-identidad-corporativa/index.html">Identidad corporativa</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="/pages/sobre-mi">Sobre mí</a></li><li><a href="/pages/contacto">Contacto</a></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2026 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
+   <div class="lightbox"><button class="lightbox__close">×</button><img class="lightbox__img" src="" alt=""></div>
+   <script src="../../js/main.js"></script>
+   <div class="fab-container"><button class="fab fab--top" id="fab-top" aria-label="Volver arriba"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg></button><a class="fab fab--whatsapp" href="https://wa.me/34636702172?text=Hola%20Ismael%2C%20me%20gustar%C3%ADa%20consultarte%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.17 1.623 5.963L.057 23.428a.5.5 0 0 0 .609.601l5.634-1.533A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 0 1-5.031-1.388l-.36-.214-3.733 1.016 1.05-3.619-.235-.372A9.808 9.808 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg></a></div>
+diff --git a/blog/fotografia-producto-relojeria/index.html b/blog/fotografia-producto-relojeria/index.html
+index 0e8b7dc..3b3cdd9 100644
+--- a/blog/fotografia-producto-relojeria/index.html
++++ b/blog/fotografia-producto-relojeria/index.html
+@@ -13,24 +13,25 @@
+   </script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../../css/main.css">
+   <link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
+ </head>
+ <body>
+   <a class="skip-to-content" href="#main">Saltar al contenido</a>
+   <header class="nav"><div class="container"><nav class="nav__inner">
+-    <a href="../../index.html" class="nav__logo"><span>Ismael Gonzalo Peña</span><span>Diseñador Gráfico · Vitoria-Gasteiz</span></a>
+-    <ul class="nav__links"><li><a href="../../portfolio/index.html">Portfolio</a></li><li><a href="../../pages/sobre-mi.html">Sobre mí</a></li><li></li><li><a href="../../blog/index.html" class="active">Blog</a></li><li><a href="../../pages/contacto.html" class="nav__cta">Contactar</a></li></ul>
++    <a href="/" class="nav__logo"><span>Ismael Gonzalo Peña</span><span>Diseñador Gráfico · Vitoria-Gasteiz</span></a>
++    <ul class="nav__links"><li><a href="/portfolio/">Portfolio</a></li><li><a href="/pages/sobre-mi">Sobre mí</a></li><li></li><li><a href="/blog/" class="active">Blog</a></li><li><a href="/pages/contacto" class="nav__cta">Contactar</a></li></ul>
+     <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+   </nav></div></header>
+-  <nav class="nav__mobile" id="mobile-menu"><a href="../../portfolio/index.html">Portfolio</a><a href="../../pages/sobre-mi.html">Sobre mí</a><a href="../../blog/index.html">Blog</a>
+-    <a href="../../pages/contacto.html">Contactar</a></nav>
++  <nav class="nav__mobile" id="mobile-menu"><a href="/portfolio/">Portfolio</a><a href="/pages/sobre-mi">Sobre mí</a><a href="/blog/">Blog</a>
++    <a href="/pages/contacto">Contactar</a></nav>
+ 
+   <main id="main">
+     <section class="page-hero" style="padding-bottom:4rem;">
+       <span class="page-hero__bg-num" aria-hidden="true">02</span>
+       <div class="container">
+-        <nav class="breadcrumb"><a href="../../index.html">Inicio</a><span class="breadcrumb__sep">›</span><a href="../../blog/index.html">Blog</a><span class="breadcrumb__sep">›</span><span aria-current="page">Fotografía relojería</span></nav>
++        <nav class="breadcrumb"><a href="/">Inicio</a><span class="breadcrumb__sep">›</span><a href="/blog/">Blog</a><span class="breadcrumb__sep">›</span><span aria-current="page">Fotografía relojería</span></nav>
+         <div style="margin-top:1.5rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+           <span class="tag">Fotografía</span>
+           <span style="font-size:var(--text-sm);color:rgba(255,255,255,0.5);">Mayo 2025 · 10 min de lectura</span>
+@@ -145,7 +146,7 @@
+           <div class="article-sidebar__card" style="background:var(--teal);color:white;">
+             <h4 style="color:white;">¿Necesitas fotografía de producto?</h4>
+             <p style="font-size:var(--text-sm);color:rgba(255,255,255,0.8);margin:0.75rem 0 1.25rem;">Cuéntame el proyecto: qué producto, qué uso, qué plazo.</p>
+-            <a href="../../pages/contacto.html" class="btn btn--white" style="width:100%;justify-content:center;font-size:var(--text-sm);">Solicitar presupuesto</a>
++            <a href="/pages/contacto" class="btn btn--white" style="width:100%;justify-content:center;font-size:var(--text-sm);">Solicitar presupuesto</a>
+           </div>
+           <div class="article-sidebar__card" style="background:var(--off-white);border:1px solid var(--gray-light);">
+             <h4 style="font-size:var(--text-base);margin-bottom:0.75rem;">Portfolio completo en PDF</h4>
+@@ -176,7 +177,7 @@
+     </section>
+   </main>
+ 
+-  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="../../index.html" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Blog</h5><ul><li><a href="../../blog/caicos-diseno-reloj/index.html">Reloj CAICOS</a></li><li><a href="../../blog/fotografia-producto-relojeria/index.html">Fotografía relojería</a></li><li><a href="../../blog/midjourney-flujo-trabajo-disenador/index.html">Midjourney</a></li><li><a href="../../blog/manual-identidad-corporativa/index.html">Identidad corporativa</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="../../pages/sobre-mi.html">Sobre mí</a></li><li></li><li><a href="../../pages/contacto.html">Contacto</a></li><li></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2025 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
++  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="/" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Blog</h5><ul><li><a href="../../blog/caicos-diseno-reloj/index.html">Reloj CAICOS</a></li><li><a href="../../blog/fotografia-producto-relojeria/index.html">Fotografía relojería</a></li><li><a href="../../blog/midjourney-flujo-trabajo-disenador/index.html">Midjourney</a></li><li><a href="../../blog/manual-identidad-corporativa/index.html">Identidad corporativa</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="/pages/sobre-mi">Sobre mí</a></li><li></li><li><a href="/pages/contacto">Contacto</a></li><li></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2025 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
+   <div class="lightbox"><button class="lightbox__close">×</button><img class="lightbox__img" src="" alt=""></div>
+   <script src="../../js/main.js"></script>
+ <div class="fab-container"><button class="fab fab--top" id="fab-top" aria-label="Volver arriba"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg></button><a class="fab fab--whatsapp" href="https://wa.me/34636702172?text=Hola%20Ismael%2C%20me%20gustar%C3%ADa%20consultarte%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.17 1.623 5.963L.057 23.428a.5.5 0 0 0 .609.601l5.634-1.533A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 0 1-5.031-1.388l-.36-.214-3.733 1.016 1.05-3.619-.235-.372A9.808 9.808 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg></a></div></body>
+diff --git a/blog/index.html b/blog/index.html
+index db55fac..b241976 100644
+--- a/blog/index.html
++++ b/blog/index.html
+@@ -10,6 +10,7 @@
+   <link rel="canonical" href="https://ismaelgonzalo.com/blog/">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../css/main.css">
+   <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+ </head>
+@@ -20,16 +21,16 @@
+   <header class="nav">
+     <div class="container">
+       <nav class="nav__inner">
+-        <a href="../index.html" class="nav__logo">
++        <a href="/" class="nav__logo">
+           <span>Ismael Gonzalo Peña</span>
+           <span>Diseñador Gráfico · Vitoria-Gasteiz</span>
+         </a>
+         <ul class="nav__links">
+-          <li><a href="../portfolio/index.html">Portfolio</a></li>
+-          <li><a href="../pages/sobre-mi.html">Sobre mí</a></li>
+-          <li><a href="../blog/index.html" class="active">Blog</a></li>
++          <li><a href="/portfolio/">Portfolio</a></li>
++          <li><a href="/pages/sobre-mi">Sobre mí</a></li>
++          <li><a href="/blog/" class="active">Blog</a></li>
+           
+-          <li><a href="../pages/contacto.html" class="nav__cta">Contactar</a></li>
++          <li><a href="/pages/contacto" class="nav__cta">Contactar</a></li>
+         </ul>
+         <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+           <span></span><span></span><span></span>
+@@ -38,12 +39,12 @@
+     </div>
+   </header>
+   <nav class="nav__mobile" id="mobile-menu">
+-    <a href="../portfolio/index.html">Portfolio</a>
+-    <a href="../pages/sobre-mi.html">Sobre mí</a>
++    <a href="/portfolio/">Portfolio</a>
++    <a href="/pages/sobre-mi">Sobre mí</a>
+     
+-    <a href="../blog/index.html">Blog</a>
++    <a href="/blog/">Blog</a>
+     
+-    <a href="../pages/contacto.html">Contactar</a>
++    <a href="/pages/contacto">Contactar</a>
+   </nav>
+ 
+   <main id="main">
+@@ -52,7 +53,7 @@
+       <span class="page-hero__bg-num" aria-hidden="true">BL</span>
+       <div class="container">
+         <nav class="breadcrumb">
+-          <a href="../index.html">Inicio</a>
++          <a href="/">Inicio</a>
+           <span class="breadcrumb__sep">›</span>
+           <span aria-current="page">Blog</span>
+         </nav>
+@@ -248,7 +249,7 @@
+       <div class="container cta-section__content">
+         <h2 class="reveal">¿Tienes un<br>proyecto?</h2>
+         <p class="reveal reveal-delay-1">Cuéntame qué necesitas. </p>
+-        <a href="../pages/contacto.html" class="btn btn--white reveal reveal-delay-2">
++        <a href="/pages/contacto" class="btn btn--white reveal reveal-delay-2">
+           Contactar
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+         </a>
+@@ -261,7 +262,7 @@
+     <div class="container">
+       <div class="footer__grid">
+         <div class="footer__brand">
+-          <a href="../index.html" class="footer__logo">Ismael <span>Gonzalo</span></a>
++          <a href="/" class="footer__logo">Ismael <span>Gonzalo</span></a>
+           <p>Diseñador gráfico y especialista en imagen en Vitoria-Gasteiz.</p>
+           <div class="footer__contact">
+             <a href="tel:+34636702172">636 702 172</a>
+@@ -293,8 +294,8 @@
+         <div class="footer__col">
+           <h5>Más</h5>
+           <ul>
+-            <li><a href="../pages/sobre-mi.html">Sobre mí</a></li>
+-              <li><a href="../pages/contacto.html">Contacto</a></li>
++            <li><a href="/pages/sobre-mi">Sobre mí</a></li>
++              <li><a href="/pages/contacto">Contacto</a></li>
+           </ul>
+         </div>
+       </div>
+diff --git a/blog/manual-identidad-corporativa/index.html b/blog/manual-identidad-corporativa/index.html
+index 60688a1..c960c66 100644
+--- a/blog/manual-identidad-corporativa/index.html
++++ b/blog/manual-identidad-corporativa/index.html
+@@ -13,24 +13,25 @@
+   </script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../../css/main.css">
+   <link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
+ </head>
+ <body>
+   <a class="skip-to-content" href="#main">Saltar al contenido</a>
+   <header class="nav"><div class="container"><nav class="nav__inner">
+-    <a href="../../index.html" class="nav__logo"><span>Ismael Gonzalo Peña</span><span>Diseñador Gráfico · Vitoria-Gasteiz</span></a>
+-    <ul class="nav__links"><li><a href="../../portfolio/index.html">Portfolio</a></li><li><a href="../../pages/sobre-mi.html">Sobre mí</a></li><li></li><li><a href="../../blog/index.html" class="active">Blog</a></li><li><a href="../../pages/contacto.html" class="nav__cta">Contactar</a></li></ul>
++    <a href="/" class="nav__logo"><span>Ismael Gonzalo Peña</span><span>Diseñador Gráfico · Vitoria-Gasteiz</span></a>
++    <ul class="nav__links"><li><a href="/portfolio/">Portfolio</a></li><li><a href="/pages/sobre-mi">Sobre mí</a></li><li></li><li><a href="/blog/" class="active">Blog</a></li><li><a href="/pages/contacto" class="nav__cta">Contactar</a></li></ul>
+     <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+   </nav></div></header>
+-  <nav class="nav__mobile" id="mobile-menu"><a href="../../portfolio/index.html">Portfolio</a><a href="../../pages/sobre-mi.html">Sobre mí</a><a href="../../blog/index.html">Blog</a>
+-    <a href="../../pages/contacto.html">Contactar</a></nav>
++  <nav class="nav__mobile" id="mobile-menu"><a href="/portfolio/">Portfolio</a><a href="/pages/sobre-mi">Sobre mí</a><a href="/blog/">Blog</a>
++    <a href="/pages/contacto">Contactar</a></nav>
+ 
+   <main id="main">
+     <section class="page-hero" style="padding-bottom:4rem;">
+       <span class="page-hero__bg-num" aria-hidden="true">ID</span>
+       <div class="container">
+-        <nav class="breadcrumb"><a href="../../index.html">Inicio</a><span class="breadcrumb__sep">›</span><a href="../../blog/index.html">Blog</a><span class="breadcrumb__sep">›</span><span aria-current="page">Manual de identidad</span></nav>
++        <nav class="breadcrumb"><a href="/">Inicio</a><span class="breadcrumb__sep">›</span><a href="/blog/">Blog</a><span class="breadcrumb__sep">›</span><span aria-current="page">Manual de identidad</span></nav>
+         <div style="margin-top:1.5rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+           <span class="tag">Diseño gráfico</span>
+           <span style="font-size:var(--text-sm);color:rgba(255,255,255,0.5);">Marzo 2025 · 9 min de lectura</span>
+@@ -149,7 +150,7 @@
+           <div style="padding:2rem;background:var(--teal-ghost);border-radius:2px;margin:3rem 0;border-left:4px solid var(--teal);">
+             <p style="margin:0 0 1rem;font-weight:500;">¿Necesitas identidad corporativa para tu empresa?</p>
+             <a href="../../portfolio/diseno-grafico/index.html" class="arrow-link" style="display:block;margin-bottom:0.75rem;">Ver el proyecto Gómez Shoe Store completo <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+-            <a href="../../pages/contacto.html" class="arrow-link">Solicitar presupuesto de identidad <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
++            <a href="/pages/contacto" class="arrow-link">Solicitar presupuesto de identidad <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+           </div>
+ 
+         </article>
+@@ -178,7 +179,7 @@
+           <div class="article-sidebar__card" style="background:var(--teal);color:white;">
+             <h4 style="color:white;">¿Necesitas identidad corporativa?</h4>
+             <p style="font-size:var(--text-sm);color:rgba(255,255,255,0.8);margin:0.75rem 0 1.25rem;">Manual de marca completo o rediseño de logotipo. Cuéntame el proyecto.</p>
+-            <a href="../../pages/contacto.html" class="btn btn--white" style="width:100%;justify-content:center;font-size:var(--text-sm);">Solicitar presupuesto</a>
++            <a href="/pages/contacto" class="btn btn--white" style="width:100%;justify-content:center;font-size:var(--text-sm);">Solicitar presupuesto</a>
+           </div>
+           <div class="article-sidebar__card" style="background:var(--off-white);border:1px solid var(--gray-light);">
+             <h4 style="font-size:var(--text-base);margin-bottom:0.75rem;">Portfolio completo en PDF</h4>
+@@ -209,7 +210,7 @@
+     </section>
+   </main>
+ 
+-  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="../../index.html" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Blog</h5><ul><li><a href="../../blog/caicos-diseno-reloj/index.html">Reloj CAICOS</a></li><li><a href="../../blog/fotografia-producto-relojeria/index.html">Fotografía relojería</a></li><li><a href="../../blog/midjourney-flujo-trabajo-disenador/index.html">Midjourney</a></li><li><a href="../../blog/manual-identidad-corporativa/index.html">Identidad corporativa</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="../../pages/sobre-mi.html">Sobre mí</a></li><li></li><li><a href="../../pages/contacto.html">Contacto</a></li><li></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2025 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
++  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="/" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Blog</h5><ul><li><a href="../../blog/caicos-diseno-reloj/index.html">Reloj CAICOS</a></li><li><a href="../../blog/fotografia-producto-relojeria/index.html">Fotografía relojería</a></li><li><a href="../../blog/midjourney-flujo-trabajo-disenador/index.html">Midjourney</a></li><li><a href="../../blog/manual-identidad-corporativa/index.html">Identidad corporativa</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="/pages/sobre-mi">Sobre mí</a></li><li></li><li><a href="/pages/contacto">Contacto</a></li><li></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2025 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
+   <div class="lightbox"><button class="lightbox__close">×</button><img class="lightbox__img" src="" alt=""></div>
+   <script src="../../js/main.js"></script>
+ <div class="fab-container"><button class="fab fab--top" id="fab-top" aria-label="Volver arriba"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg></button><a class="fab fab--whatsapp" href="https://wa.me/34636702172?text=Hola%20Ismael%2C%20me%20gustar%C3%ADa%20consultarte%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.17 1.623 5.963L.057 23.428a.5.5 0 0 0 .609.601l5.634-1.533A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 0 1-5.031-1.388l-.36-.214-3.733 1.016 1.05-3.619-.235-.372A9.808 9.808 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg></a></div></body>
+diff --git a/blog/midjourney-flujo-trabajo-disenador/index.html b/blog/midjourney-flujo-trabajo-disenador/index.html
+index 33d6436..7fd062b 100644
+--- a/blog/midjourney-flujo-trabajo-disenador/index.html
++++ b/blog/midjourney-flujo-trabajo-disenador/index.html
+@@ -13,24 +13,25 @@
+   </script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../../css/main.css">
+   <link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
+ </head>
+ <body>
+   <a class="skip-to-content" href="#main">Saltar al contenido</a>
+   <header class="nav"><div class="container"><nav class="nav__inner">
+-    <a href="../../index.html" class="nav__logo"><span>Ismael Gonzalo Peña</span><span>Diseñador Gráfico · Vitoria-Gasteiz</span></a>
+-    <ul class="nav__links"><li><a href="../../portfolio/index.html">Portfolio</a></li><li><a href="../../pages/sobre-mi.html">Sobre mí</a></li><li></li><li><a href="../../blog/index.html" class="active">Blog</a></li><li><a href="../../pages/contacto.html" class="nav__cta">Contactar</a></li></ul>
++    <a href="/" class="nav__logo"><span>Ismael Gonzalo Peña</span><span>Diseñador Gráfico · Vitoria-Gasteiz</span></a>
++    <ul class="nav__links"><li><a href="/portfolio/">Portfolio</a></li><li><a href="/pages/sobre-mi">Sobre mí</a></li><li></li><li><a href="/blog/" class="active">Blog</a></li><li><a href="/pages/contacto" class="nav__cta">Contactar</a></li></ul>
+     <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+   </nav></div></header>
+-  <nav class="nav__mobile" id="mobile-menu"><a href="../../portfolio/index.html">Portfolio</a><a href="../../pages/sobre-mi.html">Sobre mí</a><a href="../../blog/index.html">Blog</a>
+-    <a href="../../pages/contacto.html">Contactar</a></nav>
++  <nav class="nav__mobile" id="mobile-menu"><a href="/portfolio/">Portfolio</a><a href="/pages/sobre-mi">Sobre mí</a><a href="/blog/">Blog</a>
++    <a href="/pages/contacto">Contactar</a></nav>
+ 
+   <main id="main">
+     <section class="page-hero" style="padding-bottom:4rem;">
+       <span class="page-hero__bg-num" aria-hidden="true">IA</span>
+       <div class="container">
+-        <nav class="breadcrumb"><a href="../../index.html">Inicio</a><span class="breadcrumb__sep">›</span><a href="../../blog/index.html">Blog</a><span class="breadcrumb__sep">›</span><span aria-current="page">Midjourney para diseñadores</span></nav>
++        <nav class="breadcrumb"><a href="/">Inicio</a><span class="breadcrumb__sep">›</span><a href="/blog/">Blog</a><span class="breadcrumb__sep">›</span><span aria-current="page">Midjourney para diseñadores</span></nav>
+         <div style="margin-top:1.5rem;display:flex;gap:1rem;align-items:center;flex-wrap:wrap;">
+           <span class="tag">IA aplicada al diseño</span>
+           <span style="font-size:var(--text-sm);color:rgba(255,255,255,0.5);">Abril 2025 · 9 min de lectura</span>
+@@ -158,7 +159,7 @@
+           <div class="article-sidebar__card" style="background:var(--teal);color:white;">
+             <h4 style="color:white;">Servicios con IA generativa</h4>
+             <p style="font-size:var(--text-sm);color:rgba(255,255,255,0.8);margin:0.75rem 0 1.25rem;">Moodboards, variantes de concepto, extensión de imágenes y flujos híbridos para proyectos con plazos ajustados.</p>
+-            <a href="../../pages/contacto.html" class="btn btn--white" style="width:100%;justify-content:center;font-size:var(--text-sm);">Contactar</a>
++            <a href="/pages/contacto" class="btn btn--white" style="width:100%;justify-content:center;font-size:var(--text-sm);">Contactar</a>
+           </div>
+           <div class="article-sidebar__card" style="background:var(--off-white);border:1px solid var(--gray-light);">
+             <h4 style="font-size:var(--text-base);margin-bottom:0.75rem;">Portfolio completo en PDF</h4>
+@@ -189,7 +190,7 @@
+     </section>
+   </main>
+ 
+-  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="../../index.html" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Blog</h5><ul><li><a href="../../blog/caicos-diseno-reloj/index.html">Reloj CAICOS</a></li><li><a href="../../blog/fotografia-producto-relojeria/index.html">Fotografía relojería</a></li><li><a href="../../blog/midjourney-flujo-trabajo-disenador/index.html">Midjourney</a></li><li><a href="../../blog/manual-identidad-corporativa/index.html">Identidad corporativa</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="../../pages/sobre-mi.html">Sobre mí</a></li><li></li><li><a href="../../pages/contacto.html">Contacto</a></li><li></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2025 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
++  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="/" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Blog</h5><ul><li><a href="../../blog/caicos-diseno-reloj/index.html">Reloj CAICOS</a></li><li><a href="../../blog/fotografia-producto-relojeria/index.html">Fotografía relojería</a></li><li><a href="../../blog/midjourney-flujo-trabajo-disenador/index.html">Midjourney</a></li><li><a href="../../blog/manual-identidad-corporativa/index.html">Identidad corporativa</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="/pages/sobre-mi">Sobre mí</a></li><li></li><li><a href="/pages/contacto">Contacto</a></li><li></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2025 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
+   <div class="lightbox"><button class="lightbox__close">×</button><img class="lightbox__img" src="" alt=""></div>
+   <script src="../../js/main.js"></script>
+ <div class="fab-container"><button class="fab fab--top" id="fab-top" aria-label="Volver arriba"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg></button><a class="fab fab--whatsapp" href="https://wa.me/34636702172?text=Hola%20Ismael%2C%20me%20gustar%C3%ADa%20consultarte%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.17 1.623 5.963L.057 23.428a.5.5 0 0 0 .609.601l5.634-1.533A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 0 1-5.031-1.388l-.36-.214-3.733 1.016 1.05-3.619-.235-.372A9.808 9.808 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg></a></div></body>
+diff --git a/css/main.css b/css/main.css
+index d07b2ab..2c609c2 100644
+--- a/css/main.css
++++ b/css/main.css
+@@ -4,7 +4,7 @@
+    ============================================================ */
+ 
+ /* --- GOOGLE FONTS IMPORT --- */
+-@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
++/* Google Fonts cargadas vía <link> en cada HTML para evitar bloqueo de @import */
+ 
+ /* --- CSS CUSTOM PROPERTIES (TOKENS) --- */
+ :root {
+diff --git a/index.html b/index.html
+index fae8bbc..4a84740 100644
+--- a/index.html
++++ b/index.html
+@@ -20,6 +20,7 @@
+   </script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+ </head>
+diff --git a/pages/contacto.html b/pages/contacto.html
+index 42eff5f..5b2d23f 100644
+--- a/pages/contacto.html
++++ b/pages/contacto.html
+@@ -6,9 +6,10 @@
+   <title>Contacto — Ismael Gonzalo | Diseñador gráfico Vitoria-Gasteiz</title>
+   <meta name="description" content="Contacta con Ismael Gonzalo Peña, diseñador gráfico en Vitoria-Gasteiz. Teléfono: 636 702 172. Email: ismaelgph@gmail.com. Respuesta en menos de 24 horas.">
+   <meta name="robots" content="index, follow">
+-  <link rel="canonical" href="https://ismaelgonzalo.com/pages/contacto.html">
++  <link rel="canonical" href="https://ismaelgonzalo.com/pages/contacto">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../css/main.css">
+   <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+ </head>
+@@ -19,15 +20,15 @@
+   <header class="nav">
+     <div class="container">
+       <nav class="nav__inner">
+-        <a href="../index.html" class="nav__logo">
++        <a href="/" class="nav__logo">
+           <span>Ismael Gonzalo Peña</span>
+           <span>Diseñador Gráfico · Vitoria-Gasteiz</span>
+         </a>
+         <ul class="nav__links">
+-          <li><a href="../portfolio/index.html">Portfolio</a></li>
+-          <li><a href="../pages/sobre-mi.html">Sobre mí</a></li>
+-          <li><a href="../blog/index.html">Blog</a></li>
+-          <li><a href="../pages/contacto.html" class="nav__cta active">Contactar</a></li>
++          <li><a href="/portfolio/">Portfolio</a></li>
++          <li><a href="/pages/sobre-mi">Sobre mí</a></li>
++          <li><a href="/blog/">Blog</a></li>
++          <li><a href="/pages/contacto" class="nav__cta active">Contactar</a></li>
+         </ul>
+         <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+           <span></span><span></span><span></span>
+@@ -36,12 +37,12 @@
+     </div>
+   </header>
+   <nav class="nav__mobile" id="mobile-menu">
+-    <a href="../portfolio/index.html">Portfolio</a>
+-    <a href="../pages/sobre-mi.html">Sobre mí</a>
++    <a href="/portfolio/">Portfolio</a>
++    <a href="/pages/sobre-mi">Sobre mí</a>
+     
+-    <a href="../blog/index.html">Blog</a>
++    <a href="/blog/">Blog</a>
+     
+-    <a href="../pages/contacto.html">Contactar</a>
++    <a href="/pages/contacto">Contactar</a>
+   </nav>
+ 
+   <main id="main">
+@@ -50,7 +51,7 @@
+       <span class="page-hero__bg-num" aria-hidden="true">CT</span>
+       <div class="container">
+         <nav class="breadcrumb">
+-          <a href="../index.html">Inicio</a>
++          <a href="/">Inicio</a>
+           <span class="breadcrumb__sep">›</span>
+           <span aria-current="page">Contacto</span>
+         </nav>
+@@ -112,7 +113,7 @@
+               <p style="font-size:var(--text-sm); font-weight:600; color:var(--gray-mid); letter-spacing:0.06em; text-transform:uppercase; margin-bottom:1rem;">Puede que te interese</p>
+               <div style="display:flex; flex-direction:column; gap:0.75rem;">
+                 <a href="../pages/servicios.html" class="arrow-link">Ver todos los servicios <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+-                <a href="../portfolio/index.html" class="arrow-link">Ver el portfolio <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
++                <a href="/portfolio/" class="arrow-link">Ver el portfolio <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+               </div>
+             </div>
+           </div>
+@@ -218,7 +219,7 @@
+     <div class="container">
+       <div class="footer__grid">
+         <div class="footer__brand">
+-          <a href="../index.html" class="footer__logo">Ismael <span>Gonzalo</span></a>
++          <a href="/" class="footer__logo">Ismael <span>Gonzalo</span></a>
+           <p>Diseñador gráfico y especialista en imagen en Vitoria-Gasteiz.</p>
+           <div class="footer__contact">
+             <a href="tel:+34636702172">636 702 172</a>
+@@ -249,9 +250,9 @@
+         <div class="footer__col">
+           <h5>Más</h5>
+           <ul>
+-            <li><a href="../pages/sobre-mi.html">Sobre mí</a></li>
+-            <li><a href="../blog/index.html">Blog</a></li>
+-            <li><a href="../pages/contacto.html">Contacto</a></li>
++            <li><a href="/pages/sobre-mi">Sobre mí</a></li>
++            <li><a href="/blog/">Blog</a></li>
++            <li><a href="/pages/contacto">Contacto</a></li>
+           </ul>
+         </div>
+       </div>
+diff --git a/pages/servicios.html b/pages/servicios.html
+index f65f522..dfbb86f 100644
+--- a/pages/servicios.html
++++ b/pages/servicios.html
+@@ -7,7 +7,7 @@
+   <meta name="description" content="Fotografía de producto, identidad corporativa, diseño editorial, retoque fotográfico y más. Servicios de diseño gráfico profesional en Vitoria-Gasteiz y Álava.">
+   <meta name="keywords" content="servicios diseño gráfico Vitoria-Gasteiz, fotografía de producto Álava, identidad corporativa Vitoria, maquetación editorial">
+   <meta name="robots" content="index, follow">
+-  <link rel="canonical" href="https://ismaelgonzalo.com/pages/servicios.html">
++  <link rel="canonical" href="https://ismaelgonzalo.com/pages/servicios">
+   <script type="application/ld+json">
+   {
+     "@context": "https://schema.org",
+@@ -26,6 +26,7 @@
+   </script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../css/main.css">
+   <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+ </head>
+@@ -36,16 +37,16 @@
+   <header class="nav">
+     <div class="container">
+       <nav class="nav__inner">
+-        <a href="../index.html" class="nav__logo">
++        <a href="/" class="nav__logo">
+           <span>Ismael Gonzalo Peña</span>
+           <span>Diseñador Gráfico · Vitoria-Gasteiz</span>
+         </a>
+         <ul class="nav__links">
+-          <li><a href="../portfolio/index.html">Portfolio</a></li>
+-          <li><a href="../pages/sobre-mi.html">Sobre mí</a></li>
+-          <li><a href="../blog/index.html">Blog</a></li>
++          <li><a href="/portfolio/">Portfolio</a></li>
++          <li><a href="/pages/sobre-mi">Sobre mí</a></li>
++          <li><a href="/blog/">Blog</a></li>
+           
+-          <li><a href="../pages/contacto.html" class="nav__cta">Contactar</a></li>
++          <li><a href="/pages/contacto" class="nav__cta">Contactar</a></li>
+         </ul>
+         <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+           <span></span><span></span><span></span>
+@@ -54,12 +55,12 @@
+     </div>
+   </header>
+   <nav class="nav__mobile" id="mobile-menu">
+-    <a href="../portfolio/index.html">Portfolio</a>
+-    <a href="../pages/sobre-mi.html">Sobre mí</a>
++    <a href="/portfolio/">Portfolio</a>
++    <a href="/pages/sobre-mi">Sobre mí</a>
+     
+-    <a href="../blog/index.html">Blog</a>
++    <a href="/blog/">Blog</a>
+     
+-    <a href="../pages/contacto.html">Contactar</a>
++    <a href="/pages/contacto">Contactar</a>
+   </nav>
+ 
+   <main id="main">
+@@ -69,7 +70,7 @@
+       <span class="page-hero__bg-num" aria-hidden="true">SV</span>
+       <div class="container">
+         <nav class="breadcrumb">
+-          <a href="../index.html">Inicio</a>
++          <a href="/">Inicio</a>
+           <span class="breadcrumb__sep">›</span>
+           <span aria-current="page">Servicios</span>
+         </nav>
+@@ -108,7 +109,7 @@
+               </div>
+             </div>
+             <div class="service-row__cta">
+-              <a href="../pages/contacto.html" class="btn btn--primary">Solicitar información</a>
++              <a href="/pages/contacto" class="btn btn--primary">Solicitar información</a>
+               <a href="../portfolio/fotografia/index.html" class="arrow-link">Ver portfolio <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+             </div>
+           </div>
+@@ -138,7 +139,7 @@
+               </div>
+             </div>
+             <div class="service-row__cta">
+-              <a href="../pages/contacto.html" class="btn btn--primary">Solicitar información</a>
++              <a href="/pages/contacto" class="btn btn--primary">Solicitar información</a>
+               <a href="../portfolio/diseno-grafico/index.html" class="arrow-link">Ver portfolio <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+             </div>
+           </div>
+@@ -166,7 +167,7 @@
+               </div>
+             </div>
+             <div class="service-row__cta">
+-              <a href="../pages/contacto.html" class="btn btn--primary">Solicitar información</a>
++              <a href="/pages/contacto" class="btn btn--primary">Solicitar información</a>
+               <a href="../portfolio/carteleria/index.html" class="arrow-link">Ver portfolio <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+             </div>
+           </div>
+@@ -195,7 +196,7 @@
+               </div>
+             </div>
+             <div class="service-row__cta">
+-              <a href="../pages/contacto.html" class="btn btn--primary">Solicitar información</a>
++              <a href="/pages/contacto" class="btn btn--primary">Solicitar información</a>
+               <a href="../portfolio/diseno-editorial/index.html" class="arrow-link">Ver portfolio <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+             </div>
+           </div>
+@@ -223,7 +224,7 @@
+               </div>
+             </div>
+             <div class="service-row__cta">
+-              <a href="../pages/contacto.html" class="btn btn--primary">Solicitar información</a>
++              <a href="/pages/contacto" class="btn btn--primary">Solicitar información</a>
+               <a href="../portfolio/fotomontajes-retoques/index.html" class="arrow-link">Ver portfolio <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+             </div>
+           </div>
+@@ -248,7 +249,7 @@
+               </div>
+             </div>
+             <div class="service-row__cta">
+-              <a href="../pages/contacto.html" class="btn btn--primary">Solicitar información</a>
++              <a href="/pages/contacto" class="btn btn--primary">Solicitar información</a>
+               <a href="../portfolio/personalizacion-productos/index.html" class="arrow-link">Ver portfolio <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+             </div>
+           </div>
+@@ -277,7 +278,7 @@
+               </div>
+             </div>
+             <div class="service-row__cta">
+-              <a href="../pages/contacto.html" class="btn btn--primary">Solicitar información</a>
++              <a href="/pages/contacto" class="btn btn--primary">Solicitar información</a>
+               <a href="../blog/midjourney-flujo-trabajo-disenador/index.html" class="arrow-link">Leer artículo <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+             </div>
+           </div>
+@@ -343,7 +344,7 @@
+       <div class="container cta-section__content">
+         <h2 class="reveal">¿Tienes un<br>proyecto?</h2>
+         <p class="reveal reveal-delay-1">Cuéntame qué necesitas. </p>
+-        <a href="../pages/contacto.html" class="btn btn--white reveal reveal-delay-2">
++        <a href="/pages/contacto" class="btn btn--white reveal reveal-delay-2">
+           Escribir a Ismael
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+         </a>
+@@ -356,7 +357,7 @@
+     <div class="container">
+       <div class="footer__grid">
+         <div class="footer__brand">
+-          <a href="../index.html" class="footer__logo">Ismael <span>Gonzalo</span></a>
++          <a href="/" class="footer__logo">Ismael <span>Gonzalo</span></a>
+           <p>Diseñador gráfico y especialista en imagen en Vitoria-Gasteiz.</p>
+           <div class="footer__contact">
+             <a href="tel:+34636702172">636 702 172</a>
+@@ -387,9 +388,9 @@
+         <div class="footer__col">
+           <h5>Más</h5>
+           <ul>
+-            <li><a href="../pages/sobre-mi.html">Sobre mí</a></li>
+-            <li><a href="../blog/index.html">Blog</a></li>
+-            <li><a href="../pages/contacto.html">Contacto</a></li>
++            <li><a href="/pages/sobre-mi">Sobre mí</a></li>
++            <li><a href="/blog/">Blog</a></li>
++            <li><a href="/pages/contacto">Contacto</a></li>
+           </ul>
+         </div>
+       </div>
+diff --git a/pages/sobre-mi.html b/pages/sobre-mi.html
+index 454f6c7..2d73b4c 100644
+--- a/pages/sobre-mi.html
++++ b/pages/sobre-mi.html
+@@ -7,7 +7,7 @@
+   <meta name="description" content="Diseñador gráfico y especialista en imagen nacido en Vitoria-Gasteiz en 1968. Fotografía, identidad corporativa, diseño editorial y comunicación visual. Conoce mi trayectoria.">
+   <meta name="keywords" content="diseñador gráfico Vitoria-Gasteiz, Ismael Gonzalo Peña, diseñador con experiencia Álava, fotógrafo Vitoria">
+   <meta name="robots" content="index, follow">
+-  <link rel="canonical" href="https://ismaelgonzalo.com/pages/sobre-mi.html">
++  <link rel="canonical" href="https://ismaelgonzalo.com/pages/sobre-mi">
+   <meta property="og:title" content="Sobre mí — Ismael Gonzalo Peña">
+   <meta property="og:description" content="Diseñador gráfico y especialista en imagen en Vitoria-Gasteiz. Fotografía, identidad corporativa, diseño editorial y comunicación visual.">
+   <meta property="og:url" content="https://ismaelgonzalo.com/pages/sobre-mi.html">
+@@ -32,6 +32,7 @@
+   </script>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../css/main.css">
+   <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+ </head>
+@@ -42,16 +43,16 @@
+   <header class="nav">
+     <div class="container">
+       <nav class="nav__inner">
+-        <a href="../index.html" class="nav__logo">
++        <a href="/" class="nav__logo">
+           <span>Ismael Gonzalo Peña</span>
+           <span>Diseñador Gráfico · Vitoria-Gasteiz</span>
+         </a>
+         <ul class="nav__links">
+-          <li><a href="../portfolio/index.html">Portfolio</a></li>
+-          <li><a href="../pages/sobre-mi.html" class="active">Sobre mí</a></li>
+-          <li><a href="../blog/index.html">Blog</a></li>
++          <li><a href="/portfolio/">Portfolio</a></li>
++          <li><a href="/pages/sobre-mi" class="active">Sobre mí</a></li>
++          <li><a href="/blog/">Blog</a></li>
+           
+-          <li><a href="../pages/contacto.html" class="nav__cta">Contactar</a></li>
++          <li><a href="/pages/contacto" class="nav__cta">Contactar</a></li>
+         </ul>
+         <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+           <span></span><span></span><span></span>
+@@ -60,12 +61,12 @@
+     </div>
+   </header>
+   <nav class="nav__mobile" id="mobile-menu">
+-    <a href="../portfolio/index.html">Portfolio</a>
+-    <a href="../pages/sobre-mi.html">Sobre mí</a>
++    <a href="/portfolio/">Portfolio</a>
++    <a href="/pages/sobre-mi">Sobre mí</a>
+     
+-    <a href="../blog/index.html">Blog</a>
++    <a href="/blog/">Blog</a>
+     
+-    <a href="../pages/contacto.html">Contactar</a>
++    <a href="/pages/contacto">Contactar</a>
+   </nav>
+ 
+   <main id="main">
+@@ -75,7 +76,7 @@
+       <span class="page-hero__bg-num" aria-hidden="true">IG</span>
+       <div class="container">
+         <nav class="breadcrumb">
+-          <a href="../index.html">Inicio</a>
++          <a href="/">Inicio</a>
+           <span class="breadcrumb__sep">›</span>
+           <span aria-current="page">Sobre mí</span>
+         </nav>
+@@ -131,8 +132,8 @@
+             </blockquote>
+ 
+             <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:2rem;">
+-              <a href="../portfolio/index.html" class="btn btn--primary">Ver portfolio</a>
+-              <a href="../pages/contacto.html" class="btn btn--outline">Contactar</a>
++              <a href="/portfolio/" class="btn btn--primary">Ver portfolio</a>
++              <a href="/pages/contacto" class="btn btn--outline">Contactar</a>
+               <a href="../portfolio-pdf.html" download class="btn btn--ghost">
+                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                 Descargar portfolio PDF
+@@ -309,7 +310,7 @@
+       <div class="container cta-section__content">
+         <h2 class="reveal">¿Hablamos<br>de tu proyecto?</h2>
+         <p class="reveal reveal-delay-1">Cuéntame qué necesitas. </p>
+-        <a href="../pages/contacto.html" class="btn btn--white reveal reveal-delay-2">
++        <a href="/pages/contacto" class="btn btn--white reveal reveal-delay-2">
+           Contactar
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+         </a>
+@@ -322,7 +323,7 @@
+     <div class="container">
+       <div class="footer__grid">
+         <div class="footer__brand">
+-          <a href="../index.html" class="footer__logo">Ismael <span>Gonzalo</span></a>
++          <a href="/" class="footer__logo">Ismael <span>Gonzalo</span></a>
+           <p>Diseñador gráfico y especialista en imagen en Vitoria-Gasteiz.</p>
+           <div class="footer__contact">
+             <a href="tel:+34636702172">636 702 172</a>
+@@ -353,9 +354,9 @@
+         <div class="footer__col">
+           <h5>Más</h5>
+           <ul>
+-            <li><a href="../pages/sobre-mi.html">Sobre mí</a></li>
+-            <li><a href="../blog/index.html">Blog</a></li>
+-            <li><a href="../pages/contacto.html">Contacto</a></li>
++            <li><a href="/pages/sobre-mi">Sobre mí</a></li>
++            <li><a href="/blog/">Blog</a></li>
++            <li><a href="/pages/contacto">Contacto</a></li>
+           </ul>
+         </div>
+       </div>
+diff --git a/portfolio-pdf.html b/portfolio-pdf.html
+index 38af9e5..4528d5c 100644
+--- a/portfolio-pdf.html
++++ b/portfolio-pdf.html
+@@ -9,6 +9,7 @@
+   <link rel="canonical" href="https://ismaelgonzalo.com/portfolio-pdf.html">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="css/main.css">
+   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+   <style>
+diff --git a/portfolio/carteleria/index.html b/portfolio/carteleria/index.html
+index 4d156b9..0783812 100644
+--- a/portfolio/carteleria/index.html
++++ b/portfolio/carteleria/index.html
+@@ -8,23 +8,24 @@
+   <meta name="robots" content="index, follow">
+   <link rel="canonical" href="https://ismaelgonzalo.com/portfolio/carteleria/">
+   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../../css/main.css"><link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
+ </head>
+ <body>
+   <a class="skip-to-content" href="#main">Saltar al contenido</a>
+   <header class="nav"><div class="container"><nav class="nav__inner">
+-    <a href="../../index.html" class="nav__logo"><span>Ismael Gonzalo Peña</span><span>Diseñador Gráfico · Vitoria-Gasteiz</span></a>
+-    <ul class="nav__links"><li><a href="../../portfolio/index.html" class="active">Portfolio</a></li><li><a href="../../pages/sobre-mi.html">Sobre mí</a></li><li></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../pages/contacto.html" class="nav__cta">Contactar</a></li></ul>
++    <a href="/" class="nav__logo"><span>Ismael Gonzalo Peña</span><span>Diseñador Gráfico · Vitoria-Gasteiz</span></a>
++    <ul class="nav__links"><li><a href="/portfolio/" class="active">Portfolio</a></li><li><a href="/pages/sobre-mi">Sobre mí</a></li><li></li><li><a href="/blog/">Blog</a></li><li><a href="/pages/contacto" class="nav__cta">Contactar</a></li></ul>
+     <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+   </nav></div></header>
+-  <nav class="nav__mobile" id="mobile-menu"><a href="../../portfolio/index.html">Portfolio</a><a href="../../pages/sobre-mi.html">Sobre mí</a><a href="../../blog/index.html">Blog</a>
+-    <a href="../../pages/contacto.html">Contactar</a></nav>
++  <nav class="nav__mobile" id="mobile-menu"><a href="/portfolio/">Portfolio</a><a href="/pages/sobre-mi">Sobre mí</a><a href="/blog/">Blog</a>
++    <a href="/pages/contacto">Contactar</a></nav>
+ 
+   <main id="main">
+     <section class="page-hero">
+       <span class="page-hero__bg-num" aria-hidden="true">05</span>
+       <div class="container">
+-        <nav class="breadcrumb"><a href="../../index.html">Inicio</a><span class="breadcrumb__sep">›</span><a href="../../portfolio/index.html">Portfolio</a><span class="breadcrumb__sep">›</span><span aria-current="page">Cartelería</span></nav>
++        <nav class="breadcrumb"><a href="/">Inicio</a><span class="breadcrumb__sep">›</span><a href="/portfolio/">Portfolio</a><span class="breadcrumb__sep">›</span><span aria-current="page">Cartelería</span></nav>
+         <span class="label" style="color:var(--teal);margin-top:1rem;display:block;">05 / Cartelería</span>
+         <h1 class="reveal">Diseño de cartelería<br>publicitaria y gráfica exterior</h1>
+         <p class="reveal reveal-delay-1">Un cartel tiene que funcionar en un segundo. No hay tiempo para leer, no hay posibilidad de hacer clic. Tiene que capturar la atención, transmitir el mensaje esencial y dejar una impresión duradera antes de que el ojo se mueva a otra cosa. Desde ejercicios de diseño publicitario sobre campañas reales como La Hora del Planeta de WWF, hasta materiales de comunicación deportiva para CB Araba, con quienes colaboré de forma altruista durante varias temporadas.</p>
+@@ -121,11 +122,11 @@
+     <section class="cta-section"><span class="section-num cta-section__num" aria-hidden="true">?</span><div class="container cta-section__content">
+       <h2 class="reveal">¿Necesitas cartelería?</h2>
+       <p class="reveal reveal-delay-1">Evento, campaña o gráfica exterior. Cuéntame el proyecto.</p>
+-      <a href="../../pages/contacto.html" class="btn btn--white reveal reveal-delay-2">Solicitar presupuesto <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
++      <a href="/pages/contacto" class="btn btn--white reveal reveal-delay-2">Solicitar presupuesto <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+     </div></section>
+   </main>
+ 
+-  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="../../index.html" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/fotomontajes-retoques/index.html">Retoques</a></li><li><a href="../../portfolio/diseno-editorial/index.html">Editorial</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Servicios</h5><ul><li><a href="../../pages/servicios.html">Ver todos</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="../../pages/sobre-mi.html">Sobre mí</a></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../pages/contacto.html">Contacto</a></li><li></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2025 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
++  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="/" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/fotomontajes-retoques/index.html">Retoques</a></li><li><a href="../../portfolio/diseno-editorial/index.html">Editorial</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Servicios</h5><ul><li><a href="../../pages/servicios.html">Ver todos</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="/pages/sobre-mi">Sobre mí</a></li><li><a href="/blog/">Blog</a></li><li><a href="/pages/contacto">Contacto</a></li><li></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2025 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
+   <div class="lightbox"><button class="lightbox__close" aria-label="Cerrar">×</button><img class="lightbox__img" src="" alt=""></div>
+   <script src="../../js/main.js"></script>
+ <div class="fab-container"><button class="fab fab--top" id="fab-top" aria-label="Volver arriba"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg></button><a class="fab fab--whatsapp" href="https://wa.me/34636702172?text=Hola%20Ismael%2C%20me%20gustar%C3%ADa%20consultarte%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.17 1.623 5.963L.057 23.428a.5.5 0 0 0 .609.601l5.634-1.533A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 0 1-5.031-1.388l-.36-.214-3.733 1.016 1.05-3.619-.235-.372A9.808 9.808 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg></a></div></body>
+diff --git a/portfolio/diseno-editorial/index.html b/portfolio/diseno-editorial/index.html
+index 72d0679..41a5f05 100644
+--- a/portfolio/diseno-editorial/index.html
++++ b/portfolio/diseno-editorial/index.html
+@@ -8,23 +8,24 @@
+   <meta name="robots" content="index, follow">
+   <link rel="canonical" href="https://ismaelgonzalo.com/portfolio/diseno-editorial/">
+   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../../css/main.css"><link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
+ </head>
+ <body>
+   <a class="skip-to-content" href="#main">Saltar al contenido</a>
+   <header class="nav"><div class="container"><nav class="nav__inner">
+-    <a href="../../index.html" class="nav__logo"><span>Ismael Gonzalo Peña</span><span>Diseñador Gráfico · Vitoria-Gasteiz</span></a>
+-    <ul class="nav__links"><li><a href="../../portfolio/index.html" class="active">Portfolio</a></li><li><a href="../../pages/sobre-mi.html">Sobre mí</a></li><li></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../pages/contacto.html" class="nav__cta">Contactar</a></li></ul>
++    <a href="/" class="nav__logo"><span>Ismael Gonzalo Peña</span><span>Diseñador Gráfico · Vitoria-Gasteiz</span></a>
++    <ul class="nav__links"><li><a href="/portfolio/" class="active">Portfolio</a></li><li><a href="/pages/sobre-mi">Sobre mí</a></li><li></li><li><a href="/blog/">Blog</a></li><li><a href="/pages/contacto" class="nav__cta">Contactar</a></li></ul>
+     <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+   </nav></div></header>
+-  <nav class="nav__mobile" id="mobile-menu"><a href="../../portfolio/index.html">Portfolio</a><a href="../../pages/sobre-mi.html">Sobre mí</a><a href="../../blog/index.html">Blog</a>
+-    <a href="../../pages/contacto.html">Contactar</a></nav>
++  <nav class="nav__mobile" id="mobile-menu"><a href="/portfolio/">Portfolio</a><a href="/pages/sobre-mi">Sobre mí</a><a href="/blog/">Blog</a>
++    <a href="/pages/contacto">Contactar</a></nav>
+ 
+   <main id="main">
+     <section class="page-hero">
+       <span class="page-hero__bg-num" aria-hidden="true">04</span>
+       <div class="container">
+-        <nav class="breadcrumb"><a href="../../index.html">Inicio</a><span class="breadcrumb__sep">›</span><a href="../../portfolio/index.html">Portfolio</a><span class="breadcrumb__sep">›</span><span aria-current="page">Diseño Editorial</span></nav>
++        <nav class="breadcrumb"><a href="/">Inicio</a><span class="breadcrumb__sep">›</span><a href="/portfolio/">Portfolio</a><span class="breadcrumb__sep">›</span><span aria-current="page">Diseño Editorial</span></nav>
+         <span class="label" style="color:var(--teal);margin-top:1rem;display:block;">04 / Diseño Editorial</span>
+         <h1 class="reveal">Diseño editorial y maquetación<br>profesional — libros, revistas, catálogos</h1>
+         <p class="reveal reveal-delay-1">El diseño editorial tiene una lógica propia. No es solo hacer que algo quede bonito en una página: es construir un flujo de lectura, jerarquizar la información, elegir tipografías que funcionen en cuerpo pequeño, preparar archivos que lleguen a imprenta exactamente como estaban pensados. He trabajado en contextos muy distintos: desde libros de proyecto con meses de preparación hasta portadas de periódico con cierre en horas. La experiencia en prensa diaria ha sido especialmente útil para aprender a tomar decisiones rápidas con criterio, sin tiempo para dudas.</p>
+@@ -154,11 +155,11 @@
+     <section class="cta-section"><span class="section-num cta-section__num" aria-hidden="true">?</span><div class="container cta-section__content">
+       <h2 class="reveal">¿Necesitas<br>maquetación editorial?</h2>
+       <p class="reveal reveal-delay-1">Libro, catálogo, revista o folleto. Cuéntame el proyecto y el plazo.</p>
+-      <a href="../../pages/contacto.html" class="btn btn--white reveal reveal-delay-2">Solicitar presupuesto <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
++      <a href="/pages/contacto" class="btn btn--white reveal reveal-delay-2">Solicitar presupuesto <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+     </div></section>
+   </main>
+ 
+-  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="../../index.html" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/fotomontajes-retoques/index.html">Retoques</a></li><li><a href="../../portfolio/diseno-editorial/index.html">Editorial</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Servicios</h5><ul><li><a href="../../pages/servicios.html">Ver todos</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="../../pages/sobre-mi.html">Sobre mí</a></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../pages/contacto.html">Contacto</a></li><li></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2025 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
++  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="/" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/fotomontajes-retoques/index.html">Retoques</a></li><li><a href="../../portfolio/diseno-editorial/index.html">Editorial</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Servicios</h5><ul><li><a href="../../pages/servicios.html">Ver todos</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="/pages/sobre-mi">Sobre mí</a></li><li><a href="/blog/">Blog</a></li><li><a href="/pages/contacto">Contacto</a></li><li></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2025 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
+   <div class="lightbox"><button class="lightbox__close" aria-label="Cerrar">×</button><img class="lightbox__img" src="" alt=""></div>
+   <script src="../../js/main.js"></script>
+ <div class="fab-container"><button class="fab fab--top" id="fab-top" aria-label="Volver arriba"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg></button><a class="fab fab--whatsapp" href="https://wa.me/34636702172?text=Hola%20Ismael%2C%20me%20gustar%C3%ADa%20consultarte%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.17 1.623 5.963L.057 23.428a.5.5 0 0 0 .609.601l5.634-1.533A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 0 1-5.031-1.388l-.36-.214-3.733 1.016 1.05-3.619-.235-.372A9.808 9.808 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg></a></div></body>
+diff --git a/portfolio/diseno-grafico/index.html b/portfolio/diseno-grafico/index.html
+index 39f47b1..5b7f164 100644
+--- a/portfolio/diseno-grafico/index.html
++++ b/portfolio/diseno-grafico/index.html
+@@ -8,23 +8,24 @@
+   <meta name="robots" content="index, follow">
+   <link rel="canonical" href="https://ismaelgonzalo.com/portfolio/diseno-grafico/">
+   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../../css/main.css"><link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
+ </head>
+ <body>
+   <a class="skip-to-content" href="#main">Saltar al contenido</a>
+   <header class="nav"><div class="container"><nav class="nav__inner">
+-    <a href="../../index.html" class="nav__logo"><span>Ismael Gonzalo Peña</span><span>Diseñador Gráfico · Vitoria-Gasteiz</span></a>
+-    <ul class="nav__links"><li><a href="../../portfolio/index.html" class="active">Portfolio</a></li><li><a href="../../pages/sobre-mi.html">Sobre mí</a></li><li></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../pages/contacto.html" class="nav__cta">Contactar</a></li></ul>
++    <a href="/" class="nav__logo"><span>Ismael Gonzalo Peña</span><span>Diseñador Gráfico · Vitoria-Gasteiz</span></a>
++    <ul class="nav__links"><li><a href="/portfolio/" class="active">Portfolio</a></li><li><a href="/pages/sobre-mi">Sobre mí</a></li><li></li><li><a href="/blog/">Blog</a></li><li><a href="/pages/contacto" class="nav__cta">Contactar</a></li></ul>
+     <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+   </nav></div></header>
+-  <nav class="nav__mobile" id="mobile-menu"><a href="../../portfolio/index.html">Portfolio</a><a href="../../pages/sobre-mi.html">Sobre mí</a><a href="../../blog/index.html">Blog</a>
+-    <a href="../../pages/contacto.html">Contactar</a></nav>
++  <nav class="nav__mobile" id="mobile-menu"><a href="/portfolio/">Portfolio</a><a href="/pages/sobre-mi">Sobre mí</a><a href="/blog/">Blog</a>
++    <a href="/pages/contacto">Contactar</a></nav>
+ 
+   <main id="main">
+     <section class="page-hero">
+       <span class="page-hero__bg-num" aria-hidden="true">02</span>
+       <div class="container">
+-        <nav class="breadcrumb"><a href="../../index.html">Inicio</a><span class="breadcrumb__sep">›</span><a href="../../portfolio/index.html">Portfolio</a><span class="breadcrumb__sep">›</span><span aria-current="page">Diseño Gráfico</span></nav>
++        <nav class="breadcrumb"><a href="/">Inicio</a><span class="breadcrumb__sep">›</span><a href="/portfolio/">Portfolio</a><span class="breadcrumb__sep">›</span><span aria-current="page">Diseño Gráfico</span></nav>
+         <span class="label" style="color:var(--teal);margin-top:1rem;display:block;">02 / Diseño Gráfico</span>
+         <h1 class="reveal">Diseño gráfico e identidad<br>corporativa en Vitoria-Gasteiz</h1>
+         <p class="reveal reveal-delay-1">El diseño gráfico y la fotografía resuelven problemas distintos con herramientas distintas, pero el objetivo es el mismo: que una empresa transmita exactamente lo que quiere transmitir. En esta sección encontrarás proyectos de identidad corporativa completos, con proceso visible: desde el moodboard y la definición del concepto hasta las aplicaciones finales. No solo el resultado; también las decisiones que hay detrás.</p>
+@@ -121,11 +122,11 @@
+     <section class="cta-section"><span class="section-num cta-section__num" aria-hidden="true">?</span><div class="container cta-section__content">
+       <h2 class="reveal">¿Necesitas identidad<br>corporativa?</h2>
+       <p class="reveal reveal-delay-1">Manual de marca completo o rediseño de logotipo. Cuéntame el proyecto.</p>
+-      <a href="../../pages/contacto.html" class="btn btn--white reveal reveal-delay-2">Solicitar presupuesto <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
++      <a href="/pages/contacto" class="btn btn--white reveal reveal-delay-2">Solicitar presupuesto <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+     </div></section>
+   </main>
+ 
+-  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="../../index.html" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/fotomontajes-retoques/index.html">Retoques</a></li><li><a href="../../portfolio/diseno-editorial/index.html">Editorial</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Blog</h5><ul><li><a href="../../blog/manual-identidad-corporativa/index.html">Manual de identidad</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="../../pages/sobre-mi.html">Sobre mí</a></li><li></li><li><a href="../../pages/contacto.html">Contacto</a></li><li></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2025 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
++  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="/" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/fotomontajes-retoques/index.html">Retoques</a></li><li><a href="../../portfolio/diseno-editorial/index.html">Editorial</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Blog</h5><ul><li><a href="../../blog/manual-identidad-corporativa/index.html">Manual de identidad</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="/pages/sobre-mi">Sobre mí</a></li><li></li><li><a href="/pages/contacto">Contacto</a></li><li></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2025 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
+   <div class="lightbox"><button class="lightbox__close" aria-label="Cerrar">×</button><img class="lightbox__img" src="" alt=""></div>
+   <script src="../../js/main.js"></script>
+ <div class="fab-container"><button class="fab fab--top" id="fab-top" aria-label="Volver arriba"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg></button><a class="fab fab--whatsapp" href="https://wa.me/34636702172?text=Hola%20Ismael%2C%20me%20gustar%C3%ADa%20consultarte%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.17 1.623 5.963L.057 23.428a.5.5 0 0 0 .609.601l5.634-1.533A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 0 1-5.031-1.388l-.36-.214-3.733 1.016 1.05-3.619-.235-.372A9.808 9.808 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg></a></div></body>
+diff --git a/portfolio/fotografia/index.html b/portfolio/fotografia/index.html
+index e4bc401..8364339 100644
+--- a/portfolio/fotografia/index.html
++++ b/portfolio/fotografia/index.html
+@@ -9,23 +9,24 @@
+   <link rel="canonical" href="https://ismaelgonzalo.com/portfolio/fotografia/">
+   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ImageGallery","name":"Fotografía de producto — Ismael Gonzalo","author":{"@type":"Person","name":"Ismael Gonzalo Peña"},"url":"https://ismaelgonzalo.com/portfolio/fotografia/"}</script>
+   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../../css/main.css"><link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
+ </head>
+ <body>
+   <a class="skip-to-content" href="#main">Saltar al contenido</a>
+   <header class="nav"><div class="container"><nav class="nav__inner">
+-    <a href="../../index.html" class="nav__logo"><span>Ismael Gonzalo Peña</span><span>Diseñador Gráfico · Vitoria-Gasteiz</span></a>
+-    <ul class="nav__links"><li><a href="../../portfolio/index.html" class="active">Portfolio</a></li><li><a href="../../pages/sobre-mi.html">Sobre mí</a></li><li></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../pages/contacto.html" class="nav__cta">Contactar</a></li></ul>
++    <a href="/" class="nav__logo"><span>Ismael Gonzalo Peña</span><span>Diseñador Gráfico · Vitoria-Gasteiz</span></a>
++    <ul class="nav__links"><li><a href="/portfolio/" class="active">Portfolio</a></li><li><a href="/pages/sobre-mi">Sobre mí</a></li><li></li><li><a href="/blog/">Blog</a></li><li><a href="/pages/contacto" class="nav__cta">Contactar</a></li></ul>
+     <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+   </nav></div></header>
+-  <nav class="nav__mobile" id="mobile-menu"><a href="../../portfolio/index.html">Portfolio</a><a href="../../pages/sobre-mi.html">Sobre mí</a><a href="../../blog/index.html">Blog</a>
+-    <a href="../../pages/contacto.html">Contactar</a></nav>
++  <nav class="nav__mobile" id="mobile-menu"><a href="/portfolio/">Portfolio</a><a href="/pages/sobre-mi">Sobre mí</a><a href="/blog/">Blog</a>
++    <a href="/pages/contacto">Contactar</a></nav>
+ 
+   <main id="main">
+     <section class="page-hero">
+       <span class="page-hero__bg-num" aria-hidden="true">01</span>
+       <div class="container">
+-        <nav class="breadcrumb"><a href="../../index.html">Inicio</a><span class="breadcrumb__sep">›</span><a href="../../portfolio/index.html">Portfolio</a><span class="breadcrumb__sep">›</span><span aria-current="page">Fotografía</span></nav>
++        <nav class="breadcrumb"><a href="/">Inicio</a><span class="breadcrumb__sep">›</span><a href="/portfolio/">Portfolio</a><span class="breadcrumb__sep">›</span><span aria-current="page">Fotografía</span></nav>
+         <span class="label" style="color:var(--teal);margin-top:1rem;display:block;">01 / Fotografía</span>
+         <h1 class="reveal">Fotografía de producto,<br>naturaleza y retrato</h1>
+         <p class="reveal reveal-delay-1">Empecé con una cámara de película y cuarto oscuro. Hoy trabajo con equipos digitales, pero la lógica es la misma: controlar la luz, entender el objeto, construir una imagen que diga algo concreto. Mi especialización más técnica es la fotografía de relojería y fornectura. Es un campo exigente: superficies metálicas reflectantes, cristales con capas antirreflectantes, mecanismos con piezas de menos de un milímetro. Llevo más de 32 años trabajando con este tipo de producto, y eso se nota en el resultado.</p>
+@@ -135,11 +136,11 @@
+     <section class="cta-section"><span class="section-num cta-section__num" aria-hidden="true">?</span><div class="container cta-section__content">
+       <h2 class="reveal">¿Necesitas fotografía<br>de producto?</h2>
+       <p class="reveal reveal-delay-1">Cuéntame el proyecto. </p>
+-      <a href="../../pages/contacto.html" class="btn btn--white reveal reveal-delay-2">Solicitar presupuesto <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
++      <a href="/pages/contacto" class="btn btn--white reveal reveal-delay-2">Solicitar presupuesto <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+     </div></section>
+   </main>
+ 
+-  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="../../index.html" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/fotomontajes-retoques/index.html">Retoques</a></li><li><a href="../../portfolio/diseno-editorial/index.html">Editorial</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Servicios</h5><ul><li><a href="../../pages/servicios.html">Ver todos</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="../../pages/sobre-mi.html">Sobre mí</a></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../pages/contacto.html">Contacto</a></li><li></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2025 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
++  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="/" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/fotomontajes-retoques/index.html">Retoques</a></li><li><a href="../../portfolio/diseno-editorial/index.html">Editorial</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Servicios</h5><ul><li><a href="../../pages/servicios.html">Ver todos</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="/pages/sobre-mi">Sobre mí</a></li><li><a href="/blog/">Blog</a></li><li><a href="/pages/contacto">Contacto</a></li><li></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2025 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
+   <div class="lightbox"><button class="lightbox__close" aria-label="Cerrar">×</button><img class="lightbox__img" src="" alt=""></div>
+   <script src="../../js/main.js"></script>
+ <div class="fab-container"><button class="fab fab--top" id="fab-top" aria-label="Volver arriba"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg></button><a class="fab fab--whatsapp" href="https://wa.me/34636702172?text=Hola%20Ismael%2C%20me%20gustar%C3%ADa%20consultarte%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.17 1.623 5.963L.057 23.428a.5.5 0 0 0 .609.601l5.634-1.533A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 0 1-5.031-1.388l-.36-.214-3.733 1.016 1.05-3.619-.235-.372A9.808 9.808 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg></a></div></body>
+diff --git a/portfolio/fotomontajes-retoques/index.html b/portfolio/fotomontajes-retoques/index.html
+index aa1bd40..a1e766e 100644
+--- a/portfolio/fotomontajes-retoques/index.html
++++ b/portfolio/fotomontajes-retoques/index.html
+@@ -8,23 +8,24 @@
+   <meta name="robots" content="index, follow">
+   <link rel="canonical" href="https://ismaelgonzalo.com/portfolio/fotomontajes-retoques/">
+   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../../css/main.css"><link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
+ </head>
+ <body>
+   <a class="skip-to-content" href="#main">Saltar al contenido</a>
+   <header class="nav"><div class="container"><nav class="nav__inner">
+-    <a href="../../index.html" class="nav__logo"><span>Ismael Gonzalo Peña</span><span>Diseñador Gráfico · Vitoria-Gasteiz</span></a>
+-    <ul class="nav__links"><li><a href="../../portfolio/index.html" class="active">Portfolio</a></li><li><a href="../../pages/sobre-mi.html">Sobre mí</a></li><li></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../pages/contacto.html" class="nav__cta">Contactar</a></li></ul>
++    <a href="/" class="nav__logo"><span>Ismael Gonzalo Peña</span><span>Diseñador Gráfico · Vitoria-Gasteiz</span></a>
++    <ul class="nav__links"><li><a href="/portfolio/" class="active">Portfolio</a></li><li><a href="/pages/sobre-mi">Sobre mí</a></li><li></li><li><a href="/blog/">Blog</a></li><li><a href="/pages/contacto" class="nav__cta">Contactar</a></li></ul>
+     <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+   </nav></div></header>
+-  <nav class="nav__mobile" id="mobile-menu"><a href="../../portfolio/index.html">Portfolio</a><a href="../../pages/sobre-mi.html">Sobre mí</a><a href="../../blog/index.html">Blog</a>
+-    <a href="../../pages/contacto.html">Contactar</a></nav>
++  <nav class="nav__mobile" id="mobile-menu"><a href="/portfolio/">Portfolio</a><a href="/pages/sobre-mi">Sobre mí</a><a href="/blog/">Blog</a>
++    <a href="/pages/contacto">Contactar</a></nav>
+ 
+   <main id="main">
+     <section class="page-hero">
+       <span class="page-hero__bg-num" aria-hidden="true">03</span>
+       <div class="container">
+-        <nav class="breadcrumb"><a href="../../index.html">Inicio</a><span class="breadcrumb__sep">›</span><a href="../../portfolio/index.html">Portfolio</a><span class="breadcrumb__sep">›</span><span aria-current="page">Retoques y Fotomontajes</span></nav>
++        <nav class="breadcrumb"><a href="/">Inicio</a><span class="breadcrumb__sep">›</span><a href="/portfolio/">Portfolio</a><span class="breadcrumb__sep">›</span><span aria-current="page">Retoques y Fotomontajes</span></nav>
+         <span class="label" style="color:var(--teal);margin-top:1rem;display:block;">03 / Retoques y Fotomontajes</span>
+         <h1 class="reveal">Retoque fotográfico<br>profesional y fotomontajes</h1>
+         <p class="reveal reveal-delay-1">El retoque fotográfico y el fotomontaje son disciplinas que se aprenden con el tiempo y se perfeccionan con la exigencia. No hay atajos para restaurar correctamente una fotografía de 100 años de antigüedad, ni para integrar de manera creíble elementos de distintas fuentes en una sola imagen. Requieren criterio visual, dominio técnico de Photoshop y, sobre todo, paciencia.</p>
+@@ -127,11 +128,11 @@
+     <section class="cta-section"><span class="section-num cta-section__num" aria-hidden="true">?</span><div class="container cta-section__content">
+       <h2 class="reveal">¿Tienes una fotografía<br>que necesita trabajo?</h2>
+       <p class="reveal reveal-delay-1">Restauración, retoque o montaje. Cuéntame qué imagen tienes y qué imagen necesitas.</p>
+-      <a href="../../pages/contacto.html" class="btn btn--white reveal reveal-delay-2">Solicitar presupuesto <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
++      <a href="/pages/contacto" class="btn btn--white reveal reveal-delay-2">Solicitar presupuesto <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+     </div></section>
+   </main>
+ 
+-  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="../../index.html" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/fotomontajes-retoques/index.html">Retoques</a></li><li><a href="../../portfolio/diseno-editorial/index.html">Editorial</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Servicios</h5><ul><li><a href="../../pages/servicios.html">Ver todos</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="../../pages/sobre-mi.html">Sobre mí</a></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../pages/contacto.html">Contacto</a></li><li></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2025 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
++  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="/" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/fotomontajes-retoques/index.html">Retoques</a></li><li><a href="../../portfolio/diseno-editorial/index.html">Editorial</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Servicios</h5><ul><li><a href="../../pages/servicios.html">Ver todos</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="/pages/sobre-mi">Sobre mí</a></li><li><a href="/blog/">Blog</a></li><li><a href="/pages/contacto">Contacto</a></li><li></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2025 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
+   <div class="lightbox"><button class="lightbox__close" aria-label="Cerrar">×</button><img class="lightbox__img" src="" alt=""></div>
+   <script src="../../js/main.js"></script>
+ <div class="fab-container"><button class="fab fab--top" id="fab-top" aria-label="Volver arriba"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg></button><a class="fab fab--whatsapp" href="https://wa.me/34636702172?text=Hola%20Ismael%2C%20me%20gustar%C3%ADa%20consultarte%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.17 1.623 5.963L.057 23.428a.5.5 0 0 0 .609.601l5.634-1.533A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 0 1-5.031-1.388l-.36-.214-3.733 1.016 1.05-3.619-.235-.372A9.808 9.808 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg></a></div></body>
+diff --git a/portfolio/index.html b/portfolio/index.html
+index ebcc026..61228a2 100644
+--- a/portfolio/index.html
++++ b/portfolio/index.html
+@@ -12,6 +12,7 @@
+   <meta property="og:url" content="https://ismaelgonzalo.com/portfolio/">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../css/main.css">
+   <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+ </head>
+diff --git a/portfolio/personalizacion-productos/index.html b/portfolio/personalizacion-productos/index.html
+index 8e442c0..d3242db 100644
+--- a/portfolio/personalizacion-productos/index.html
++++ b/portfolio/personalizacion-productos/index.html
+@@ -8,23 +8,24 @@
+   <meta name="robots" content="index, follow">
+   <link rel="canonical" href="https://ismaelgonzalo.com/portfolio/personalizacion-productos/">
+   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
++  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="../../css/main.css"><link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
+ </head>
+ <body>
+   <a class="skip-to-content" href="#main">Saltar al contenido</a>
+   <header class="nav"><div class="container"><nav class="nav__inner">
+-    <a href="../../index.html" class="nav__logo"><span>Ismael Gonzalo Peña</span><span>Diseñador Gráfico · Vitoria-Gasteiz</span></a>
+-    <ul class="nav__links"><li><a href="../../portfolio/index.html" class="active">Portfolio</a></li><li><a href="../../pages/sobre-mi.html">Sobre mí</a></li><li></li><li><a href="../../blog/index.html">Blog</a></li><li><a href="../../pages/contacto.html" class="nav__cta">Contactar</a></li></ul>
++    <a href="/" class="nav__logo"><span>Ismael Gonzalo Peña</span><span>Diseñador Gráfico · Vitoria-Gasteiz</span></a>
++    <ul class="nav__links"><li><a href="/portfolio/" class="active">Portfolio</a></li><li><a href="/pages/sobre-mi">Sobre mí</a></li><li></li><li><a href="/blog/">Blog</a></li><li><a href="/pages/contacto" class="nav__cta">Contactar</a></li></ul>
+     <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
+   </nav></div></header>
+-  <nav class="nav__mobile" id="mobile-menu"><a href="../../portfolio/index.html">Portfolio</a><a href="../../pages/sobre-mi.html">Sobre mí</a><a href="../../blog/index.html">Blog</a>
+-    <a href="../../pages/contacto.html">Contactar</a></nav>
++  <nav class="nav__mobile" id="mobile-menu"><a href="/portfolio/">Portfolio</a><a href="/pages/sobre-mi">Sobre mí</a><a href="/blog/">Blog</a>
++    <a href="/pages/contacto">Contactar</a></nav>
+ 
+   <main id="main">
+     <section class="page-hero">
+       <span class="page-hero__bg-num" aria-hidden="true">06</span>
+       <div class="container">
+-        <nav class="breadcrumb"><a href="../../index.html">Inicio</a><span class="breadcrumb__sep">›</span><a href="../../portfolio/index.html">Portfolio</a><span class="breadcrumb__sep">›</span><span aria-current="page">Personalización de Producto</span></nav>
++        <nav class="breadcrumb"><a href="/">Inicio</a><span class="breadcrumb__sep">›</span><a href="/portfolio/">Portfolio</a><span class="breadcrumb__sep">›</span><span aria-current="page">Personalización de Producto</span></nav>
+         <span class="label" style="color:var(--teal);margin-top:1rem;display:block;">06 / Personalización de Producto</span>
+         <h1 class="reveal">Personalización de producto<br>y diseño de equipaciones</h1>
+         <p class="reveal reveal-delay-1">Diseñar un producto físico es distinto a diseñar una comunicación visual. La imagen de un cartel puede corregirse; un grabado en acero inoxidable, no. Eso exige un nivel de precisión y de previsualización previo al que no todo diseñador está acostumbrado.</p>
+@@ -188,11 +189,11 @@
+     <section class="cta-section"><span class="section-num cta-section__num" aria-hidden="true">?</span><div class="container cta-section__content">
+       <h2 class="reveal">¿Necesitas diseño<br>de producto?</h2>
+       <p class="reveal reveal-delay-1">Equipaciones, merchandising o diseño de producto. Cuéntame el proyecto.</p>
+-      <a href="../../pages/contacto.html" class="btn btn--white reveal reveal-delay-2">Solicitar presupuesto <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
++      <a href="/pages/contacto" class="btn btn--white reveal reveal-delay-2">Solicitar presupuesto <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+     </div></section>
+   </main>
+ 
+-  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="../../index.html" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/fotomontajes-retoques/index.html">Retoques</a></li><li><a href="../../portfolio/diseno-editorial/index.html">Editorial</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Blog</h5><ul><li><a href="../../blog/caicos-diseno-reloj/index.html">Reloj CAICOS</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="../../pages/sobre-mi.html">Sobre mí</a></li><li></li><li><a href="../../pages/contacto.html">Contacto</a></li><li></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2025 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
++  <footer class="footer"><div class="container"><div class="footer__grid"><div class="footer__brand"><a href="/" class="footer__logo">Ismael <span>Gonzalo</span></a><p>Diseñador gráfico en Vitoria-Gasteiz.</p><div class="footer__contact"><a href="tel:+34636702172">636 702 172</a><a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a></div></div><div class="footer__col"><h5>Portfolio</h5><ul><li><a href="../../portfolio/fotografia/index.html">Fotografía</a></li><li><a href="../../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li><li><a href="../../portfolio/fotomontajes-retoques/index.html">Retoques</a></li><li><a href="../../portfolio/diseno-editorial/index.html">Editorial</a></li><li><a href="../../portfolio/carteleria/index.html">Cartelería</a></li><li><a href="../../portfolio/personalizacion-productos/index.html">Personalización</a></li></ul></div><div class="footer__col"><h5>Blog</h5><ul><li><a href="../../blog/caicos-diseno-reloj/index.html">Reloj CAICOS</a></li></ul></div><div class="footer__col"><h5>Más</h5><ul><li><a href="/pages/sobre-mi">Sobre mí</a></li><li></li><li><a href="/pages/contacto">Contacto</a></li><li></li></ul></div></div><div class="footer__bottom"><span class="footer__copy">© 2025 Ismael Gonzalo Peña · Vitoria-Gasteiz</span></div></div></footer>
+   <div class="lightbox"><button class="lightbox__close" aria-label="Cerrar">×</button><img class="lightbox__img" src="" alt=""></div>
+   <script src="../../js/main.js"></script>
+ <div class="fab-container"><button class="fab fab--top" id="fab-top" aria-label="Volver arriba"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg></button><a class="fab fab--whatsapp" href="https://wa.me/34636702172?text=Hola%20Ismael%2C%20me%20gustar%C3%ADa%20consultarte%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.17 1.623 5.963L.057 23.428a.5.5 0 0 0 .609.601l5.634-1.533A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 0 1-5.031-1.388l-.36-.214-3.733 1.016 1.05-3.619-.235-.372A9.808 9.808 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg></a></div></body>
+diff --git a/sitemap.xml b/sitemap.xml
+index f41f813..cc36452 100644
+--- a/sitemap.xml
++++ b/sitemap.xml
+@@ -1,26 +1,24 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+-  <url><loc>https://ismaelgonzalo.com/</loc><lastmod>2025-06-10</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
+-  <url><loc>https://ismaelgonzalo.com/portfolio/</loc><lastmod>2025-06-10</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+-  <url><loc>https://ismaelgonzalo.com/portfolio/fotografia/</loc><lastmod>2025-06-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+-  <url><loc>https://ismaelgonzalo.com/portfolio/diseno-grafico/</loc><lastmod>2025-06-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+-  <url><loc>https://ismaelgonzalo.com/portfolio/fotomontajes-retoques/</loc><lastmod>2025-06-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+-  <url><loc>https://ismaelgonzalo.com/portfolio/diseno-editorial/</loc><lastmod>2025-06-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+-  <url><loc>https://ismaelgonzalo.com/portfolio/carteleria/</loc><lastmod>2025-06-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+-  <url><loc>https://ismaelgonzalo.com/portfolio/personalizacion-productos/</loc><lastmod>2025-06-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+-  <url><loc>https://ismaelgonzalo.com/pages/sobre-mi.html</loc><lastmod>2025-06-10</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+-  <url><loc>https://ismaelgonzalo.com/pages/servicios.html</loc><lastmod>2025-06-10</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
++  <url><loc>https://ismaelgonzalo.com/</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>1.0</priority></url>
++  <url><loc>https://ismaelgonzalo.com/portfolio/</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
++  <url><loc>https://ismaelgonzalo.com/portfolio/fotografia/</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
++  <url><loc>https://ismaelgonzalo.com/portfolio/diseno-grafico/</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
++  <url><loc>https://ismaelgonzalo.com/portfolio/fotomontajes-retoques/</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
++  <url><loc>https://ismaelgonzalo.com/portfolio/diseno-editorial/</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
++  <url><loc>https://ismaelgonzalo.com/portfolio/carteleria/</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
++  <url><loc>https://ismaelgonzalo.com/portfolio/personalizacion-productos/</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
++  <url><loc>https://ismaelgonzalo.com/pages/sobre-mi.html</loc><lastmod>2026-06-23</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
++  <url><loc>https://ismaelgonzalo.com/pages/servicios.html</loc><lastmod>2026-06-23</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+   <url><loc>https://ismaelgonzalo.com/pages/contacto.html</loc><lastmod>2025-06-10</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+-  <url><loc>https://ismaelgonzalo.com/blog/</loc><lastmod>2025-06-10</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
++  <url><loc>https://ismaelgonzalo.com/blog/</loc><lastmod>2026-06-23</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+   <url><loc>https://ismaelgonzalo.com/blog/caicos-diseno-reloj/</loc><lastmod>2025-06-01</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://ismaelgonzalo.com/blog/fotografia-producto-relojeria/</loc><lastmod>2025-05-10</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://ismaelgonzalo.com/blog/midjourney-flujo-trabajo-disenador/</loc><lastmod>2025-04-15</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+   <url><loc>https://ismaelgonzalo.com/blog/manual-identidad-corporativa/</loc><lastmod>2025-03-20</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
+-  <url>
+-    <loc>https://ismaelgonzalo.com/portfolio-pdf.html</loc>
+-    <lastmod>2025-06-18</lastmod>
+-    <changefreq>yearly</changefreq>
+-    <priority>0.8</priority>
+-  </url>
++  <url><loc>https://ismaelgonzalo.com/blog/alkhe-identidad-corporativa-arquitectura/</loc><lastmod>2026-06-19</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
++  <url><loc>https://ismaelgonzalo.com/blog/del-cuarto-oscuro-a-la-ia/</loc><lastmod>2026-06-21</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
++  <url><loc>https://ismaelgonzalo.com/blog/diseno-publicidad-prensa/</loc><lastmod>2026-06-22</lastmod><changefreq>yearly</changefreq><priority>0.7</priority></url>
++  <url><loc>https://ismaelgonzalo.com/portfolio-pdf.html</loc><lastmod>2025-06-18</lastmod><changefreq>yearly</changefreq><priority>0.8</priority></url>
+ 
+ </urlset>
+-- 
+2.43.0
+
