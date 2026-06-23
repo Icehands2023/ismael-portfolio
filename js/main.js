@@ -47,7 +47,7 @@
   }
 
   /* ---- SCROLL REVEAL ---- */
-  const revealSelectors = '.reveal, .reveal-img, .reveal-left, .divider--animated, .divider--full';
+  const revealSelectors = '.reveal, .reveal-img, .reveal-left, .reveal-right, .reveal-bottom, .divider--animated, .divider--full';
   const reveals = document.querySelectorAll(revealSelectors);
   if (reveals.length) {
     const observer = new IntersectionObserver(
@@ -59,7 +59,7 @@
           }
         });
       },
-      { threshold: 0.12, rootMargin: '0px 0px -60px 0px' }
+      { threshold: 0.08, rootMargin: '0px 0px -80px 0px' }
     );
     reveals.forEach(el => observer.observe(el));
   }
@@ -151,7 +151,7 @@
 
   /* ---- REDUCED MOTION ---- */
   if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    document.querySelectorAll('.reveal, .reveal-img, .reveal-left').forEach(el => el.classList.add('visible'));
+    document.querySelectorAll('.reveal, .reveal-img, .reveal-left, .reveal-right, .reveal-bottom').forEach(el => el.classList.add('visible'));
   }
 
   /* ---- PARALLAX — Section numbers ---- */
