@@ -1796,6 +1796,35 @@ a:hover .tag,
 .reveal-delay-4 { transition-delay: 400ms; }
 .reveal-delay-5 { transition-delay: 500ms; }
 
+/* Variante derecha — columna derecha del grid */
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 700ms var(--ease-out),
+              transform 700ms var(--ease-out);
+}
+.reveal-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Variante abajo — columna central del grid */
+.reveal-bottom {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 700ms var(--ease-out),
+              transform 700ms var(--ease-out);
+}
+.reveal-bottom.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Delays adicionales para segunda fila */
+.reveal-delay-6 { transition-delay: 150ms; }
+.reveal-delay-7 { transition-delay: 250ms; }
+.reveal-delay-8 { transition-delay: 350ms; }
+
 /* --- BREADCRUMB --- */
 .breadcrumb {
   display: flex;
