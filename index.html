@@ -21,7 +21,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="preload" href="css/main.min.css" as="style">
+  <link rel="stylesheet" href="css/main.min.css">
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
 </head>
 <body>
@@ -77,7 +78,7 @@
         <p class="hero__geo">Vitoria-Gasteiz</p>
         <p class="hero__sub">Fotografía, diseño editorial y comunicación visual en Vitoria-Gasteiz. Criterio consolidado, herramientas actuales.</p>
         <div class="hero__actions">
-          <a href="portfolio/index.html" class="btn btn--primary">Ver portfolio <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a href="portfolio/index.html" class="btn btn--primary">Ver portfolio <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           <a href="pages/contacto.html" class="btn btn--ghost" style="color:white;border-color:rgba(255,255,255,0.3)">Contactar</a>
           <a href="portfolio-pdf.html" class="btn btn--ghost" style="color:rgba(255,255,255,0.65);border-color:rgba(255,255,255,0.15);">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="15" height="15"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -189,7 +190,7 @@
         </div>
       </div>
       <div class="container" style="padding-top:2.5rem;text-align:center;">
-        <a href="portfolio/index.html" class="arrow-link">Ver todo el portfolio <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="portfolio/index.html" class="arrow-link">Ver todo el portfolio <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
     </section>
 
@@ -206,7 +207,7 @@
             <div class="divider divider--animated"></div>
             <h2 id="about-heading">Tres décadas mirando el mundo a través del objetivo y construyendo imagen con las herramientas del diseño.</h2>
             <p>He trabajado la imagen desde distintos ángulos: primero con una cámara en la mano, después como diseñador gráfico con las herramientas del diseño, y cada vez más integrando inteligencia artificial en el proceso. Domino el ciclo completo: captura, retoque, composición, maquetación y preimpresión.</p>
-            <a href="pages/sobre-mi.html" class="arrow-link">Conoce mi trayectoria <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <a href="pages/sobre-mi.html" class="arrow-link">Conoce mi trayectoria <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             <a href="portfolio-pdf.html" class="arrow-link" style="color:var(--gray-mid);margin-top:0.75rem;">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Ver portfolio completo en PDF
@@ -229,25 +230,25 @@
             <div class="service-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M3 9a2 2 0 0 1 2-2h.93a2 2 0 0 0 1.664-.89l.812-1.22A2 2 0 0 1 10.07 4h3.86a2 2 0 0 1 1.664.89l.812 1.22A2 2 0 0 0 18.07 7H19a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
             <h4>Fotografía de producto</h4>
             <p>Fotografía con luz de estudio para e-commerce, catálogos y campañas. Especialización en relojería de precisión y joyería.</p>
-            <a href="pages/servicios.html#fotografia" class="arrow-link">Más información <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <a href="pages/servicios.html#fotografia" class="arrow-link">Más información <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
           <div class="service-card reveal reveal-delay-1">
             <div class="service-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
             <h4>Diseño gráfico e identidad</h4>
             <p>Creación de identidad visual completa: logotipo, manual de marca y aplicaciones. El trabajo de diseñador gráfico más estratégico: desde el briefing hasta la entrega de todos los archivos.</p>
-            <a href="pages/servicios.html#identidad" class="arrow-link">Más información <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <a href="pages/servicios.html#identidad" class="arrow-link">Más información <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
           <div class="service-card reveal reveal-delay-2">
             <div class="service-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
             <h4>Maquetación y diseño editorial</h4>
             <p>Libros, catálogos, revistas y suplementos de prensa. Flujos de trabajo orientados a preimpresión con experiencia en producción diaria de periódico.</p>
-            <a href="pages/servicios.html#editorial" class="arrow-link">Más información <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <a href="pages/servicios.html#editorial" class="arrow-link">Más información <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
           <div class="service-card reveal reveal-delay-3">
             <div class="service-card__icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div>
             <h4>Retoque y postproducción</h4>
             <p>Retoque fotográfico de alta calidad, restauración de fotografías antiguas, fotomontajes y composición digital avanzada.</p>
-            <a href="pages/servicios.html#retoque" class="arrow-link">Más información <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+            <a href="pages/servicios.html#retoque" class="arrow-link">Más información <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
           </div>
         </div>
         <div style="text-align:center;margin-top:2.5rem;" class="reveal">
@@ -261,7 +262,7 @@
       <div class="container">
         <div class="section__header reveal flex-between" style="flex-wrap:wrap;gap:1rem;">
           <div><span class="label">Blog</span><div class="divider divider--animated"></div><h2 id="blog-heading">Artículos recientes</h2></div>
-          <a href="blog/index.html" class="arrow-link reveal">Ver todos <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+          <a href="blog/index.html" class="arrow-link reveal">Ver todos <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
         </div>
         <div class="blog-grid">
           <article class="blog-card reveal-img">
@@ -270,7 +271,7 @@
               <div class="blog-card__meta"><span class="tag">Portfolio y proceso</span><span class="blog-card__date">Junio 2025</span></div>
               <h3><a href="blog/caicos-diseno-reloj/index.html">Cómo diseñé el reloj CAICOS: del plano técnico a la pieza real</a></h3>
               <p>51 unidades numeradas. Movimiento Miyota 9015. El proyecto más singular de mi portfolio, con el proceso completo visible.</p>
-              <a href="blog/caicos-diseno-reloj/index.html" class="arrow-link">Leer artículo <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              <a href="blog/caicos-diseno-reloj/index.html" class="arrow-link">Leer artículo <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             </div>
           </article>
           <article class="blog-card reveal-img reveal-delay-1">
@@ -279,7 +280,7 @@
               <div class="blog-card__meta"><span class="tag">Fotografía</span><span class="blog-card__date">Mayo 2025</span></div>
               <h3><a href="blog/fotografia-producto-relojeria/index.html">Fotografía de producto de relojería: técnica, iluminación y postproducción</a></h3>
               <p>Todo lo que he aprendido fotografiando relojes en 32 años: reflexiones, luz por capas y el trabajo de postproducción que nunca se nota.</p>
-              <a href="blog/fotografia-producto-relojeria/index.html" class="arrow-link">Leer artículo <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              <a href="blog/fotografia-producto-relojeria/index.html" class="arrow-link">Leer artículo <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             </div>
           </article>
           <article class="blog-card reveal-img reveal-delay-2">
@@ -288,7 +289,7 @@
               <div class="blog-card__meta"><span class="tag">IA aplicada al diseño</span><span class="blog-card__date">Abril 2025</span></div>
               <h3><a href="blog/midjourney-flujo-trabajo-disenador/index.html">Midjourney para diseñadores gráficos: cómo integro la IA en mi flujo de trabajo</a></h3>
               <p>No como sustituto del criterio creativo, sino como herramienta que lo amplifica. Mi metodología real con proyectos concretos.</p>
-              <a href="blog/midjourney-flujo-trabajo-disenador/index.html" class="arrow-link">Leer artículo <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+              <a href="blog/midjourney-flujo-trabajo-disenador/index.html" class="arrow-link">Leer artículo <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
             </div>
           </article>
         </div>
@@ -300,7 +301,7 @@
       <div class="container cta-section__content">
         <h2 class="reveal">¿Tienes un<br>proyecto? Hablemos.</h2>
         <p class="reveal reveal-delay-1">Diseñador gráfico disponible para proyectos en Vitoria-Gasteiz y en remoto. Cuéntame qué necesitas.</p>
-        <a href="pages/contacto.html" class="btn btn--white reveal reveal-delay-2">Escribir a Ismael <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+        <a href="pages/contacto.html" class="btn btn--white reveal reveal-delay-2">Escribir a Ismael <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
       </div>
     </section>
   </main>
@@ -312,8 +313,8 @@
           <a href="index.html" class="footer__logo">Ismael <span>Gonzalo</span></a>
           <p>Diseñador gráfico y especialista en imagen en Vitoria-Gasteiz.</p>
           <div class="footer__contact">
-            <a href="tel:+34636702172"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.72 17z"/></svg>636 702 172</a>
-            <a href="mailto:ismaelgph@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>ismaelgph@gmail.com</a>
+            <a href="tel:+34636702172"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.41 2 2 0 0 1 3.6 1.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.81a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.72 17z"/></svg>636 702 172</a>
+            <a href="mailto:ismaelgph@gmail.com"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>ismaelgph@gmail.com</a>
           </div>
         </div>
         <div class="footer__col"><h5>Portfolio</h5><ul>
@@ -344,6 +345,6 @@
     </div>
   </footer>
   <div class="lightbox"><button class="lightbox__close" aria-label="Cerrar">×</button><img class="lightbox__img" src="" alt=""></div>
-  <script src="js/main.js"></script>
+  <script src="js/main.js" defer></script>
 <div class="fab-container"><button class="fab fab--top" id="fab-top" aria-label="Volver arriba"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg></button><a class="fab fab--whatsapp" href="https://wa.me/34636702172?text=Hola%20Ismael%2C%20me%20gustar%C3%ADa%20consultarte%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.17 1.623 5.963L.057 23.428a.5.5 0 0 0 .609.601l5.634-1.533A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 0 1-5.031-1.388l-.36-.214-3.733 1.016 1.05-3.619-.235-.372A9.808 9.808 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg></a></div></body>
 </html>

@@ -10,7 +10,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="preload" href="../../css/main.min.css" as="style">
+  <link rel="stylesheet" href="../../css/main.min.css">
   <link rel="icon" href="../../img/favicon.svg" type="image/svg+xml">
 
   <!-- Open Graph -->
@@ -389,7 +390,7 @@
         <p class="reveal reveal-delay-1">Criterio acumulado en cinco revoluciones tecnológicas, aplicado a lo que necesitas hoy.</p>
         <a href="/pages/contacto" class="btn btn--white reveal reveal-delay-2">
           Contactar
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
         </a>
       </div>
     </section>
@@ -444,7 +445,7 @@
   </footer>
 
   <div class="lightbox"><button class="lightbox__close" aria-label="Cerrar">×</button><img class="lightbox__img" src="" alt=""></div>
-  <script src="../../js/main.js"></script>
+  <script src="../../js/main.js" defer></script>
 
   <div class="fab-container">
     <button class="fab fab--top" id="fab-top" aria-label="Volver arriba">
