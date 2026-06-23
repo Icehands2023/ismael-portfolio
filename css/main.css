@@ -592,6 +592,7 @@ a:hover .tag,
   letter-spacing: -0.02em;
   color: var(--white);
   margin-bottom: 0;
+  padding-bottom: 0.15em;
 }
 
 .hero__title em {
