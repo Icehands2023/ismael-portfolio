@@ -606,8 +606,7 @@ a:hover .tag,
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--teal);
-  opacity: 0.9;
+  color: #2490b5;
   margin-top: 0.5rem;
   margin-bottom: var(--space-lg);
 }
@@ -1112,8 +1111,7 @@ a:hover .tag,
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
-  margin-bottom: var(--space-md);
+  color: #888888;
 }
 
 .footer__col ul li {
@@ -1142,7 +1140,7 @@ a:hover .tag,
 
 .footer__copy {
   font-size: var(--text-xs);
-  color: rgba(255,255,255,0.35);
+  color: #888888;
   letter-spacing: 0.04em;
 }
 
@@ -2403,9 +2401,7 @@ a:hover .tag,
   font-weight: 400;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
-  margin-top: 1.25rem;
-  opacity: 0;
+  color: #888888;
   transition: opacity 500ms var(--ease-out) 700ms;
 }
 
