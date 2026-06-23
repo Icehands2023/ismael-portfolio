@@ -1,0 +1,77 @@
+/* ============================================================
+   Fuentes locales — eliminan dependencia de Google Fonts
+   Barlow Condensed: 400, 600, 700, 800
+   Inter: 300, 400, 500, 600
+   ============================================================ */
+
+/* Barlow Condensed 400 */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/barlow-condensed-v13-latin-regular.woff2') format('woff2');
+}
+
+/* Barlow Condensed 600 */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/barlow-condensed-v13-latin-600.woff2') format('woff2');
+}
+
+/* Barlow Condensed 700 */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/barlow-condensed-v13-latin-700.woff2') format('woff2');
+}
+
+/* Barlow Condensed 800 */
+@font-face {
+  font-family: 'Barlow Condensed';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../fonts/barlow-condensed-v13-latin-800.woff2') format('woff2');
+}
+
+/* Inter 300 */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: url('../fonts/inter-v20-latin-300.woff2') format('woff2');
+}
+
+/* Inter 400 */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/inter-v20-latin-regular.woff2') format('woff2');
+}
+
+/* Inter 500 */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('../fonts/inter-v20-latin-500.woff2') format('woff2');
+}
+
+/* Inter 600 */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/inter-v20-latin-600.woff2') format('woff2');
+}

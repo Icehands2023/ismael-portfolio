@@ -21,3 +21,14 @@ desktop.ini
 *.tmp
 *.bak
 *.old
+
+# Fuentes — solo incluir los 8 pesos necesarios, excluir el resto
+fonts/*.woff2
+!fonts/barlow-condensed-v13-latin-regular.woff2
+!fonts/barlow-condensed-v13-latin-600.woff2
+!fonts/barlow-condensed-v13-latin-700.woff2
+!fonts/barlow-condensed-v13-latin-800.woff2
+!fonts/inter-v20-latin-300.woff2
+!fonts/inter-v20-latin-regular.woff2
+!fonts/inter-v20-latin-500.woff2
+!fonts/inter-v20-latin-600.woff2
