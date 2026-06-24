@@ -394,8 +394,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const name = screen.querySelector('.intro-screen__name');
 
-  // Bloquear scroll mientras la intro está activa
-  document.body.style.overflow = 'hidden';
+  // Bloquear interacción sin afectar al layout (evita CLS por overflow shift)
+  document.body.style.pointerEvents = 'none';
 
   // Arrancar la animación del nombre tras un frame
   requestAnimationFrame(() => {
@@ -412,10 +412,10 @@ document.addEventListener('DOMContentLoaded', function () {
   setTimeout(() => {
     screen.classList.add('hide');
 
-    // Restaurar scroll y limpiar tras la transición
+    // Restaurar interacción y limpiar tras la transición
     setTimeout(() => {
       screen.style.display = 'none';
-      document.body.style.overflow = '';
+      document.body.style.pointerEvents = '';
 
       // Disparar el reveal del hero manualmente
       const heroLines = document.querySelectorAll('.hero__line');
