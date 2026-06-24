@@ -265,13 +265,13 @@ document.addEventListener('DOMContentLoaded', function () {
   document.addEventListener('mousemove', (e) => {
     mouseX = e.clientX;
     mouseY = e.clientY;
-    // El punto sigue inmediato via CSS transform
-    dot.style.transform = `translate(calc(${mouseX}px - 50%), calc(${mouseY}px - 50%))`;
   });
 
-  // Animación del anillo con lag via rAF
+  // Animación del cursor via rAF — dot y ring en el mismo frame de composición
   function animateRing() {
-    // Interpolación suave — factor 0.12 da el lag deseado
+    // Dot: sigue exacto sin lag
+    dot.style.transform = `translate(calc(${mouseX}px - 50%), calc(${mouseY}px - 50%))`;
+    // Interpolación suave del anillo — factor 0.12 da el lag deseado
     ringX += (mouseX - ringX) * 0.12;
     ringY += (mouseY - ringY) * 0.12;
     ring.style.transform = `translate(calc(${ringX}px - 50%), calc(${ringY}px - 50%))`;
