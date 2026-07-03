@@ -2580,3 +2580,8 @@ a:hover .tag,
 .featured-works__grid .featured-item:nth-child(6) .featured-item__link:hover .featured-item__img {
   transform: scale(1.4) translateY(-15%);
 }
+
+/* Footer portfolio/index — 3 bloques, ajustar grid */
+.page-portfolio-index .footer__grid {
+  grid-template-columns: 2fr 1fr 1fr;
+}
