@@ -85,171 +85,14 @@
 
 
     <!-- ══════════════════════════════════════════════════
-         BLOQUE DE TRABAJOS DESTACADOS
-         ─────────────────────────────────────────────────
-         FASE 2: 6 imágenes seleccionadas (una por categoría)
-         visibles antes del grid de categorías.
-         Cada imagen enlaza directamente a su landing.
-         SIN nueva URL ni nivel de navegación añadido.
-    ══════════════════════════════════════════════════ -->
-    <section class="featured-works" aria-label="Selección de trabajos destacados">
-      <div class="container">
-
-        <div class="featured-works__header">
-          <h2 class="featured-works__title">Una selección del trabajo</h2>
-          <p class="featured-works__subtitle">
-            Seis proyectos, seis disciplinas. Explora cada categoría completa más abajo.
-          </p>
-        </div>
-
-        <div class="featured-works__grid" role="list">
-
-          <!-- Destacado 1 — Fotografía -->
-          <article class="featured-item" role="listitem">
-            <a href="/portfolio/fotografia/" class="featured-item__link" aria-label="Ver portfolio de fotografía">
-              <div class="featured-item__img-wrap">
-                <img
-                  src="/img/portfolio/rolex-submariner-fotografia-producto-relojeria.webp"
-                  alt="Fotografía de producto: Rolex Submariner — detalle de maquinaria de relojería de precisión"
-                  class="featured-item__img"
-                  width="600" height="400"
-                  loading="lazy"
-                >
-                <div class="featured-item__overlay" aria-hidden="true">
-                  <span class="featured-item__category">Fotografía</span>
-                  <span class="featured-item__arrow">→</span>
-                </div>
-              </div>
-              <p class="featured-item__caption">Fotografía de producto · Relojería de precisión</p>
-            </a>
-          </article>
-
-          <!-- Destacado 2 — Diseño gráfico -->
-          <article class="featured-item" role="listitem">
-            <a href="/portfolio/diseno-grafico/" class="featured-item__link" aria-label="Ver portfolio de diseño gráfico">
-              <div class="featured-item__img-wrap">
-                <img
-                  src="/img/portfolio/gomezAUREA.webp"
-                  alt="Identidad corporativa Gómez Shoe Store — logotipo y manual de marca completo"
-                  class="featured-item__img"
-                  width="600" height="400"
-                  loading="lazy"
-                >
-                <div class="featured-item__overlay" aria-hidden="true">
-                  <span class="featured-item__category">Diseño gráfico</span>
-                  <span class="featured-item__arrow">→</span>
-                </div>
-              </div>
-              <p class="featured-item__caption">Identidad corporativa · Gómez Shoe Store</p>
-            </a>
-          </article>
-
-          <!-- Destacado 3 — Retoque -->
-          <article class="featured-item" role="listitem">
-            <a href="/portfolio/fotomontajes-retoques/" class="featured-item__link" aria-label="Ver portfolio de retoque y fotomontajes">
-              <div class="featured-item__img-wrap">
-                <img
-                  src="/img/portfolio/restauracion-fotografia-antigua-retrato-antes-despues.webp"
-                  alt="Restauración de fotografía antigua: retrato familiar antes y después del retoque profesional"
-                  class="featured-item__img"
-                  width="600" height="400"
-                  loading="lazy"
-                >
-                <div class="featured-item__overlay" aria-hidden="true">
-                  <span class="featured-item__category">Retoque</span>
-                  <span class="featured-item__arrow">→</span>
-                </div>
-              </div>
-              <p class="featured-item__caption">Restauración fotográfica · Antes y después</p>
-            </a>
-          </article>
-
-          <!-- Destacado 4 — Editorial -->
-          <article class="featured-item" role="listitem">
-            <a href="/portfolio/diseno-editorial/" class="featured-item__link" aria-label="Ver portfolio de diseño editorial">
-              <div class="featured-item__img-wrap">
-                <img
-                  src="/img/portfolio/mockup-libro-recetas-abierto-diseno-editorial.webp"
-                  alt="Diseño editorial: libro de recetas abierto — maquetación interior y portada"
-                  class="featured-item__img"
-                  width="600" height="400"
-                  loading="lazy"
-                >
-                <div class="featured-item__overlay" aria-hidden="true">
-                  <span class="featured-item__category">Editorial</span>
-                  <span class="featured-item__arrow">→</span>
-                </div>
-              </div>
-              <p class="featured-item__caption">Diseño editorial · Libro de recetas</p>
-            </a>
-          </article>
-
-          <!-- Destacado 5 — Cartelería -->
-          <article class="featured-item" role="listitem">
-            <a href="/portfolio/carteleria/" class="featured-item__link" aria-label="Ver portfolio de cartelería">
-              <div class="featured-item__img-wrap">
-                <img
-                  src="/img/portfolio/cartel-exposicion-david-umemoto-planos-korapilo.webp"
-                  alt="Cartel de exposición David Umemoto — diseño gráfico con planos arquitectónicos Korapilo"
-                  class="featured-item__img"
-                  width="600" height="400"
-                  loading="lazy"
-                >
-                <div class="featured-item__overlay" aria-hidden="true">
-                  <span class="featured-item__category">Cartelería</span>
-                  <span class="featured-item__arrow">→</span>
-                </div>
-              </div>
-              <p class="featured-item__caption">Cartel de exposición · David Umemoto</p>
-            </a>
-          </article>
-
-          <!-- Destacado 6 — Personalización -->
-          <article class="featured-item" role="listitem">
-            <a href="/portfolio/personalizacion-productos/" class="featured-item__link" aria-label="Ver portfolio de personalización de producto">
-              <div class="featured-item__img-wrap">
-                <img
-                  src="/img/portfolio/caicos1280.webp"
-                  alt="Reloj CAICOS — diseño integral de reloj de edición limitada: esfera, bisel, agujas y grabados"
-                  class="featured-item__img"
-                  width="600" height="400"
-                  loading="lazy"
-                >
-                <div class="featured-item__overlay" aria-hidden="true">
-                  <span class="featured-item__category">Personalización</span>
-                  <span class="featured-item__arrow">→</span>
-                </div>
-              </div>
-              <p class="featured-item__caption">Reloj CAICOS · Diseño de edición limitada</p>
-            </a>
-          </article>
-
-        </div><!-- /.featured-works__grid -->
-
-        <div class="featured-works__cta">
-          <a href="#portfolio-categories" class="btn btn--outline" aria-label="Explorar todas las categorías del portfolio">
-            Ver todo el portfolio por categorías ↓
-          </a>
-        </div>
-
-      </div><!-- /.container -->
-    </section><!-- /.featured-works -->
-
-
-    <!-- ══════════════════════════════════════════════════
          GRID DE CATEGORÍAS
          ─────────────────────────────────────────────────
-         FASE 1: badge con contador añadido a cada tarjeta.
-         FASE 3: data-previews para hover mini-preview (JS).
+         Contadores de proyectos por categoría (Fase 1).
+         data-previews listos para hover preview si se activa.
          Las seis landings SEO se mantienen intactas.
     ══════════════════════════════════════════════════ -->
     <section class="portfolio-categories" id="portfolio-categories" aria-label="Categorías del portfolio">
       <div class="container">
-
-        <h2 class="portfolio-categories__title">Explora por disciplina</h2>
-        <p class="portfolio-categories__desc">
-          Cada categoría es una especialidad independiente con proyectos completos, proceso visible y contexto profesional.
-        </p>
 
         <div class="portfolio-grid" role="list">
 
@@ -258,7 +101,7 @@
             data-previews='[
               "/img/portfolio/rolex-submariner-fotografia-producto-relojeria.webp",
               "/img/portfolio/RolexSubm_09.webp",
-              "/img/portfolio/caicos1280.webp"
+              "/img/portfolio/reloj-caicos-luminiscencia-oscuridad.webp"
             ]'>
             <a href="/portfolio/fotografia/" class="portfolio-card__link" aria-label="Portfolio de fotografía — 12 proyectos">
               <div class="portfolio-card__img-wrap">
@@ -409,7 +252,7 @@
           <!-- Tarjeta 6 — Personalización -->
           <article class="portfolio-card reveal-fade" role="listitem"
             data-previews='[
-              "/img/portfolio/caicos1280.webp",
+              "/img/portfolio/reloj-caicos-muneca-diseno-ismael-gonzalo.webp",
               "/img/portfolio/camiseta-cb-araba-25-aniversario.webp",
               "/img/portfolio/muestra_bufanda.webp"
             ]'>
