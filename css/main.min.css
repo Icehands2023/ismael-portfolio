@@ -2611,3 +2611,13 @@ a:hover .tag,
 .page-portfolio-index .nav.scrolled .nav__logo-text {
   color: #ffffff;
 }
+
+/* Portfolio index — nav oscura en scroll */
+.page-portfolio-index .nav.scrolled {
+  background: rgba(17, 17, 17, 0.97);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.page-portfolio-index .nav.scrolled .nav__link,
+.page-portfolio-index .nav.scrolled .nav__logo-text {
+  color: #ffffff;
+}
