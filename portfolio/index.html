@@ -3,201 +3,504 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio — Ismael Gonzalo | Diseñador Gráfico Vitoria</title>
-  <meta name="description" content="Portfolio completo de Ismael Gonzalo: fotografía de producto, diseño gráfico, diseño editorial, cartelería y personalización de producto. Ver proyectos reales.">
-  <meta name="robots" content="index, follow">
+
+  <title>Portfolio — Diseñador gráfico y fotógrafo publicitario · Ismael Gonzalo</title>
+  <meta name="description" content="Portfolio completo de Ismael Gonzalo: fotografía de producto, diseño gráfico, identidad visual, diseño editorial, cartelería y personalización. Vitoria-Gasteiz.">
   <link rel="canonical" href="https://ismaelgonzalo.com/portfolio/">
-  <meta property="og:title" content="Portfolio — Ismael Gonzalo">
-  <meta property="og:description" content="30 años de trabajo real: fotografía, diseño editorial, identidad corporativa y más.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Portfolio · Ismael Gonzalo — Diseñador gráfico Vitoria-Gasteiz">
+  <meta property="og:description" content="Portfolio completo de diseño gráfico, fotografía y comunicación visual. Vitoria-Gasteiz.">
   <meta property="og:url" content="https://ismaelgonzalo.com/portfolio/">
-  <link rel="stylesheet" href="../css/fonts.css">
-  <link rel="preload" href="../css/main.min.css" as="style">
-  <link rel="stylesheet" href="../css/main.min.css">
-  <link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="https://ismaelgonzalo.com/img/portfolio/rolex-submariner-fotografia-producto-relojeria.webp">
-  <meta property="og:locale" content="es_ES">
-  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts (self-hosted) -->
+  <link rel="preload" href="/fonts/barlow-condensed-800.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/main.min.css">
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Portfolio — Ismael Gonzalo Peña",
+    "description": "Portfolio completo de diseño gráfico, fotografía publicitaria y comunicación visual.",
+    "url": "https://ismaelgonzalo.com/portfolio/",
+    "author": {
+      "@type": "Person",
+      "name": "Ismael Gonzalo Peña",
+      "url": "https://ismaelgonzalo.com"
+    }
+  }
+  </script>
 </head>
-<body>
 
-  <a class="skip-to-content" href="#main">Saltar al contenido</a>
+<body class="page-portfolio-index">
 
-  <header class="nav" role="banner">
-    <div class="container">
-      <nav class="nav__inner">
-        <a href="../index.html" class="nav__logo">
-          <span>Ismael Gonzalo Peña</span>
-          <span>Diseñador Gráfico · Vitoria-Gasteiz</span>
-        </a>
-        <ul class="nav__links">
-          <li><a href="../portfolio/index.html" class="active">Portfolio</a></li>
-          <li><a href="../pages/sobre-mi.html">Sobre mí</a></li>
-          <li><a href="../blog/index.html">Blog</a></li>
-          
-          <li><a href="../pages/contacto.html" class="nav__cta">Contactar</a></li>
-        </ul>
-        <button class="nav__hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
-          <span></span><span></span><span></span>
-        </button>
-      </nav>
-    </div>
+  <!-- ══════════════════════════════════════════════════
+       NAV (igual que en el resto del sitio)
+  ══════════════════════════════════════════════════ -->
+  <header class="site-header" id="site-header">
+    <nav class="nav container" aria-label="Navegación principal">
+      <a href="/" class="nav__logo" aria-label="Ismael Gonzalo — inicio">
+        <span class="nav__logo-text">Ismael Gonzalo</span>
+      </a>
+      <ul class="nav__links" role="list">
+        <li><a href="/portfolio/" class="nav__link nav__link--active" aria-current="page">Portfolio</a></li>
+        <li><a href="/pages/servicios.html" class="nav__link">Servicios</a></li>
+        <li><a href="/blog/" class="nav__link">Blog</a></li>
+        <li><a href="/pages/sobre-mi.html" class="nav__link">Sobre mí</a></li>
+        <li><a href="/pages/contacto.html" class="nav__link nav__link--cta">Contactar</a></li>
+      </ul>
+      <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav-links">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+    </nav>
   </header>
-  <nav class="nav__mobile" id="mobile-menu">
-    <a href="../portfolio/index.html">Portfolio</a>
-    <a href="../pages/sobre-mi.html">Sobre mí</a>
-    
-    <a href="../blog/index.html">Blog</a>
-    
-    <a href="../pages/contacto.html">Contactar</a>
-  </nav>
 
-  <main id="main">
+  <main>
 
-    <!-- Page Hero -->
-    <section class="page-hero">
-      <span class="page-hero__bg-num" aria-hidden="true">PF</span>
+    <!-- ══════════════════════════════════════════════════
+         HERO DE PÁGINA — H1 + descripción
+    ══════════════════════════════════════════════════ -->
+    <section class="page-hero page-hero--portfolio" aria-labelledby="portfolio-h1">
       <div class="container">
-        <nav class="breadcrumb" aria-label="Ruta de navegación">
-          <a href="../index.html">Inicio</a>
-          <span class="breadcrumb__sep" aria-hidden="true">›</span>
-          <span aria-current="page">Portfolio</span>
-        </nav>
-        <h1 class="reveal">Portfolio — Diseño gráfico y fotografía<br><span style="font-size:0.65em;font-weight:400;color:var(--teal);letter-spacing:0.06em;">Ismael Gonzalo · Vitoria-Gasteiz</span></h1>
-        <p class="reveal reveal-delay-1">Treinta años de proyectos reales en seis disciplinas. Desde fotografía de precisión hasta identidad corporativa.</p>
+        <span class="section-number" aria-hidden="true">01</span>
+        <p class="page-hero__label">Vitoria-Gasteiz · Álava</p>
+        <h1 class="page-hero__title" id="portfolio-h1">
+          Portfolio de diseño gráfico,<br>fotografía y comunicación visual
+        </h1>
+        <p class="page-hero__desc">
+          Treinta años de trabajo organizado en seis disciplinas. Desde la fotografía de relojería de precisión
+          hasta la identidad corporativa, el diseño editorial y la personalización de producto.
+          Cada proyecto tiene un proceso detrás — aquí está el resultado.
+        </p>
       </div>
     </section>
 
-    <!-- Portfolio Categories Grid -->
-    <section style="padding: 5rem 0;" aria-label="Categorías del portfolio">
+
+    <!-- ══════════════════════════════════════════════════
+         BLOQUE DE TRABAJOS DESTACADOS
+         ─────────────────────────────────────────────────
+         FASE 2: 6 imágenes seleccionadas (una por categoría)
+         visibles antes del grid de categorías.
+         Cada imagen enlaza directamente a su landing.
+         SIN nueva URL ni nivel de navegación añadido.
+    ══════════════════════════════════════════════════ -->
+    <section class="featured-works" aria-label="Selección de trabajos destacados">
       <div class="container">
-        <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 2px;">
 
-          <!-- Fotografía -->
-          <a href="../portfolio/fotografia/index.html" class="portfolio-card ph-fotografia reveal-fade" style="aspect-ratio:16/10;" aria-label="Ver fotografía">
-            <img src="../img/portfolio/cover-fotografia.webp" alt="Fotografía de producto de relojería — Rolex Submariner" class="portfolio-card__img" loading="lazy" width="800" height="500">
-            <div class="portfolio-card__overlay">
-              <div class="portfolio-card__overlay-inner"><span class="portfolio-card__cat">01 — Fotografía</span>
-              <h2 class="portfolio-card__title" style="font-size:clamp(1.5rem,3vw,2.5rem);">Fotografía de producto, naturaleza y retrato</h2>
-              <span class="portfolio-card__arrow">Ver trabajos <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
-            </div>
-          </a>
-
-          <!-- Diseño Gráfico -->
-          <a href="../portfolio/diseno-grafico/index.html" class="portfolio-card ph-diseno reveal-fade" style="aspect-ratio:16/10;" aria-label="Ver diseño gráfico">
-            <img src="../img/portfolio/cover-diseno-grafico.webp" alt="Identidad corporativa Gómez Shoe Store — proporción áurea aplicada al logotipo" class="portfolio-card__img" loading="lazy" width="800" height="500">
-            <div class="portfolio-card__overlay">
-              <div class="portfolio-card__overlay-inner"><span class="portfolio-card__cat">02 — Diseño Gráfico</span>
-              <h2 class="portfolio-card__title" style="font-size:clamp(1.5rem,3vw,2.5rem);">Identidad corporativa y diseño gráfico</h2>
-              <span class="portfolio-card__arrow">Ver trabajos <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
-            </div>
-          </a>
-
-          <!-- Retoques -->
-          <a href="../portfolio/fotomontajes-retoques/index.html" class="portfolio-card ph-retoque reveal-fade" style="aspect-ratio:16/10;" aria-label="Ver retoques y fotomontajes">
-            <img src="../img/portfolio/cover-retoques.webp" alt="Restauración fotográfica — retoque antes y después de fotografía antigua" class="portfolio-card__img" loading="lazy" width="800" height="500">
-            <div class="portfolio-card__overlay">
-              <div class="portfolio-card__overlay-inner"><span class="portfolio-card__cat">03 — Retoques</span>
-              <h2 class="portfolio-card__title" style="font-size:clamp(1.5rem,3vw,2.5rem);">Retoque profesional y fotomontajes</h2>
-              <span class="portfolio-card__arrow">Ver trabajos <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
-            </div>
-          </a>
-
-          <!-- Editorial -->
-          <a href="../portfolio/diseno-editorial/index.html" class="portfolio-card ph-editorial reveal-fade" style="aspect-ratio:16/10;" aria-label="Ver diseño editorial">
-            <img src="../img/portfolio/cover-editorial.webp" alt="Diseño editorial — mockup libro de recetas maquetación profesional" class="portfolio-card__img" loading="lazy" width="800" height="500">
-            <div class="portfolio-card__overlay">
-              <div class="portfolio-card__overlay-inner"><span class="portfolio-card__cat">04 — Editorial</span>
-              <h2 class="portfolio-card__title" style="font-size:clamp(1.5rem,3vw,2.5rem);">Diseño editorial y maquetación</h2>
-              <span class="portfolio-card__arrow">Ver trabajos <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
-            </div>
-          </a>
-
-          <!-- Cartelería -->
-          <a href="../portfolio/carteleria/index.html" class="portfolio-card ph-carteleria reveal-fade" style="aspect-ratio:16/10;" aria-label="Ver cartelería">
-            <img src="../img/portfolio/cover-carteleria.webp" alt="Cartelería publicitaria — cartel exposición David Umemoto Korapilo Vitoria-Gasteiz" class="portfolio-card__img" loading="lazy" width="800" height="500">
-            <div class="portfolio-card__overlay">
-              <div class="portfolio-card__overlay-inner"><span class="portfolio-card__cat">05 — Cartelería</span>
-              <h2 class="portfolio-card__title" style="font-size:clamp(1.5rem,3vw,2.5rem);">Cartelería publicitaria y gráfica exterior</h2>
-              <span class="portfolio-card__arrow">Ver trabajos <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
-            </div>
-          </a>
-
-          <!-- Personalización -->
-          <a href="../portfolio/personalizacion-productos/index.html" class="portfolio-card ph-personalizacion reveal-fade" style="aspect-ratio:16/10;" aria-label="Ver personalización de productos">
-            <img src="../img/portfolio/cover-personalizacion.webp" alt="Personalización de producto — camiseta CB Araba 25 aniversario diseño Ismael Gonzalo" class="portfolio-card__img" loading="lazy" width="800" height="500">
-            <div class="portfolio-card__overlay">
-              <div class="portfolio-card__overlay-inner"><span class="portfolio-card__cat">06 — Personalización</span>
-              <h2 class="portfolio-card__title" style="font-size:clamp(1.5rem,3vw,2.5rem);">Personalización de producto y equipaciones</h2>
-              <span class="portfolio-card__arrow">Ver trabajos <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></span></div>
-            </div>
-          </a>
-
+        <div class="featured-works__header">
+          <h2 class="featured-works__title">Una selección del trabajo</h2>
+          <p class="featured-works__subtitle">
+            Seis proyectos, seis disciplinas. Explora cada categoría completa más abajo.
+          </p>
         </div>
-      </div>
-    </section>
 
-    <!-- CTA -->
-    <section class="cta-section">
-      <span class="section-num cta-section__num" aria-hidden="true">?</span>
-      <div class="container cta-section__content">
-        <h2 class="reveal">¿Tienes un<br>proyecto?</h2>
-        <p class="reveal reveal-delay-1">Cuéntame qué necesitas. </p>
-        <div class="reveal reveal-delay-2">
-          <a href="../pages/contacto.html" class="btn btn--white">
-            Contactar
-            <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        <div class="featured-works__grid" role="list">
+
+          <!-- Destacado 1 — Fotografía -->
+          <article class="featured-item" role="listitem">
+            <a href="/portfolio/fotografia/" class="featured-item__link" aria-label="Ver portfolio de fotografía">
+              <div class="featured-item__img-wrap">
+                <img
+                  src="/img/portfolio/rolex-submariner-fotografia-producto-relojeria.webp"
+                  alt="Fotografía de producto: Rolex Submariner — detalle de maquinaria de relojería de precisión"
+                  class="featured-item__img"
+                  width="600" height="400"
+                  loading="lazy"
+                >
+                <div class="featured-item__overlay" aria-hidden="true">
+                  <span class="featured-item__category">Fotografía</span>
+                  <span class="featured-item__arrow">→</span>
+                </div>
+              </div>
+              <p class="featured-item__caption">Fotografía de producto · Relojería de precisión</p>
+            </a>
+          </article>
+
+          <!-- Destacado 2 — Diseño gráfico -->
+          <article class="featured-item" role="listitem">
+            <a href="/portfolio/diseno-grafico/" class="featured-item__link" aria-label="Ver portfolio de diseño gráfico">
+              <div class="featured-item__img-wrap">
+                <img
+                  src="/img/portfolio/gomezAUREA.webp"
+                  alt="Identidad corporativa Gómez Shoe Store — logotipo y manual de marca completo"
+                  class="featured-item__img"
+                  width="600" height="400"
+                  loading="lazy"
+                >
+                <div class="featured-item__overlay" aria-hidden="true">
+                  <span class="featured-item__category">Diseño gráfico</span>
+                  <span class="featured-item__arrow">→</span>
+                </div>
+              </div>
+              <p class="featured-item__caption">Identidad corporativa · Gómez Shoe Store</p>
+            </a>
+          </article>
+
+          <!-- Destacado 3 — Retoque -->
+          <article class="featured-item" role="listitem">
+            <a href="/portfolio/fotomontajes-retoques/" class="featured-item__link" aria-label="Ver portfolio de retoque y fotomontajes">
+              <div class="featured-item__img-wrap">
+                <img
+                  src="/img/portfolio/restauracion-fotografia-antigua-retrato-antes-despues.webp"
+                  alt="Restauración de fotografía antigua: retrato familiar antes y después del retoque profesional"
+                  class="featured-item__img"
+                  width="600" height="400"
+                  loading="lazy"
+                >
+                <div class="featured-item__overlay" aria-hidden="true">
+                  <span class="featured-item__category">Retoque</span>
+                  <span class="featured-item__arrow">→</span>
+                </div>
+              </div>
+              <p class="featured-item__caption">Restauración fotográfica · Antes y después</p>
+            </a>
+          </article>
+
+          <!-- Destacado 4 — Editorial -->
+          <article class="featured-item" role="listitem">
+            <a href="/portfolio/diseno-editorial/" class="featured-item__link" aria-label="Ver portfolio de diseño editorial">
+              <div class="featured-item__img-wrap">
+                <img
+                  src="/img/portfolio/mockup-libro-recetas-abierto-diseno-editorial.webp"
+                  alt="Diseño editorial: libro de recetas abierto — maquetación interior y portada"
+                  class="featured-item__img"
+                  width="600" height="400"
+                  loading="lazy"
+                >
+                <div class="featured-item__overlay" aria-hidden="true">
+                  <span class="featured-item__category">Editorial</span>
+                  <span class="featured-item__arrow">→</span>
+                </div>
+              </div>
+              <p class="featured-item__caption">Diseño editorial · Libro de recetas</p>
+            </a>
+          </article>
+
+          <!-- Destacado 5 — Cartelería -->
+          <article class="featured-item" role="listitem">
+            <a href="/portfolio/carteleria/" class="featured-item__link" aria-label="Ver portfolio de cartelería">
+              <div class="featured-item__img-wrap">
+                <img
+                  src="/img/portfolio/cartel-exposicion-david-umemoto-planos-korapilo.webp"
+                  alt="Cartel de exposición David Umemoto — diseño gráfico con planos arquitectónicos Korapilo"
+                  class="featured-item__img"
+                  width="600" height="400"
+                  loading="lazy"
+                >
+                <div class="featured-item__overlay" aria-hidden="true">
+                  <span class="featured-item__category">Cartelería</span>
+                  <span class="featured-item__arrow">→</span>
+                </div>
+              </div>
+              <p class="featured-item__caption">Cartel de exposición · David Umemoto</p>
+            </a>
+          </article>
+
+          <!-- Destacado 6 — Personalización -->
+          <article class="featured-item" role="listitem">
+            <a href="/portfolio/personalizacion-productos/" class="featured-item__link" aria-label="Ver portfolio de personalización de producto">
+              <div class="featured-item__img-wrap">
+                <img
+                  src="/img/portfolio/caicos1280.webp"
+                  alt="Reloj CAICOS — diseño integral de reloj de edición limitada: esfera, bisel, agujas y grabados"
+                  class="featured-item__img"
+                  width="600" height="400"
+                  loading="lazy"
+                >
+                <div class="featured-item__overlay" aria-hidden="true">
+                  <span class="featured-item__category">Personalización</span>
+                  <span class="featured-item__arrow">→</span>
+                </div>
+              </div>
+              <p class="featured-item__caption">Reloj CAICOS · Diseño de edición limitada</p>
+            </a>
+          </article>
+
+        </div><!-- /.featured-works__grid -->
+
+        <div class="featured-works__cta">
+          <a href="#portfolio-categories" class="btn btn--outline" aria-label="Explorar todas las categorías del portfolio">
+            Ver todo el portfolio por categorías ↓
           </a>
         </div>
+
+      </div><!-- /.container -->
+    </section><!-- /.featured-works -->
+
+
+    <!-- ══════════════════════════════════════════════════
+         GRID DE CATEGORÍAS
+         ─────────────────────────────────────────────────
+         FASE 1: badge con contador añadido a cada tarjeta.
+         FASE 3: data-previews para hover mini-preview (JS).
+         Las seis landings SEO se mantienen intactas.
+    ══════════════════════════════════════════════════ -->
+    <section class="portfolio-categories" id="portfolio-categories" aria-label="Categorías del portfolio">
+      <div class="container">
+
+        <h2 class="portfolio-categories__title">Explora por disciplina</h2>
+        <p class="portfolio-categories__desc">
+          Cada categoría es una especialidad independiente con proyectos completos, proceso visible y contexto profesional.
+        </p>
+
+        <div class="portfolio-grid" role="list">
+
+          <!-- Tarjeta 1 — Fotografía -->
+          <article class="portfolio-card reveal-fade" role="listitem"
+            data-previews='[
+              "/img/portfolio/rolex-submariner-fotografia-producto-relojeria.webp",
+              "/img/portfolio/RolexSubm_09.webp",
+              "/img/portfolio/caicos1280.webp"
+            ]'>
+            <a href="/portfolio/fotografia/" class="portfolio-card__link" aria-label="Portfolio de fotografía — 12 proyectos">
+              <div class="portfolio-card__img-wrap">
+                <img
+                  src="/img/portfolio/cover-fotografia.webp"
+                  alt="Fotografía de producto: Rolex Submariner sobre fondo negro — portfolio de fotografía"
+                  class="portfolio-card__img"
+                  width="600" height="400"
+                  loading="lazy"
+                >
+                <div class="portfolio-card__overlay" aria-hidden="true"></div>
+
+                <!-- FASE 3: hover preview panel (oculto por defecto, activado por JS) -->
+                <div class="portfolio-card__preview" aria-hidden="true">
+                  <div class="portfolio-card__preview-grid"></div>
+                </div>
+              </div>
+              <div class="portfolio-card__info">
+                <h3 class="portfolio-card__title">Fotografía</h3>
+                <p class="portfolio-card__subtitle">Producto, naturaleza y retrato</p>
+                <!-- FASE 1: contador -->
+                <span class="portfolio-card__count" aria-label="12 proyectos">12 proyectos</span>
+              </div>
+              <span class="portfolio-card__arrow" aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Tarjeta 2 — Diseño gráfico -->
+          <article class="portfolio-card reveal-fade" role="listitem"
+            data-previews='[
+              "/img/portfolio/gomezAUREA.webp",
+              "/img/portfolio/Identidad_Full06.webp",
+              "/img/portfolio/cartel-exposicion-david-umemoto-planos-korapilo.webp"
+            ]'>
+            <a href="/portfolio/diseno-grafico/" class="portfolio-card__link" aria-label="Portfolio de diseño gráfico — 6 proyectos">
+              <div class="portfolio-card__img-wrap">
+                <img
+                  src="/img/portfolio/cover-diseno-grafico.webp"
+                  alt="Identidad corporativa Gómez Shoe Store — portfolio de diseño gráfico"
+                  class="portfolio-card__img"
+                  width="600" height="400"
+                  loading="lazy"
+                >
+                <div class="portfolio-card__overlay" aria-hidden="true"></div>
+                <div class="portfolio-card__preview" aria-hidden="true">
+                  <div class="portfolio-card__preview-grid"></div>
+                </div>
+              </div>
+              <div class="portfolio-card__info">
+                <h3 class="portfolio-card__title">Diseño gráfico</h3>
+                <p class="portfolio-card__subtitle">Identidad visual y branding</p>
+                <span class="portfolio-card__count" aria-label="6 proyectos">6 proyectos</span>
+              </div>
+              <span class="portfolio-card__arrow" aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Tarjeta 3 — Retoque -->
+          <article class="portfolio-card reveal-fade" role="listitem"
+            data-previews='[
+              "/img/portfolio/restauracion-fotografia-antigua-retrato-antes-despues.webp",
+              "/img/portfolio/Abuela_2.webp",
+              "/img/portfolio/Abuela_4.webp"
+            ]'>
+            <a href="/portfolio/fotomontajes-retoques/" class="portfolio-card__link" aria-label="Portfolio de fotomontajes y retoque — 8 proyectos">
+              <div class="portfolio-card__img-wrap">
+                <img
+                  src="/img/portfolio/cover-retoques.webp"
+                  alt="Restauración de fotografía antigua — antes y después, portfolio de retoque fotográfico"
+                  class="portfolio-card__img"
+                  width="600" height="400"
+                  loading="lazy"
+                >
+                <div class="portfolio-card__overlay" aria-hidden="true"></div>
+                <div class="portfolio-card__preview" aria-hidden="true">
+                  <div class="portfolio-card__preview-grid"></div>
+                </div>
+              </div>
+              <div class="portfolio-card__info">
+                <h3 class="portfolio-card__title">Fotomontajes y retoque</h3>
+                <p class="portfolio-card__subtitle">Restauración, retoque y composición</p>
+                <span class="portfolio-card__count" aria-label="8 proyectos">8 proyectos</span>
+              </div>
+              <span class="portfolio-card__arrow" aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Tarjeta 4 — Editorial -->
+          <article class="portfolio-card reveal-fade" role="listitem"
+            data-previews='[
+              "/img/portfolio/mockup-libro-recetas-abierto-diseno-editorial.webp",
+              "/img/portfolio/diseno-portada-libro-la-vida-de-pi.webp",
+              "/img/portfolio/PORTADA_SUPLE_copia.webp"
+            ]'>
+            <a href="/portfolio/diseno-editorial/" class="portfolio-card__link" aria-label="Portfolio de diseño editorial — 5 proyectos">
+              <div class="portfolio-card__img-wrap">
+                <img
+                  src="/img/portfolio/cover-editorial.webp"
+                  alt="Diseño editorial: mockup libro de recetas — portfolio de maquetación y diseño editorial"
+                  class="portfolio-card__img"
+                  width="600" height="400"
+                  loading="lazy"
+                >
+                <div class="portfolio-card__overlay" aria-hidden="true"></div>
+                <div class="portfolio-card__preview" aria-hidden="true">
+                  <div class="portfolio-card__preview-grid"></div>
+                </div>
+              </div>
+              <div class="portfolio-card__info">
+                <h3 class="portfolio-card__title">Diseño editorial</h3>
+                <p class="portfolio-card__subtitle">Libros, revistas y publicaciones</p>
+                <span class="portfolio-card__count" aria-label="5 proyectos">5 proyectos</span>
+              </div>
+              <span class="portfolio-card__arrow" aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Tarjeta 5 — Cartelería -->
+          <article class="portfolio-card reveal-fade" role="listitem"
+            data-previews='[
+              "/img/portfolio/cartel-exposicion-david-umemoto-planos-korapilo.webp",
+              "/img/portfolio/la_hora_del_planeta_v3.webp",
+              "/img/portfolio/cartel_FINAL.webp"
+            ]'>
+            <a href="/portfolio/carteleria/" class="portfolio-card__link" aria-label="Portfolio de cartelería — 9 proyectos">
+              <div class="portfolio-card__img-wrap">
+                <img
+                  src="/img/portfolio/cover-carteleria.webp"
+                  alt="Cartel de exposición David Umemoto — portfolio de diseño de cartelería publicitaria"
+                  class="portfolio-card__img"
+                  width="600" height="400"
+                  loading="lazy"
+                >
+                <div class="portfolio-card__overlay" aria-hidden="true"></div>
+                <div class="portfolio-card__preview" aria-hidden="true">
+                  <div class="portfolio-card__preview-grid"></div>
+                </div>
+              </div>
+              <div class="portfolio-card__info">
+                <h3 class="portfolio-card__title">Cartelería</h3>
+                <p class="portfolio-card__subtitle">Carteles, campañas y gráfica exterior</p>
+                <span class="portfolio-card__count" aria-label="9 proyectos">9 proyectos</span>
+              </div>
+              <span class="portfolio-card__arrow" aria-hidden="true">→</span>
+            </a>
+          </article>
+
+          <!-- Tarjeta 6 — Personalización -->
+          <article class="portfolio-card reveal-fade" role="listitem"
+            data-previews='[
+              "/img/portfolio/caicos1280.webp",
+              "/img/portfolio/camiseta-cb-araba-25-aniversario.webp",
+              "/img/portfolio/muestra_bufanda.webp"
+            ]'>
+            <a href="/portfolio/personalizacion-productos/" class="portfolio-card__link" aria-label="Portfolio de personalización de producto — 7 proyectos">
+              <div class="portfolio-card__img-wrap">
+                <img
+                  src="/img/portfolio/cover-personalizacion.webp"
+                  alt="Reloj CAICOS edición limitada — portfolio de personalización de producto y diseño de objeto"
+                  class="portfolio-card__img"
+                  width="600" height="400"
+                  loading="lazy"
+                >
+                <div class="portfolio-card__overlay" aria-hidden="true"></div>
+                <div class="portfolio-card__preview" aria-hidden="true">
+                  <div class="portfolio-card__preview-grid"></div>
+                </div>
+              </div>
+              <div class="portfolio-card__info">
+                <h3 class="portfolio-card__title">Personalización de producto</h3>
+                <p class="portfolio-card__subtitle">Equipaciones, merchandising y diseño de objeto</p>
+                <span class="portfolio-card__count" aria-label="7 proyectos">7 proyectos</span>
+              </div>
+              <span class="portfolio-card__arrow" aria-hidden="true">→</span>
+            </a>
+          </article>
+
+        </div><!-- /.portfolio-grid -->
+      </div><!-- /.container -->
+    </section><!-- /.portfolio-categories -->
+
+
+    <!-- ══════════════════════════════════════════════════
+         CTA FINAL
+    ══════════════════════════════════════════════════ -->
+    <section class="cta-band" aria-label="Contacto">
+      <div class="container">
+        <p class="cta-band__text">¿Tienes un proyecto en mente?</p>
+        <h2 class="cta-band__title">Hablemos.</h2>
+        <a href="/pages/contacto.html" class="btn btn--primary btn--lg">Escribir a Ismael</a>
       </div>
     </section>
 
   </main>
 
-  <footer class="footer">
+
+  <!-- ══════════════════════════════════════════════════
+       FOOTER (igual que resto del sitio)
+  ══════════════════════════════════════════════════ -->
+  <footer class="site-footer">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a href="../index.html" class="footer__logo">Ismael <span>Gonzalo</span></a>
-          <p>Diseñador gráfico y especialista en imagen en Vitoria-Gasteiz.</p>
-          <div class="footer__contact">
-            <a href="tel:+34636702172">636 702 172</a>
-            <a href="mailto:ismaelgph@gmail.com">ismaelgph@gmail.com</a>
-          </div>
+          <span class="footer__name">Ismael Gonzalo</span>
+          <p class="footer__tagline">Diseñador gráfico & especialista en imagen · Vitoria-Gasteiz</p>
         </div>
-        <div class="footer__col">
-          <p class="footer__col-title">Portfolio</p>
-          <ul>
-            <li><a href="../portfolio/fotografia/index.html">Fotografía</a></li>
-            <li><a href="../portfolio/diseno-grafico/index.html">Diseño Gráfico</a></li>
-            <li><a href="../portfolio/fotomontajes-retoques/index.html">Retoques</a></li>
-            <li><a href="../portfolio/diseno-editorial/index.html">Diseño Editorial</a></li>
-            <li><a href="../portfolio/carteleria/index.html">Cartelería</a></li>
-            <li><a href="../portfolio/personalizacion-productos/index.html">Personalización</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <p class="footer__col-title">Servicios</p>
-          <ul>
-            <li><a href="../pages/servicios.html">Ver todos</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <p class="footer__col-title">Más</p>
-          <ul>
-            <li><a href="../pages/sobre-mi.html">Sobre mí</a></li>
-            <li><a href="../blog/index.html">Blog</a></li>
-            <li><a href="../pages/contacto.html">Contacto</a></li>
-          </ul>
+        <nav class="footer__nav" aria-label="Navegación pie de página">
+          <a href="/portfolio/" class="footer__link">Portfolio</a>
+          <a href="/pages/servicios.html" class="footer__link">Servicios</a>
+          <a href="/blog/" class="footer__link">Blog</a>
+          <a href="/pages/sobre-mi.html" class="footer__link">Sobre mí</a>
+          <a href="/pages/contacto.html" class="footer__link">Contactar</a>
+          <a href="/pdf/ismael-gonzalo-portfolio.pdf" class="footer__link" target="_blank" rel="noopener">Portfolio PDF</a>
+        </nav>
+        <div class="footer__contact">
+          <a href="tel:+34636702172" class="footer__link">636 702 172</a>
+          <a href="mailto:ismaelgph@gmail.com" class="footer__link">ismaelgph@gmail.com</a>
         </div>
       </div>
-      <div class="footer__bottom">
-        <span class="footer__copy">© 2025 Ismael Gonzalo Peña · Vitoria-Gasteiz</span>
-      </div>
+      <p class="footer__copy">© 2026 Ismael Gonzalo Peña · Vitoria-Gasteiz</p>
     </div>
   </footer>
 
-  <div class="lightbox"><button class="lightbox__close">×</button><img class="lightbox__img" src="" alt=""></div>
-  <script src="../js/main.js" defer></script>
-<div class="fab-container"><button class="fab fab--top" id="fab-top" aria-label="Volver arriba"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="20" height="20"><polyline points="18 15 12 9 6 15"/></svg></button><a class="fab fab--whatsapp" href="https://wa.me/34636702172?text=Hola%20Ismael%2C%20me%20gustar%C3%ADa%20consultarte%20sobre%20un%20proyecto." target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24" height="24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.124.558 4.17 1.623 5.963L.057 23.428a.5.5 0 0 0 .609.601l5.634-1.533A11.945 11.945 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 0 1-5.031-1.388l-.36-.214-3.733 1.016 1.05-3.619-.235-.372A9.808 9.808 0 0 1 2.182 12C2.182 6.57 6.57 2.182 12 2.182S21.818 6.57 21.818 12 17.43 21.818 12 21.818z"/></svg></a></div></body>
+  <!-- Floating buttons (WhatsApp + back to top) -->
+  <a href="https://wa.me/34636702172"
+     class="floating-btn floating-btn--wa"
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Contactar por WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <button class="floating-btn floating-btn--top" aria-label="Volver al inicio de la página">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="20" height="20" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <script src="/js/main.js"></script>
+  <!-- FASE 3: script del hover preview (cargado al final, no bloquea render) -->
+  <script src="/js/portfolio-preview.js" defer></script>
+
+</body>
 </html>

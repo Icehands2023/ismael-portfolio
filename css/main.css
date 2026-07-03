@@ -2414,3 +2414,340 @@ a:hover .tag,
     display: none;
   }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PORTFOLIO INDEX — UX IMPROVEMENTS
+   Añadir al final de main.css (antes de la sección de media queries finales)
+   ─────────────────────────────────────────────────────────────────────────
+   FASE 1: .portfolio-card__count
+   FASE 2: .featured-works
+   FASE 3: .portfolio-card__preview (hover mini-preview)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+
+/* ─────────────────────────────────────────────────────────────────────────
+   PAGE HERO — variante portfolio/index
+   ───────────────────────────────────────────────────────────────────────── */
+.page-hero--portfolio {
+  padding: clamp(5rem, 10vw, 8rem) 0 clamp(3rem, 6vw, 5rem);
+  background-color: var(--color-carbon);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-hero--portfolio .section-number {
+  position: absolute;
+  top: -0.15em;
+  right: -0.05em;
+  font-family: var(--font-display);
+  font-size: clamp(8rem, 20vw, 16rem);
+  font-weight: 800;
+  color: var(--color-teal);
+  opacity: 0.08;
+  line-height: 1;
+  pointer-events: none;
+  user-select: none;
+}
+
+.page-hero__label {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-teal);
+  margin: 0 0 1rem;
+}
+
+.page-hero--portfolio .page-hero__title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.05;
+  margin: 0 0 1.5rem;
+  max-width: 20ch;
+}
+
+.page-hero--portfolio .page-hero__desc {
+  font-family: var(--font-body);
+  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+  color: rgba(255, 255, 255, 0.65);
+  max-width: 56ch;
+  line-height: 1.7;
+  margin: 0;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────
+   FASE 2: TRABAJOS DESTACADOS
+   ───────────────────────────────────────────────────────────────────────── */
+.featured-works {
+  padding: clamp(4rem, 8vw, 6rem) 0;
+  background-color: var(--color-off-white);
+  position: relative;
+}
+
+.featured-works__header {
+  text-align: center;
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.featured-works__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  font-weight: 800;
+  color: var(--color-carbon);
+  margin: 0 0 0.75rem;
+}
+
+.featured-works__subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+  color: var(--color-gray-mid);
+  margin: 0;
+}
+
+/* Grid de 3 columnas en desktop, 2 en tablet, 1 en móvil */
+.featured-works__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(0.75rem, 1.5vw, 1.25rem);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+@media (max-width: 900px) {
+  .featured-works__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .featured-works__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Ítem destacado */
+.featured-item {
+  position: relative;
+}
+
+.featured-item__link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.featured-item__img-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background-color: var(--color-gray-light);
+}
+
+.featured-item__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transform-origin: center;
+}
+
+.featured-item__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 40%,
+    rgba(26, 122, 154, 0.82) 100%
+  );
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 1rem 1.1rem;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.featured-item__category {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.featured-item__arrow {
+  font-size: 1.25rem;
+  color: #fff;
+  transition: transform 0.25s ease;
+}
+
+/* Hover state */
+.featured-item__link:hover .featured-item__img {
+  transform: scale(1.04);
+}
+
+.featured-item__link:hover .featured-item__overlay {
+  opacity: 1;
+}
+
+.featured-item__link:hover .featured-item__arrow {
+  transform: translateX(4px);
+}
+
+.featured-item__caption {
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: var(--color-gray-mid);
+  margin: 0.6rem 0 0;
+  padding: 0 0.1rem;
+}
+
+/* CTA central */
+.featured-works__cta {
+  text-align: center;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────
+   CATEGORÍAS — título de sección
+   ───────────────────────────────────────────────────────────────────────── */
+.portfolio-categories__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 800;
+  color: var(--color-carbon);
+  margin: 0 0 0.5rem;
+  text-align: center;
+}
+
+.portfolio-categories__desc {
+  font-family: var(--font-body);
+  font-size: clamp(0.9rem, 1.4vw, 1rem);
+  color: var(--color-gray-mid);
+  text-align: center;
+  max-width: 52ch;
+  margin: 0 auto clamp(2rem, 4vw, 3rem);
+  line-height: 1.65;
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────
+   FASE 1: BADGE CONTADOR DE PROYECTOS
+   Añadir sobre el .portfolio-card__info existente
+   ───────────────────────────────────────────────────────────────────────── */
+.portfolio-card__count {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-teal);
+  background-color: rgba(26, 122, 154, 0.08);
+  border: 1px solid rgba(26, 122, 154, 0.25);
+  border-radius: 2px;
+  padding: 0.2em 0.6em;
+  margin-top: 0.5rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* El badge se ilumina al hacer hover sobre la tarjeta */
+.portfolio-card:hover .portfolio-card__count {
+  background-color: rgba(26, 122, 154, 0.15);
+  border-color: rgba(26, 122, 154, 0.5);
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────
+   FASE 3: HOVER MINI-PREVIEW
+   Panel con 3 thumbnails que aparece sobre la tarjeta al hover
+   Activado por portfolio-preview.js
+   ───────────────────────────────────────────────────────────────────────── */
+.portfolio-card__preview {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(17, 17, 17, 0.88);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+/* Activado por JS al añadir clase .is-preview-visible a la tarjeta */
+.portfolio-card.is-preview-visible .portfolio-card__preview {
+  opacity: 1;
+}
+
+/* Grid interno de los 3 thumbnails */
+.portfolio-card__preview-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem;
+  width: 100%;
+}
+
+.portfolio-card__preview-grid img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 2px;
+  /* Los thumbnails se cargan a demanda por JS, no en el HTML */
+}
+
+/* Etiqueta "Ver categoría" en la parte inferior del preview */
+.portfolio-card__preview-label {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* En móvil, desactivar el hover preview (no hay hover táctil real) */
+@media (hover: none) {
+  .portfolio-card__preview {
+    display: none;
+  }
+}
+
+
+/* ─────────────────────────────────────────────────────────────────────────
+   RESPONSIVO — ajustes generales portfolio index
+   ───────────────────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .portfolio-card__subtitle {
+    /* Reducir a una línea en móvil si es necesario */
+    font-size: 0.8rem;
+  }
+
+  .portfolio-card__count {
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-works__grid {
+    gap: 0.6rem;
+  }
+
+  .featured-item__caption {
+    font-size: 0.78rem;
+  }
+}
