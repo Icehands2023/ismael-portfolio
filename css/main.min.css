@@ -2585,3 +2585,19 @@ a:hover .tag,
 .page-portfolio-index .footer__grid {
   grid-template-columns: 2fr 1fr 1fr;
 }
+
+/* Portfolio index — CTA en negro carbón con botón teal */
+.page-portfolio-index .cta-band {
+  background: #111111;
+}
+.page-portfolio-index .cta-band__text {
+  color: rgba(255, 255, 255, 0.5);
+}
+.page-portfolio-index .cta-band__title {
+  color: #ffffff;
+}
+.page-portfolio-index .cta-band .btn--primary {
+  background: #1A7A9A;
+  border-color: #1A7A9A;
+  color: #ffffff;
+}
