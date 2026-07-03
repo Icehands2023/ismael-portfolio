@@ -2575,8 +2575,8 @@ a:hover .tag,
 }
 /* Fix: zoom imagen CAICOS para eliminar márgenes negros del WebP */
 .featured-works__grid .featured-item:nth-child(6) .featured-item__img {
-  transform: scale(1.35) translateY(-8%);
+  transform: scale(1.35) translateY(-15%);
 }
 .featured-works__grid .featured-item:nth-child(6) .featured-item__link:hover .featured-item__img {
-  transform: scale(1.4) translateY(-8%);
+  transform: scale(1.4) translateY(-15%);
 }
