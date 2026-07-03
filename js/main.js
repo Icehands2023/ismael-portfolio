@@ -108,7 +108,7 @@
   }
 
   /* ---- CONTACT FORM ---- */
-  const form = document.querySelector('.js-contact-form');
+ const form = document.querySelector('.js-contact-form');
   if (form) {
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
@@ -117,11 +117,13 @@
       btn.disabled = true;
       btn.innerHTML = 'Enviando...';
 
+      const data = Object.fromEntries(new FormData(form).entries());
+
       try {
-        const response = await fetch(form.action, {
+        const response = await fetch('/api/contact', {
           method: 'POST',
-          body: new FormData(form),
-          headers: { 'Accept': 'application/json' }
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
         });
 
         if (response.ok) {
@@ -129,7 +131,7 @@
           btn.style.background = '#27ae60';
           form.reset();
         } else {
-          throw new Error('Formspree respondió con error');
+          throw new Error('Error en el envío');
         }
       } catch (err) {
         btn.innerHTML = '✗ Error — llama al 636 702 172';
