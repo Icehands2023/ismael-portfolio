@@ -2512,7 +2512,7 @@ a:hover .tag,
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--color-teal);
+  color: var(--teal);
   margin-top: 0.2rem;
 }
 
@@ -2541,7 +2541,7 @@ a:hover .tag,
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--color-teal);
+  color: var(--teal);
   background-color: rgba(26, 122, 154, 0.08);
   border: 1px solid rgba(26, 122, 154, 0.25);
   border-radius: 2px;
@@ -2567,7 +2567,7 @@ a:hover .tag,
   font-family: var(--font-display);
   font-size: clamp(1.4rem, 2.5vw, 1.9rem);
   font-weight: 800;
-  color: var(--color-carbon);
+  color: var(--carbon);
   text-align: center;
   margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
   text-transform: uppercase;
