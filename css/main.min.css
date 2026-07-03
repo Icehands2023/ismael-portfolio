@@ -2415,18 +2415,19 @@ a:hover .tag,
   }
 }
 
-/* ═══════════════════════════════════════════════════════════════════════════
-   PORTFOLIO INDEX — UX IMPROVEMENTS
-   Añadir al final de main.css (antes de la sección de media queries finales)
-   ─────────────────────────────────────────────────────────────────────────
-   FASE 1: .portfolio-card__count  (badge contador de proyectos)
-   FASE 3: .portfolio-card__preview (hover mini-preview, activado por JS)
-   ═══════════════════════════════════════════════════════════════════════════ */
+/* ═══════════════════════════════════════════════════════════════════
+   PORTFOLIO INDEX — añadir al final de main.css
+   ───────────────────────────────────────────────────────────────────
+   1. page-hero--portfolio
+   2. .featured-works  (grid de 6 destacados)
+   3. .portfolio-card__count  (badge contador)
+   4. .portfolio-categories__title
+   ═══════════════════════════════════════════════════════════════════ */
 
 
-/* ─────────────────────────────────────────────────────────────────────────
-   PAGE HERO — variante portfolio/index
-   ───────────────────────────────────────────────────────────────────────── */
+/* ─────────────────────────────────────────────
+   1. HERO DE PÁGINA PORTFOLIO
+───────────────────────────────────────────── */
 .page-hero--portfolio {
   padding: clamp(5rem, 10vw, 8rem) 0 clamp(3rem, 6vw, 5rem);
   background-color: var(--color-carbon);
@@ -2469,41 +2470,121 @@ a:hover .tag,
 
 .page-hero--portfolio .page-hero__desc {
   font-family: var(--font-body);
-  font-size: clamp(0.95rem, 1.5vw, 1.1rem);
-  color: rgba(255, 255, 255, 0.65);
-  max-width: 56ch;
+  font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 52ch;
   line-height: 1.7;
   margin: 0;
 }
 
 
-/* ─────────────────────────────────────────────────────────────────────────
-   CATEGORÍAS — título de sección
-   ───────────────────────────────────────────────────────────────────────── */
-.portfolio-categories__title {
+/* ─────────────────────────────────────────────
+   2. TRABAJOS DESTACADOS
+   Grid de 6 imágenes. Cada una = acceso directo
+   a su landing de categoría. Sin nivel intermedio.
+───────────────────────────────────────────── */
+.featured-works {
+  padding: clamp(3rem, 6vw, 5rem) 0;
+  background-color: var(--color-carbon);
+}
+
+.featured-works__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3px;
+}
+
+@media (max-width: 900px) {
+  .featured-works__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .featured-works__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2px;
+  }
+}
+
+/* Ítem */
+.featured-item__link {
+  display: block;
+  text-decoration: none;
+  position: relative;
+}
+
+.featured-item__img-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
+  background-color: #1a1a1a;
+}
+
+.featured-item__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.3s ease;
+  opacity: 0.75;
+}
+
+/* Overlay permanente con gradiente — etiqueta siempre visible */
+.featured-item__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 45%,
+    rgba(17, 17, 17, 0.88) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem 1.1rem;
+  transition: background 0.3s ease;
+}
+
+.featured-item__label {
   font-family: var(--font-display);
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
   font-weight: 800;
-  color: var(--color-carbon);
-  margin: 0 0 0.5rem;
-  text-align: center;
+  color: #fff;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  line-height: 1.1;
 }
 
-.portfolio-categories__desc {
+.featured-item__count {
   font-family: var(--font-body);
-  font-size: clamp(0.9rem, 1.4vw, 1rem);
-  color: var(--color-gray-mid);
-  text-align: center;
-  max-width: 52ch;
-  margin: 0 auto clamp(2rem, 4vw, 3rem);
-  line-height: 1.65;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-teal);
+  margin-top: 0.2rem;
+}
+
+/* Hover: imagen a color completo + overlay teal */
+.featured-item__link:hover .featured-item__img {
+  transform: scale(1.04);
+  opacity: 1;
+}
+
+.featured-item__link:hover .featured-item__overlay {
+  background: linear-gradient(
+    to bottom,
+    transparent 30%,
+    rgba(26, 122, 154, 0.82) 100%
+  );
 }
 
 
-/* ─────────────────────────────────────────────────────────────────────────
-   FASE 1: BADGE CONTADOR DE PROYECTOS
-   Añadir sobre el .portfolio-card__info existente
-   ───────────────────────────────────────────────────────────────────────── */
+/* ─────────────────────────────────────────────
+   3. BADGE CONTADOR EN TARJETAS DE CATEGORÍA
+───────────────────────────────────────────── */
 .portfolio-card__count {
   display: inline-block;
   font-family: var(--font-body);
@@ -2520,95 +2601,26 @@ a:hover .tag,
   transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-/* El badge se ilumina al hacer hover sobre la tarjeta */
 .portfolio-card:hover .portfolio-card__count {
   background-color: rgba(26, 122, 154, 0.15);
   border-color: rgba(26, 122, 154, 0.5);
 }
 
 
-/* ─────────────────────────────────────────────────────────────────────────
-   FASE 3: HOVER MINI-PREVIEW
-   Panel con 3 thumbnails que aparece sobre la tarjeta al hover
-   Activado por portfolio-preview.js
-   ───────────────────────────────────────────────────────────────────────── */
-.portfolio-card__preview {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(17, 17, 17, 0.88);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.75rem;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 2;
+/* ─────────────────────────────────────────────
+   4. ENCABEZADO SECCIÓN CATEGORÍAS
+───────────────────────────────────────────── */
+.portfolio-categories {
+  padding-top: clamp(3rem, 6vw, 5rem);
 }
 
-/* Activado por JS al añadir clase .is-preview-visible a la tarjeta */
-.portfolio-card.is-preview-visible .portfolio-card__preview {
-  opacity: 1;
-}
-
-/* Grid interno de los 3 thumbnails */
-.portfolio-card__preview-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.4rem;
-  width: 100%;
-}
-
-.portfolio-card__preview-grid img {
-  width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
-  display: block;
-  border-radius: 2px;
-  /* Los thumbnails se cargan a demanda por JS, no en el HTML */
-}
-
-/* Etiqueta "Ver categoría" en la parte inferior del preview */
-.portfolio-card__preview-label {
-  position: absolute;
-  bottom: 0.75rem;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: var(--font-body);
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+.portfolio-categories__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+  font-weight: 800;
+  color: var(--color-carbon);
+  text-align: center;
+  margin: 0 0 clamp(1.5rem, 3vw, 2.5rem);
   text-transform: uppercase;
-  color: #fff;
-  white-space: nowrap;
-}
-
-/* En móvil, desactivar el hover preview (no hay hover táctil real) */
-@media (hover: none) {
-  .portfolio-card__preview {
-    display: none;
-  }
-}
-
-
-/* ─────────────────────────────────────────────────────────────────────────
-   RESPONSIVO — ajustes generales portfolio index
-   ───────────────────────────────────────────────────────────────────────── */
-@media (max-width: 768px) {
-  .portfolio-card__subtitle {
-    /* Reducir a una línea en móvil si es necesario */
-    font-size: 0.8rem;
-  }
-
-  .portfolio-card__count {
-    font-size: 0.68rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .portfolio-card__count {
-    font-size: 0.65rem;
-  }
+  letter-spacing: 0.04em;
 }

@@ -8,20 +8,16 @@
   <meta name="description" content="Portfolio completo de Ismael Gonzalo: fotografía de producto, diseño gráfico, identidad visual, diseño editorial, cartelería y personalización. Vitoria-Gasteiz.">
   <link rel="canonical" href="https://ismaelgonzalo.com/portfolio/">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Portfolio · Ismael Gonzalo — Diseñador gráfico Vitoria-Gasteiz">
   <meta property="og:description" content="Portfolio completo de diseño gráfico, fotografía y comunicación visual. Vitoria-Gasteiz.">
   <meta property="og:url" content="https://ismaelgonzalo.com/portfolio/">
   <meta property="og:type" content="website">
 
-  <!-- Fonts (self-hosted) -->
   <link rel="preload" href="/fonts/barlow-condensed-800.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/inter-400.woff2" as="font" type="font/woff2" crossorigin>
 
-  <!-- Styles -->
   <link rel="stylesheet" href="/css/main.min.css">
 
-  <!-- Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -29,20 +25,13 @@
     "name": "Portfolio — Ismael Gonzalo Peña",
     "description": "Portfolio completo de diseño gráfico, fotografía publicitaria y comunicación visual.",
     "url": "https://ismaelgonzalo.com/portfolio/",
-    "author": {
-      "@type": "Person",
-      "name": "Ismael Gonzalo Peña",
-      "url": "https://ismaelgonzalo.com"
-    }
+    "author": { "@type": "Person", "name": "Ismael Gonzalo Peña", "url": "https://ismaelgonzalo.com" }
   }
   </script>
 </head>
 
 <body class="page-portfolio-index">
 
-  <!-- ══════════════════════════════════════════════════
-       NAV (igual que en el resto del sitio)
-  ══════════════════════════════════════════════════ -->
   <header class="site-header" id="site-header">
     <nav class="nav container" aria-label="Navegación principal">
       <a href="/" class="nav__logo" aria-label="Ismael Gonzalo — inicio">
@@ -65,9 +54,9 @@
 
   <main>
 
-    <!-- ══════════════════════════════════════════════════
-         HERO DE PÁGINA — H1 + descripción
-    ══════════════════════════════════════════════════ -->
+    <!-- ══════════════════════════════════════════
+         HERO — H1 + descripción
+    ══════════════════════════════════════════ -->
     <section class="page-hero page-hero--portfolio" aria-labelledby="portfolio-h1">
       <div class="container">
         <span class="section-number" aria-hidden="true">01</span>
@@ -76,204 +65,259 @@
           Portfolio de diseño gráfico,<br>fotografía y comunicación visual
         </h1>
         <p class="page-hero__desc">
-          Treinta años de trabajo organizado en seis disciplinas. Desde la fotografía de relojería de precisión
-          hasta la identidad corporativa, el diseño editorial y la personalización de producto.
-          Cada proyecto tiene un proceso detrás — aquí está el resultado.
+          Treinta años de trabajo organizado en seis disciplinas. Desde la fotografía
+          de relojería de precisión hasta la identidad corporativa, el diseño editorial
+          y la personalización de producto. Cada proyecto tiene un proceso detrás.
         </p>
       </div>
     </section>
 
 
-    <!-- ══════════════════════════════════════════════════
-         GRID DE CATEGORÍAS
-         ─────────────────────────────────────────────────
-         Contadores de proyectos por categoría (Fase 1).
-         data-previews listos para hover preview si se activa.
-         Las seis landings SEO se mantienen intactas.
-    ══════════════════════════════════════════════════ -->
-    <section class="portfolio-categories" id="portfolio-categories" aria-label="Categorías del portfolio">
+    <!-- ══════════════════════════════════════════
+         TRABAJOS DESTACADOS
+         6 imágenes — una por categoría.
+         Cada imagen es acceso directo a su landing.
+         Sin nivel de navegación intermedio.
+    ══════════════════════════════════════════ -->
+    <section class="featured-works" aria-label="Selección de trabajos destacados">
       <div class="container">
+
+        <div class="featured-works__grid">
+
+          <article class="featured-item">
+            <a href="/portfolio/fotografia/" class="featured-item__link"
+               aria-label="Ver portfolio de fotografía de producto y relojería">
+              <div class="featured-item__img-wrap">
+                <img
+                  src="/img/portfolio/rolex-submariner-fotografia-producto-relojeria.webp"
+                  alt="Fotografía de producto: Rolex Submariner — relojería de precisión sobre fondo negro"
+                  class="featured-item__img"
+                  width="800" height="600"
+                  loading="eager"
+                >
+                <div class="featured-item__overlay" aria-hidden="true">
+                  <span class="featured-item__label">Fotografía</span>
+                  <span class="featured-item__count">12 proyectos</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="featured-item">
+            <a href="/portfolio/diseno-grafico/" class="featured-item__link"
+               aria-label="Ver portfolio de diseño gráfico e identidad corporativa">
+              <div class="featured-item__img-wrap">
+                <img
+                  src="/img/portfolio/gomezAUREA.webp"
+                  alt="Identidad corporativa Gómez Shoe Store — logotipo con proporción áurea"
+                  class="featured-item__img"
+                  width="800" height="600"
+                  loading="eager"
+                >
+                <div class="featured-item__overlay" aria-hidden="true">
+                  <span class="featured-item__label">Diseño gráfico</span>
+                  <span class="featured-item__count">6 proyectos</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="featured-item">
+            <a href="/portfolio/fotomontajes-retoques/" class="featured-item__link"
+               aria-label="Ver portfolio de retoque fotográfico y fotomontajes">
+              <div class="featured-item__img-wrap">
+                <img
+                  src="/img/portfolio/restauracion-fotografia-antigua-retrato-antes-despues.webp"
+                  alt="Restauración de fotografía antigua: retrato familiar antes y después del retoque profesional"
+                  class="featured-item__img"
+                  width="800" height="600"
+                  loading="lazy"
+                >
+                <div class="featured-item__overlay" aria-hidden="true">
+                  <span class="featured-item__label">Retoque</span>
+                  <span class="featured-item__count">8 proyectos</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="featured-item">
+            <a href="/portfolio/diseno-editorial/" class="featured-item__link"
+               aria-label="Ver portfolio de diseño editorial y maquetación">
+              <div class="featured-item__img-wrap">
+                <img
+                  src="/img/portfolio/mockup-libro-recetas-abierto-diseno-editorial.webp"
+                  alt="Diseño editorial: libro de recetas abierto mostrando maquetación interior"
+                  class="featured-item__img"
+                  width="800" height="600"
+                  loading="lazy"
+                >
+                <div class="featured-item__overlay" aria-hidden="true">
+                  <span class="featured-item__label">Editorial</span>
+                  <span class="featured-item__count">5 proyectos</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="featured-item">
+            <a href="/portfolio/carteleria/" class="featured-item__link"
+               aria-label="Ver portfolio de cartelería y diseño publicitario">
+              <div class="featured-item__img-wrap">
+                <img
+                  src="/img/portfolio/cartel-exposicion-david-umemoto-planos-korapilo.webp"
+                  alt="Cartel de exposición David Umemoto con planos arquitectónicos Korapilo"
+                  class="featured-item__img"
+                  width="800" height="600"
+                  loading="lazy"
+                >
+                <div class="featured-item__overlay" aria-hidden="true">
+                  <span class="featured-item__label">Cartelería</span>
+                  <span class="featured-item__count">9 proyectos</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+          <article class="featured-item">
+            <a href="/portfolio/personalizacion-productos/" class="featured-item__link"
+               aria-label="Ver portfolio de personalización de producto">
+              <div class="featured-item__img-wrap">
+                <img
+                  src="/img/portfolio/reloj-caicos-muneca-diseno-ismael-gonzalo.webp"
+                  alt="Reloj CAICOS en muñeca — diseño integral de edición limitada 51 piezas"
+                  class="featured-item__img"
+                  width="800" height="600"
+                  loading="lazy"
+                >
+                <div class="featured-item__overlay" aria-hidden="true">
+                  <span class="featured-item__label">Personalización</span>
+                  <span class="featured-item__count">7 proyectos</span>
+                </div>
+              </div>
+            </a>
+          </article>
+
+        </div><!-- /.featured-works__grid -->
+      </div><!-- /.container -->
+    </section>
+
+
+    <!-- ══════════════════════════════════════════
+         ÍNDICE DE CATEGORÍAS
+         Navegación estructurada por especialidad.
+         Las seis landings SEO se mantienen intactas.
+    ══════════════════════════════════════════ -->
+    <section class="portfolio-categories" aria-label="Explorar por categoría">
+      <div class="container">
+
+        <h2 class="portfolio-categories__title">Explorar por disciplina</h2>
 
         <div class="portfolio-grid" role="list">
 
-          <!-- Tarjeta 1 — Fotografía -->
-          <article class="portfolio-card reveal-fade" role="listitem"
-            data-previews='[
-              "/img/portfolio/rolex-submariner-fotografia-producto-relojeria.webp",
-              "/img/portfolio/RolexSubm_09.webp",
-              "/img/portfolio/reloj-caicos-luminiscencia-oscuridad.webp"
-            ]'>
-            <a href="/portfolio/fotografia/" class="portfolio-card__link" aria-label="Portfolio de fotografía — 12 proyectos">
+          <article class="portfolio-card reveal-fade" role="listitem">
+            <a href="/portfolio/fotografia/" class="portfolio-card__link"
+               aria-label="Portfolio de fotografía — 12 proyectos">
               <div class="portfolio-card__img-wrap">
-                <img
-                  src="/img/portfolio/cover-fotografia.webp"
-                  alt="Fotografía de producto: Rolex Submariner sobre fondo negro — portfolio de fotografía"
-                  class="portfolio-card__img"
-                  width="600" height="400"
-                  loading="lazy"
-                >
+                <img src="/img/portfolio/cover-fotografia.webp"
+                  alt="Fotografía de producto y relojería de precisión"
+                  class="portfolio-card__img" width="600" height="400" loading="lazy">
                 <div class="portfolio-card__overlay" aria-hidden="true"></div>
-
-                <!-- FASE 3: hover preview panel (oculto por defecto, activado por JS) -->
-                <div class="portfolio-card__preview" aria-hidden="true">
-                  <div class="portfolio-card__preview-grid"></div>
-                </div>
               </div>
               <div class="portfolio-card__info">
                 <h3 class="portfolio-card__title">Fotografía</h3>
                 <p class="portfolio-card__subtitle">Producto, naturaleza y retrato</p>
-                <!-- FASE 1: contador -->
-                <span class="portfolio-card__count" aria-label="12 proyectos">12 proyectos</span>
+                <span class="portfolio-card__count">12 proyectos</span>
               </div>
               <span class="portfolio-card__arrow" aria-hidden="true">→</span>
             </a>
           </article>
 
-          <!-- Tarjeta 2 — Diseño gráfico -->
-          <article class="portfolio-card reveal-fade" role="listitem"
-            data-previews='[
-              "/img/portfolio/gomezAUREA.webp",
-              "/img/portfolio/Identidad_Full06.webp",
-              "/img/portfolio/cartel-exposicion-david-umemoto-planos-korapilo.webp"
-            ]'>
-            <a href="/portfolio/diseno-grafico/" class="portfolio-card__link" aria-label="Portfolio de diseño gráfico — 6 proyectos">
+          <article class="portfolio-card reveal-fade" role="listitem">
+            <a href="/portfolio/diseno-grafico/" class="portfolio-card__link"
+               aria-label="Portfolio de diseño gráfico — 6 proyectos">
               <div class="portfolio-card__img-wrap">
-                <img
-                  src="/img/portfolio/cover-diseno-grafico.webp"
-                  alt="Identidad corporativa Gómez Shoe Store — portfolio de diseño gráfico"
-                  class="portfolio-card__img"
-                  width="600" height="400"
-                  loading="lazy"
-                >
+                <img src="/img/portfolio/cover-diseno-grafico.webp"
+                  alt="Diseño gráfico e identidad corporativa"
+                  class="portfolio-card__img" width="600" height="400" loading="lazy">
                 <div class="portfolio-card__overlay" aria-hidden="true"></div>
-                <div class="portfolio-card__preview" aria-hidden="true">
-                  <div class="portfolio-card__preview-grid"></div>
-                </div>
               </div>
               <div class="portfolio-card__info">
                 <h3 class="portfolio-card__title">Diseño gráfico</h3>
                 <p class="portfolio-card__subtitle">Identidad visual y branding</p>
-                <span class="portfolio-card__count" aria-label="6 proyectos">6 proyectos</span>
+                <span class="portfolio-card__count">6 proyectos</span>
               </div>
               <span class="portfolio-card__arrow" aria-hidden="true">→</span>
             </a>
           </article>
 
-          <!-- Tarjeta 3 — Retoque -->
-          <article class="portfolio-card reveal-fade" role="listitem"
-            data-previews='[
-              "/img/portfolio/restauracion-fotografia-antigua-retrato-antes-despues.webp",
-              "/img/portfolio/Abuela_2.webp",
-              "/img/portfolio/Abuela_4.webp"
-            ]'>
-            <a href="/portfolio/fotomontajes-retoques/" class="portfolio-card__link" aria-label="Portfolio de fotomontajes y retoque — 8 proyectos">
+          <article class="portfolio-card reveal-fade" role="listitem">
+            <a href="/portfolio/fotomontajes-retoques/" class="portfolio-card__link"
+               aria-label="Portfolio de retoque fotográfico — 8 proyectos">
               <div class="portfolio-card__img-wrap">
-                <img
-                  src="/img/portfolio/cover-retoques.webp"
-                  alt="Restauración de fotografía antigua — antes y después, portfolio de retoque fotográfico"
-                  class="portfolio-card__img"
-                  width="600" height="400"
-                  loading="lazy"
-                >
+                <img src="/img/portfolio/cover-retoques.webp"
+                  alt="Retoque fotográfico y restauración de fotografías antiguas"
+                  class="portfolio-card__img" width="600" height="400" loading="lazy">
                 <div class="portfolio-card__overlay" aria-hidden="true"></div>
-                <div class="portfolio-card__preview" aria-hidden="true">
-                  <div class="portfolio-card__preview-grid"></div>
-                </div>
               </div>
               <div class="portfolio-card__info">
                 <h3 class="portfolio-card__title">Fotomontajes y retoque</h3>
                 <p class="portfolio-card__subtitle">Restauración, retoque y composición</p>
-                <span class="portfolio-card__count" aria-label="8 proyectos">8 proyectos</span>
+                <span class="portfolio-card__count">8 proyectos</span>
               </div>
               <span class="portfolio-card__arrow" aria-hidden="true">→</span>
             </a>
           </article>
 
-          <!-- Tarjeta 4 — Editorial -->
-          <article class="portfolio-card reveal-fade" role="listitem"
-            data-previews='[
-              "/img/portfolio/mockup-libro-recetas-abierto-diseno-editorial.webp",
-              "/img/portfolio/diseno-portada-libro-la-vida-de-pi.webp",
-              "/img/portfolio/PORTADA_SUPLE_copia.webp"
-            ]'>
-            <a href="/portfolio/diseno-editorial/" class="portfolio-card__link" aria-label="Portfolio de diseño editorial — 5 proyectos">
+          <article class="portfolio-card reveal-fade" role="listitem">
+            <a href="/portfolio/diseno-editorial/" class="portfolio-card__link"
+               aria-label="Portfolio de diseño editorial — 5 proyectos">
               <div class="portfolio-card__img-wrap">
-                <img
-                  src="/img/portfolio/cover-editorial.webp"
-                  alt="Diseño editorial: mockup libro de recetas — portfolio de maquetación y diseño editorial"
-                  class="portfolio-card__img"
-                  width="600" height="400"
-                  loading="lazy"
-                >
+                <img src="/img/portfolio/cover-editorial.webp"
+                  alt="Diseño editorial y maquetación de libros y publicaciones"
+                  class="portfolio-card__img" width="600" height="400" loading="lazy">
                 <div class="portfolio-card__overlay" aria-hidden="true"></div>
-                <div class="portfolio-card__preview" aria-hidden="true">
-                  <div class="portfolio-card__preview-grid"></div>
-                </div>
               </div>
               <div class="portfolio-card__info">
                 <h3 class="portfolio-card__title">Diseño editorial</h3>
                 <p class="portfolio-card__subtitle">Libros, revistas y publicaciones</p>
-                <span class="portfolio-card__count" aria-label="5 proyectos">5 proyectos</span>
+                <span class="portfolio-card__count">5 proyectos</span>
               </div>
               <span class="portfolio-card__arrow" aria-hidden="true">→</span>
             </a>
           </article>
 
-          <!-- Tarjeta 5 — Cartelería -->
-          <article class="portfolio-card reveal-fade" role="listitem"
-            data-previews='[
-              "/img/portfolio/cartel-exposicion-david-umemoto-planos-korapilo.webp",
-              "/img/portfolio/la_hora_del_planeta_v3.webp",
-              "/img/portfolio/cartel_FINAL.webp"
-            ]'>
-            <a href="/portfolio/carteleria/" class="portfolio-card__link" aria-label="Portfolio de cartelería — 9 proyectos">
+          <article class="portfolio-card reveal-fade" role="listitem">
+            <a href="/portfolio/carteleria/" class="portfolio-card__link"
+               aria-label="Portfolio de cartelería — 9 proyectos">
               <div class="portfolio-card__img-wrap">
-                <img
-                  src="/img/portfolio/cover-carteleria.webp"
-                  alt="Cartel de exposición David Umemoto — portfolio de diseño de cartelería publicitaria"
-                  class="portfolio-card__img"
-                  width="600" height="400"
-                  loading="lazy"
-                >
+                <img src="/img/portfolio/cover-carteleria.webp"
+                  alt="Diseño de cartelería publicitaria y gráfica exterior"
+                  class="portfolio-card__img" width="600" height="400" loading="lazy">
                 <div class="portfolio-card__overlay" aria-hidden="true"></div>
-                <div class="portfolio-card__preview" aria-hidden="true">
-                  <div class="portfolio-card__preview-grid"></div>
-                </div>
               </div>
               <div class="portfolio-card__info">
                 <h3 class="portfolio-card__title">Cartelería</h3>
                 <p class="portfolio-card__subtitle">Carteles, campañas y gráfica exterior</p>
-                <span class="portfolio-card__count" aria-label="9 proyectos">9 proyectos</span>
+                <span class="portfolio-card__count">9 proyectos</span>
               </div>
               <span class="portfolio-card__arrow" aria-hidden="true">→</span>
             </a>
           </article>
 
-          <!-- Tarjeta 6 — Personalización -->
-          <article class="portfolio-card reveal-fade" role="listitem"
-            data-previews='[
-              "/img/portfolio/reloj-caicos-muneca-diseno-ismael-gonzalo.webp",
-              "/img/portfolio/camiseta-cb-araba-25-aniversario.webp",
-              "/img/portfolio/muestra_bufanda.webp"
-            ]'>
-            <a href="/portfolio/personalizacion-productos/" class="portfolio-card__link" aria-label="Portfolio de personalización de producto — 7 proyectos">
+          <article class="portfolio-card reveal-fade" role="listitem">
+            <a href="/portfolio/personalizacion-productos/" class="portfolio-card__link"
+               aria-label="Portfolio de personalización de producto — 7 proyectos">
               <div class="portfolio-card__img-wrap">
-                <img
-                  src="/img/portfolio/cover-personalizacion.webp"
-                  alt="Reloj CAICOS edición limitada — portfolio de personalización de producto y diseño de objeto"
-                  class="portfolio-card__img"
-                  width="600" height="400"
-                  loading="lazy"
-                >
+                <img src="/img/portfolio/cover-personalizacion.webp"
+                  alt="Personalización de producto: reloj CAICOS y equipaciones deportivas"
+                  class="portfolio-card__img" width="600" height="400" loading="lazy">
                 <div class="portfolio-card__overlay" aria-hidden="true"></div>
-                <div class="portfolio-card__preview" aria-hidden="true">
-                  <div class="portfolio-card__preview-grid"></div>
-                </div>
               </div>
               <div class="portfolio-card__info">
                 <h3 class="portfolio-card__title">Personalización de producto</h3>
                 <p class="portfolio-card__subtitle">Equipaciones, merchandising y diseño de objeto</p>
-                <span class="portfolio-card__count" aria-label="7 proyectos">7 proyectos</span>
+                <span class="portfolio-card__count">7 proyectos</span>
               </div>
               <span class="portfolio-card__arrow" aria-hidden="true">→</span>
             </a>
@@ -281,12 +325,12 @@
 
         </div><!-- /.portfolio-grid -->
       </div><!-- /.container -->
-    </section><!-- /.portfolio-categories -->
+    </section>
 
 
-    <!-- ══════════════════════════════════════════════════
+    <!-- ══════════════════════════════════════════
          CTA FINAL
-    ══════════════════════════════════════════════════ -->
+    ══════════════════════════════════════════ -->
     <section class="cta-band" aria-label="Contacto">
       <div class="container">
         <p class="cta-band__text">¿Tienes un proyecto en mente?</p>
@@ -298,9 +342,6 @@
   </main>
 
 
-  <!-- ══════════════════════════════════════════════════
-       FOOTER (igual que resto del sitio)
-  ══════════════════════════════════════════════════ -->
   <footer class="site-footer">
     <div class="container">
       <div class="footer__grid">
@@ -325,7 +366,6 @@
     </div>
   </footer>
 
-  <!-- Floating buttons (WhatsApp + back to top) -->
   <a href="https://wa.me/34636702172"
      class="floating-btn floating-btn--wa"
      target="_blank" rel="noopener noreferrer"
@@ -342,8 +382,6 @@
   </button>
 
   <script src="/js/main.js"></script>
-  <!-- FASE 3: script del hover preview (cargado al final, no bloquea render) -->
-  <script src="/js/portfolio-preview.js" defer></script>
 
 </body>
 </html>
