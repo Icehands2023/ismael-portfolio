@@ -117,12 +117,24 @@
       btn.disabled = true;
       btn.innerHTML = 'Enviando...';
 
-      // Simulate send — replace with real backend / Formspree endpoint
-      await new Promise(r => setTimeout(r, 1200));
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
 
-      btn.innerHTML = '✓ Mensaje enviado';
-      btn.style.background = '#27ae60';
-      form.reset();
+        if (response.ok) {
+          btn.innerHTML = '✓ Mensaje enviado';
+          btn.style.background = '#27ae60';
+          form.reset();
+        } else {
+          throw new Error('Formspree respondió con error');
+        }
+      } catch (err) {
+        btn.innerHTML = '✗ Error — llama al 636 702 172';
+        btn.style.background = '#c0392b';
+      }
 
       setTimeout(() => {
         btn.disabled = false;
