@@ -2621,3 +2621,8 @@ a:hover .tag,
 .page-portfolio-index .nav.scrolled .nav__logo-text {
   color: #ffffff;
 }
+
+/* --- SERVICIOS: hero paragraph a 2 líneas --- */
+.page-servicios .page-hero p {
+  max-width: 700px;
+}
