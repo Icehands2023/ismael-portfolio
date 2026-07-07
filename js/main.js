@@ -395,14 +395,23 @@ document.addEventListener('DOMContentLoaded', function () {
    Solo en la home y solo en la primera visita de la sesión
    ============================================================ */
 (function () {
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const body = document.body;
+
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    body.classList.add('intro-done');
+    return;
+  }
 
   const screen = document.querySelector('.intro-screen');
-  if (!screen) return;
+  if (!screen) {
+    body.classList.add('intro-done');
+    return;
+  }
 
   // Solo mostrar una vez por sesión
   if (sessionStorage.getItem('intro-shown')) {
     screen.style.display = 'none';
+    body.classList.add('intro-done');
     return;
   }
 
@@ -425,6 +434,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Ocultar la intro y revelar la home
   setTimeout(() => {
     screen.classList.add('hide');
+    body.classList.add('intro-done');
 
     // Restaurar interacción y limpiar tras la transición
     setTimeout(() => {

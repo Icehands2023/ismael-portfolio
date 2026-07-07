@@ -6,6 +6,10 @@
     /* Critical: cubre la home instantáneamente, antes de que cargue cualquier CSS/JS externo */
     html, body { background: #111111; }
     .intro-screen { position: fixed; inset: 0; z-index: 10000; background: #111111; }
+    /* Oculta TODO lo que no sea la intro hasta que el JS confirme que toca revelar la home.
+       visibility:hidden no depende de z-index/blend-mode/compositing: si Firefox filtra algo
+       a través del stacking del blend-mode, aquí no hay nada pintado con lo que pueda mezclarse. */
+    body:not(.intro-done) > :not(.intro-screen) { visibility: hidden; }
   </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ismael Gonzalo — Diseñador gráfico · Vitoria-Gasteiz</title>
