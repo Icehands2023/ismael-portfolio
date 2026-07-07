@@ -2,6 +2,11 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
+  <style>
+    /* Critical: cubre la home instantáneamente, antes de que cargue cualquier CSS/JS externo */
+    html, body { background: #111111; }
+    .intro-screen { position: fixed; inset: 0; z-index: 10000; background: #111111; }
+  </style>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ismael Gonzalo — Diseñador gráfico · Vitoria-Gasteiz</title>
   <meta name="description" content="Diseñador gráfico especialista en fotografía, identidad visual y diseño editorial en Vitoria-Gasteiz. Criterio consolidado, herramientas actuales. Ver portfolio.">
