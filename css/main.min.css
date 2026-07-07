@@ -2340,7 +2340,9 @@ a:hover .tag,
 .intro-screen {
   position: fixed;
   inset: 0;
-  background: #111111;
+  background:
+    linear-gradient(rgba(17, 17, 17, 0.82), rgba(17, 17, 17, 0.88)),
+    url('../img/textura-grunge-intro.webp') center / cover no-repeat;
   z-index: 10000;
   display: flex;
   align-items: center;
@@ -2358,8 +2360,47 @@ a:hover .tag,
 }
 
 .intro-screen__inner {
+  position: relative;
   text-align: center;
   padding: 0 2rem;
+}
+
+/* Bloom ambiental muy suave — luz que el "neón" proyecta sobre la textura, sin borde definido */
+.intro-screen__inner::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: -1;
+  width: clamp(420px, 70vw, 900px);
+  height: clamp(280px, 46vw, 560px);
+  background: radial-gradient(
+    ellipse at center,
+    rgba(26, 122, 154, 0.30) 0%,
+    rgba(26, 122, 154, 0.16) 32%,
+    rgba(26, 122, 154, 0.06) 58%,
+    rgba(26, 122, 154, 0) 82%
+  );
+  filter: blur(70px);
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.intro-screen__inner:has(.intro-screen__name.revealed)::before {
+  animation:
+    intro-bloom-in 900ms ease-out forwards,
+    intro-bloom-pulse 1700ms ease-in-out 900ms infinite;
+}
+
+@keyframes intro-bloom-in {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes intro-bloom-pulse {
+  0%, 100% { opacity: 0.85; }
+  50% { opacity: 1; }
 }
 
 .intro-screen__name {
@@ -2375,12 +2416,50 @@ a:hover .tag,
 
 .intro-screen__name-inner {
   display: block;
-  transform: translateY(110%);
+  transform: translateY(110%) scale(0.85);
   transition: transform 700ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .intro-screen__name.revealed .intro-screen__name-inner {
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
+  animation:
+    intro-neon-in 900ms cubic-bezier(0.16, 1, 0.3, 1) forwards,
+    intro-neon-pulse 1700ms ease-in-out 900ms infinite;
+}
+
+/* Neón ciñéndose a las letras — capas de text-shadow, sin relleno ni bordes definidos */
+@keyframes intro-neon-in {
+  0% {
+    text-shadow:
+      0 0 0 rgba(255, 255, 255, 0),
+      0 0 0 rgba(90, 210, 235, 0),
+      0 0 0 rgba(26, 122, 154, 0),
+      0 0 0 rgba(26, 122, 154, 0);
+  }
+  100% {
+    text-shadow:
+      0 0 6px rgba(255, 255, 255, 0.9),
+      0 0 18px rgba(90, 210, 235, 0.85),
+      0 0 36px rgba(26, 122, 154, 0.75),
+      0 0 64px rgba(26, 122, 154, 0.45);
+  }
+}
+
+@keyframes intro-neon-pulse {
+  0%, 100% {
+    text-shadow:
+      0 0 6px rgba(255, 255, 255, 0.9),
+      0 0 18px rgba(90, 210, 235, 0.85),
+      0 0 36px rgba(26, 122, 154, 0.75),
+      0 0 64px rgba(26, 122, 154, 0.45);
+  }
+  50% {
+    text-shadow:
+      0 0 8px rgba(255, 255, 255, 1),
+      0 0 24px rgba(90, 210, 235, 0.95),
+      0 0 48px rgba(26, 122, 154, 0.9),
+      0 0 84px rgba(26, 122, 154, 0.6);
+  }
 }
 
 .intro-screen__line {

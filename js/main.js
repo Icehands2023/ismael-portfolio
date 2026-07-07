@@ -420,7 +420,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Duración según dispositivo — más corta en móvil
   const isMobile = window.innerWidth < 768;
-  const holdDuration = isMobile ? 1500 : 2200;
+  const holdDuration = isMobile ? 4000 : 4600;
 
   // Ocultar la intro y revelar la home
   setTimeout(() => {
