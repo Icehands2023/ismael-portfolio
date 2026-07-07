@@ -2365,23 +2365,21 @@ a:hover .tag,
   padding: 0 2rem;
 }
 
-/* Bloom ambiental muy suave — luz que el "neón" proyecta sobre la textura, sin borde definido */
+/* Bloom ambiental — 3 manchas superpuestas descentradas para romper la simetría del óvalo */
 .intro-screen__inner::before {
   content: '';
   position: absolute;
   top: 50%;
   left: 50%;
   z-index: -1;
-  width: clamp(420px, 70vw, 900px);
-  height: clamp(280px, 46vw, 560px);
-  background: radial-gradient(
-    ellipse at center,
-    rgba(26, 122, 154, 0.30) 0%,
-    rgba(26, 122, 154, 0.16) 32%,
-    rgba(26, 122, 154, 0.06) 58%,
-    rgba(26, 122, 154, 0) 82%
-  );
-  filter: blur(70px);
+  width: clamp(560px, 85vw, 1100px);
+  height: clamp(380px, 58vw, 720px);
+  background:
+    radial-gradient(circle at 38% 42%, rgba(26, 122, 154, 0.30) 0%, rgba(26, 122, 154, 0) 55%),
+    radial-gradient(circle at 64% 58%, rgba(26, 122, 154, 0.24) 0%, rgba(26, 122, 154, 0) 50%),
+    radial-gradient(circle at 50% 35%, rgba(26, 122, 154, 0.18) 0%, rgba(26, 122, 154, 0) 60%);
+  filter: blur(110px);
+  mix-blend-mode: screen;
   opacity: 0;
   transform: translate(-50%, -50%);
   pointer-events: none;
