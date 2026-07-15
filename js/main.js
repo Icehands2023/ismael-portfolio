@@ -50,18 +50,29 @@
   const revealSelectors = '.reveal, .reveal-img, .reveal-left, .reveal-right, .reveal-bottom, .reveal-fade, .divider--animated, .divider--full';
   const reveals = document.querySelectorAll(revealSelectors);
   if (reveals.length) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.08, rootMargin: '0px 0px -80px 0px' }
-    );
-    reveals.forEach(el => observer.observe(el));
+    try {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        { threshold: 0.08, rootMargin: '0px 0px -80px 0px' }
+      );
+      reveals.forEach(el => observer.observe(el));
+    } catch (err) {
+      reveals.forEach(el => el.classList.add('visible'));
+    }
+
+    // Red de seguridad: si por cualquier motivo (extensión del navegador,
+    // fallo del observer, etc.) el contenido no se ha revelado a los 2.5s,
+    // se muestra igualmente en vez de quedar invisible de forma permanente.
+    setTimeout(() => {
+      reveals.forEach(el => el.classList.add('visible'));
+    }, 2500);
   }
 
   /* ---- PORTFOLIO GRID — fade de entrada con delay aleatorio ---- */
